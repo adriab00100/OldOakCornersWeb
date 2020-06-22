@@ -12,6 +12,7 @@ body {
 
 .main-content {
   background-color: white;
+  padding: 0 8px 32px 8px;
 }
 
 .full-width-container {
@@ -20,13 +21,13 @@ body {
   margin-right: auto;
   
   .limited-width-container {
-    width: 1440px;
+    max-width: 1440px;
   }
 }
 
 .full-width-container.limited-width-container,
 .limited-width-container {
-  width: 1440px;
+  max-width: 1440px;
 }
 
 .jump-to-main {
@@ -43,4 +44,24 @@ body {
     left: 0;
     z-index: 10;
   }
+}
+
+.side-by-side-container {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.stacked-container {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.pls {
+  padding-left: 4px;
+}
+
+.centering-container {
+  display: flex;
+  justify-content: center;
 }
