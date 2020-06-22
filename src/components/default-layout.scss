@@ -65,3 +65,17 @@ body {
   display: flex;
   justify-content: center;
 }
+
+.post-heading {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  h1 {
+    margin-bottom: 4px;
+  }
+
+  h4 {
+    margin: 4px 0 4px 0;
+  }
+}

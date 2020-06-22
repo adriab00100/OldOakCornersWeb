@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Old Oak Corners - by Brian Adriance`,
+    title: `Old Oak Corners`,
     description: `Sharing thoughts, ideas, and projects.`,
     author: `Brian Adriance`,
   },
@@ -30,7 +30,7 @@ module.exports = {
     {
       resolve: `gatsby-transformer-yaml`,
       options: {
-        typeName: `yml`, 
+        typeName: `yml`,
       },
     },
     {
@@ -47,33 +47,26 @@ module.exports = {
         path: `${__dirname}/posts/`,
       },
     },
-    'gatsby-transformer-remark',
+    "gatsby-transformer-remark",
     {
       resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {
-          include: /images.+\.svg$/ // See below to configure properly
-        }
-      }
+          include: /images.+\.svg$/,
+        },
+      },
     },
     {
       resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
         fonts: [
           {
-            "family": "Roboto",
-            "variants": [
-              "400",
-              "400i",
-              "700",
-              "700i"
-            ],
-            "subsets": [
-              "latin-ext"
-            ]
-          }          
+            family: "Roboto",
+            variants: ["400", "400i", "700", "700i"],
+            subsets: ["latin-ext"],
+          },
         ],
-      }
-    }
+      },
+    },
   ],
-}
+};
