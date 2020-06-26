@@ -14,6 +14,12 @@ const Header = ({ siteTitle }) => (
         </div>
       </Link>
       <h1 className="site-header-title">{siteTitle}</h1>
+      <nav className="site-navigation">
+        <ul>
+          <li><Link to="/latest">Latest Post</Link></li>
+          <li><Link to="/about">About</Link></li>
+        </ul>
+      </nav>
     </div>
   </header>
 );

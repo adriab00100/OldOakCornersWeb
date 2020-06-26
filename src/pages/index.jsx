@@ -1,23 +1,14 @@
 import React from "react";
-import { Link, graphql } from "gatsby";
+import { graphql } from "gatsby";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
+import PostListing from "../components/post-listing";
 
 const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Home" />
-
-    {data.allMarkdownRemark.edges.map(post => (
-      <div key={post.node.id}>
-        <Link to={post.node.frontmatter.path}>
-          <h3>{post.node.frontmatter.title}</h3>
-        </Link>
-        <small>
-          {post.node.frontmatter.author} on {post.node.frontmatter.date}
-        </small>
-      </div>
-    ))}
+    <PostListing posts={data.allMarkdownRemark.edges.map(p => p.node)} />
   </Layout>
 );
 
@@ -33,6 +24,7 @@ export const pageQuery = graphql`
             date
             author
           }
+          excerpt
         }
       }
     }

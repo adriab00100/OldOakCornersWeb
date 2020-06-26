@@ -1,5 +1,6 @@
 import React from "react";
 import { graphql } from "gatsby"
+import Container from "../components/container";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 
@@ -9,7 +10,7 @@ const BlogPost = ({ data }) => {
     <Layout>
       <SEO title={post.frontmatter.title} />
 
-      <div className="centering-container">
+      <Container type="centering">
         <div className="post-heading">
           <h1>{post.frontmatter.title}</h1>
           <h4>
@@ -17,12 +18,12 @@ const BlogPost = ({ data }) => {
             <time>{post.frontmatter.date}</time>
           </h4>
         </div>
-      </div>
-      <div className="centering-container">
+      </Container>
+      <Container type="centering">
         <section className="blog-post-contents">
           <div dangerouslySetInnerHTML={{ __html: post.html }} />
         </section>
-      </div>
+      </Container>
     </Layout>
   );
 };

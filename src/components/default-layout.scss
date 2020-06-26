@@ -79,3 +79,53 @@ body {
     margin: 4px 0 4px 0;
   }
 }
+
+a {
+  color: black;
+  font-weight: 600;
+
+  &:visited {
+    color: black;
+  }
+}
+
+.blog-listing {
+  display: flex;
+  
+  @media screen and (max-width: 500px) {
+    flex-direction: column;
+  }
+  @media screen and (min-width: 501px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  h3 {
+    margin: 0;
+    padding: 8px 0 8px 0;
+  }
+
+  small {
+    font-weight: lighter;
+    color: #3a3a3a;
+  }
+
+  .post-tile {
+    padding: 8px 8px 8px 8px;
+    transition: all 500ms;
+    border-color: darkgrey;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    
+    @media screen and (min-width: 501px) {
+      max-width: 400px;
+    }
+    
+
+    &:hover {
+      background-color: linen;
+      border-color: black;
+    }
+  }
+}

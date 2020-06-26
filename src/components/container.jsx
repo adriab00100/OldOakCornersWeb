@@ -19,7 +19,6 @@ const Container = ({ children, type, additionalClass }) => {
             throw new Error("Invalid type");
     }
 
-
     return (
         <div className={`${containerClass} ${additionalClass}`}>
             {children}
