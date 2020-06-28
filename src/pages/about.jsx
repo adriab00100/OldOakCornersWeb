@@ -55,7 +55,7 @@ const AboutPage = () => (
         <section>
           <h2>How is this blog made?</h2>
           <p>
-            I've used a combination of <ExternalLink href="https://www.gatsbyjs.org/">Gatsby</ExternalLink> and <ExternalLink>React</ExternalLink> for this blog,
+            I've used a combination of <ExternalLink href="https://www.gatsbyjs.org/">Gatsby</ExternalLink> and <ExternalLink href="https://reactjs.org/">React</ExternalLink> for this blog,
             while I am storing the code in a <ExternalLink href="https://github.com/adriab00100/OldOakCornersWeb">github repository</ExternalLink>.
             I am hosting the website on <ExternalLink href="https://www.netlify.com/">Netlify</ExternalLink> and using <ExternalLink href="https://cloudinary.com/">
               Cloudinary</ExternalLink> for all my image and video needs.

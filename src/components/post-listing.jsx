@@ -16,6 +16,9 @@ const PostListing = ({ posts }) => {
                         {post.frontmatter.author} on <date>{post.frontmatter.date}</date>
                     </small>
                     <p>{post.excerpt}</p>
+                    <Link className="preview-read-more" to={post.frontmatter.path}>
+                        Read Post
+                    </Link>
                 </div>
             ))}
         </section>
