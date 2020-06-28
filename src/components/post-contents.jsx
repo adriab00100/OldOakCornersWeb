@@ -15,11 +15,9 @@ const PostContents = ({ post }) => {
                     </h4>
                 </div>
             </Container>
-            <Container type="centering">
-                <section className="blog-post-contents">
-                    <div dangerouslySetInnerHTML={{ __html: post.html }} />
-                </section>
-            </Container>
+            <section className="blog-post-contents">
+                <div dangerouslySetInnerHTML={{ __html: post.html }} />
+            </section>
         </>
     );
 };
