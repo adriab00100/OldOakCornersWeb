@@ -3,11 +3,12 @@ import Container from "../components/container";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import ExternalLink from "../components/external-link"
+import { Image, Transformation } from "cloudinary-react";
+import { cloudinaryCloudId } from "../images/constants";
 
 const AboutPage = () => (
   <Layout>
     <SEO title="About" />
-    <Container type="centering">
       <div>
         <section>
           <h1>About this blog</h1>
@@ -54,19 +55,37 @@ const AboutPage = () => (
         </section>
         <section>
           <h2>How is this blog made?</h2>
-          <p>
-            I've used a combination of <ExternalLink href="https://www.gatsbyjs.org/">Gatsby</ExternalLink> and <ExternalLink href="https://reactjs.org/">React</ExternalLink> for this blog,
-            while I am storing the code in a <ExternalLink href="https://github.com/adriab00100/OldOakCornersWeb">github repository</ExternalLink>.
-            I am hosting the website on <ExternalLink href="https://www.netlify.com/">Netlify</ExternalLink> and using <ExternalLink href="https://cloudinary.com/">
-              Cloudinary</ExternalLink> for all my image and video needs.
-          </p>
-          <p>
-            The inspiration for how I built this was from a crash-course by <ExternalLink href="https://www.youtube.com/watch?v=6YhqQ2ZW1sc">
-              TraversyMedia on YouTube</ExternalLink>
-          </p>
+          <Container type="side-by-side">
+            <div>
+              <p>
+                I've used a combination of <ExternalLink href="https://www.gatsbyjs.org/">Gatsby</ExternalLink> and <ExternalLink href="https://reactjs.org/">React</ExternalLink> for this blog,
+                while I am storing the code in a <ExternalLink href="https://github.com/adriab00100/OldOakCornersWeb">github repository</ExternalLink>.
+                I am hosting the website on <ExternalLink href="https://www.netlify.com/">Netlify</ExternalLink> and using <ExternalLink href="https://cloudinary.com/">
+                Cloudinary</ExternalLink> for all my image and video needs.
+             </p>
+             <p>
+                The inspiration for how I built this was from a crash-course by <ExternalLink href="https://www.youtube.com/watch?v=6YhqQ2ZW1sc">
+                TraversyMedia on YouTube</ExternalLink>
+              </p>
+            </div>
+            <Image
+              cloudName={cloudinaryCloudId}
+              secure="true"
+              width="440"
+              alt="A hatchet lodged in a large piece of oak"
+              publicId="site-assets/hatchet_asiz4d"
+
+            >
+              <Transformation
+                width="440"
+                crop="scale"
+                fetchFormat="auto"
+                quality="auto"
+              />
+            </Image>
+          </Container>
         </section>
       </div>
-    </Container>
   </Layout>
 );
 

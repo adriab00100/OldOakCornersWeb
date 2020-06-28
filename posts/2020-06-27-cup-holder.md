@@ -38,5 +38,65 @@ I started with the table saw, and cut one long trapezoid piece that I then cut u
 The sawing all went pretty well so I moved on to the next step. I wanted to put a 1/4-inch plywood floor into the octagonal cup holder portion, so next I pulled
 out the scariest tool I own, the router. It went... ok, but I had some tear-out.
 
-![Cuts from router](https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,h_800/blog-posts/cup-holder/IMG_6674_p2jnie)
+![Cuts from router](https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,w_800/blog-posts/cup-holder/IMG_6674_p2jnie)
 
+Next I tried to cut out the plywood base for the cup holder portion, but it required a little precision trimming.
+
+![Base cutting](https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,w_800/blog-posts/cup-holder/IMG_6678_jkjn4s)
+
+![Base fitting](https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,w_400/blog-posts/cup-holder/IMG_6677_pz7vgb)
+![Base trimming](https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,w_400/blog-posts/cup-holder/IMG_6680_rwkoqf)
+
+Next, I took one of the cup holder segments and market it up for mortise and tenons. I measured and cut a small connector piece for the connecting the handle
+to the cup-holding portion an started on the tenon portion. Cutting a tenon can be a pain. I this case I was able to do it all with my dovetail saw.
+
+![Tenon connector](https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,w_400/blog-posts/cup-holder/IMG_6655_sx749g)
+![Tenon connector shaping](https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,w_400/blog-posts/cup-holder/IMG_6656_zpkz1f)
+
+![Small tenon connector](https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,w_800/blog-posts/cup-holder/IMG_6698_iovmgr)
+
+As you can see, I did not give myself a lot of space to work with, but moving on, I cut the mortises next. I forgot to take a lot of pictures at this part.
+First, I use the drill press to remove most of the material, then I clean it up with my chisel. 
+
+![Mortise drilling](https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,w_800/blog-posts/cup-holder/IMG_6657_qhfsom)
+
+After I do a few final dry tests for marking, I do the glue-up. I laid out two strips of tape, put wood glue in the routed cut, and
+rolled the cup holder segments up.
+
+![Octagonal glue up](https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,w_800/blog-posts/cup-holder/IMG_6682_awhwos)
+
+After the glue set for the octagon, I did the glue-up and clamping for the handle portion. This is as easy as putting some glue on the mortises, then clamping it all tight.
+
+![Handle glue up](https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,w_800/blog-posts/cup-holder/IMG_6700_tdfw8t)
+
+After the glue was set, I sanded the heck out of it to smooth everything out, and I finished it was a light colored stain and clear glossy varnish.
+
+![Stained](https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,w_800/blog-posts/cup-holder/IMG_6707_jpvvmx)
+
+It came out a bit lighter colored than I expected, but looks great nonetheless.
+
+![Test photo](https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,w_800/blog-posts/cup-holder/IMG_6728_yxzwf3)
+
+After letting it sit and cure for a day or two, I finally put it to the final test. Will it work? Will the cups fit? Does it hold ok?
+
+![Final test](https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,w_800/blog-posts/cup-holder/IMG_6729_pe2urh)
+
+Yes, yes, and yes! It works and it looks good. It can be moved around as needed, and hold the cup at the perfect location. Alex loved it.
+
+### Mistakes
+We all make mistakes, and this is a great opportunity to learn.
+
+#### Finishing
+It would have been a hell of a lot easier if I sanded down the surface of the interior before rolling into the octagon shape, and I wish I had sanded the exterior before
+sanding the exterior. Live and learn, I guess. In this case I made it work with folded sandpaper and a lot of time.
+
+#### Tear-outs
+When using the router I had a few tear-outs for the material that I was cutting for the slot in which the base would go. I could probably avoided this by doing a little
+bit of sawing ahead of time so the waste material wouldn't break as it was cut away.
+
+#### Glue
+I got glue in the end-grain of the piece which prevented good coloration for when I applied the stain in some places and that annoyed me. I need to be more careful with where
+the glue goes.
+
+### The end!
+That's all for this project. Thanks for reading!
