@@ -1,0 +1,140 @@
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: whitesmoke;
+}
+
+.main-content {
+  background-color: white;
+  padding: 0 8px 32px 8px;
+}
+
+.full-width-container {
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+  
+  .limited-width-container {
+    max-width: 1440px;
+  }
+}
+
+.full-width-container.limited-width-container,
+.limited-width-container {
+  max-width: 1440px;
+}
+
+.jump-to-main {
+  background: #f5f6f7;
+  border: 1px solid #d6dce0;
+  display: block;
+  left: -200vw;
+  padding: 1px 8px;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+
+  &:focus {
+    left: 0;
+    z-index: 10;
+  }
+}
+
+.side-by-side-container {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.stacked-container {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.pls {
+  padding-left: 4px;
+}
+
+.centering-container {
+  display: flex;
+  justify-content: center;
+}
+
+.post-heading {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  h1 {
+    margin-bottom: 4px;
+  }
+
+  h4 {
+    margin: 4px 0 4px 0;
+  }
+}
+
+a {
+  color: black;
+  font-weight: 600;
+
+  &:visited {
+    color: black;
+  }
+}
+
+.blog-listing {
+  display: flex;
+  
+  @media screen and (max-width: 500px) {
+    flex-direction: column;
+  }
+  @media screen and (min-width: 501px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  h3 {
+    margin: 0;
+    padding: 8px 0 8px 0;
+  }
+
+  small {
+    font-weight: lighter;
+    color: #3a3a3a;
+  }
+
+  .post-tile {
+    display: flex;
+    flex-direction: column;
+    padding: 8px 8px 8px 8px;
+    transition: all 500ms;
+    border-color: darkgrey;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+
+    @media screen and (min-width: 501px) {
+      max-width: 400px;
+    }
+    
+    p {
+      margin-bottom: 0;
+    }
+
+    &:hover {
+      background-color: linen;
+      border-color: black;
+    }
+
+    .preview-read-more {
+      align-self: flex-end;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+.site-header-title {
+    margin: 8px 0 0 4px;
+}
+
+.site-header {
+    background: wheat;
+    margin: 0 auto;
+    padding: 1.45rem 1.0875rem;
+}
+
+.site-header-logo-and-title {
+    display: flex;
+}
+
+.site-navigation {
+    ul {
+        list-style: none;
+    }
+    li {
+        font-size: 24px;
+        margin-right: 40px;
+        display: inline-block;
+
+        a {
+            font-weight: normal;
+            text-decoration: none;
+            color: black;
+            transition: background-color 200ms;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            background-color: blanchedalmond;
+        }
+    }
+}
