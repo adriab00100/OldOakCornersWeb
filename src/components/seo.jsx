@@ -10,7 +10,7 @@ import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
 
-function SEO({ description, lang, meta, title, datePublished }) {
+function SEO({ description, lang, meta, title, datePublished, previewImage }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -27,6 +27,7 @@ function SEO({ description, lang, meta, title, datePublished }) {
 
   const metaDescription = description || site.siteMetadata.description;
   const metaDatePublished = datePublished || "2020-06-28";
+  const metaPreviewImage = previewImage || "https://res.cloudinary.com/dgqmwqi0v/image/upload/f_auto,q_auto,w_800/site-assets/mallet_vfigwm.jpg";
 
   return (
     <Helmet
@@ -51,6 +52,10 @@ function SEO({ description, lang, meta, title, datePublished }) {
         {
           property: `og:type`,
           content: `website`,
+        },
+        {
+          property: `og:image`,
+          content: metaPreviewImage
         },
         {
           name: `twitter:card`,
