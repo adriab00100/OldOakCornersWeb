@@ -10,7 +10,7 @@ import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
 
-function SEO({ description, lang, meta, title }) {
+function SEO({ description, lang, meta, title, datePublished, previewImage }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -26,13 +26,15 @@ function SEO({ description, lang, meta, title }) {
   );
 
   const metaDescription = description || site.siteMetadata.description;
+  const metaDatePublished = datePublished || "2020-06-28";
+  const metaPreviewImage = previewImage || "https://res.cloudinary.com/dgqmwqi0v/image/upload/f_auto,q_auto,w_800/site-assets/mallet_vfigwm.jpg";
 
   return (
     <Helmet
       htmlAttributes={{
         lang,
       }}
-      title={title}
+      title={`${title}`}
       titleTemplate={`%s | ${site.siteMetadata.title}`}
       meta={[
         {
@@ -52,6 +54,10 @@ function SEO({ description, lang, meta, title }) {
           content: `website`,
         },
         {
+          property: `og:image`,
+          content: metaPreviewImage
+        },
+        {
           name: `twitter:card`,
           content: `summary`,
         },
@@ -68,7 +74,21 @@ function SEO({ description, lang, meta, title }) {
           content: metaDescription,
         },
       ].concat(meta)}
-    />
+    >
+      <script type="application/ld+json">
+        {`{
+          "@context": "https://schema.org/",
+          "@type": "Blog",
+          "name": "Old Oak Corners Blog",
+          "author": {
+            "@type": "Person",
+            "name": "${site.siteMetadata.author}"
+          },
+          "datePublished": "${metaDatePublished}",
+          "description": "${metaDescription}",
+        }`}
+      </script>
+    </Helmet>
   );
 }
 

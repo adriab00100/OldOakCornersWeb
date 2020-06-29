@@ -49,6 +49,10 @@ body {
 .side-by-side-container {
   display: flex;
   justify-content: flex-start;
+
+  @media screen and (max-width: 801px) {
+    flex-direction: column;
+  }
 }
 
 .stacked-container {
@@ -142,6 +146,12 @@ a {
 .text-image {
   position: relative;
 
+  img {
+    @media screen and (max-width: 555px) {
+      min-height: 92px;
+    }
+  }
+
   .text-image-top-left {
     position: absolute;
     top: 24px;
@@ -149,8 +159,11 @@ a {
     @media screen and (max-width: 801px) {
       top: 8px;
     }
+    
   }
 }
+
+
 
 .extra-large {
   font-size: 28pt;
@@ -158,4 +171,17 @@ a {
   @media screen and (max-width: 801px) {
     font-size: 20pt;
   }
+  @media screen and (max-width: 555px) {
+    font-size: 18pt;
+  }
+}
+
+.blog-post-contents {
+  @media screen and (max-width: 801px) {
+    img {
+
+    }
+  }
+  
+  
 }
