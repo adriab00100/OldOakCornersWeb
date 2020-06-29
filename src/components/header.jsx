@@ -16,6 +16,7 @@ const Header = ({ siteTitle }) => (
       <h1 className="site-header-title">{siteTitle}</h1>
       <nav className="site-navigation">
         <ul>
+          <li><Link to="/">Home</Link></li>
           <li><Link to="/latest">Latest Post</Link></li>
           <li><Link to="/about">About</Link></li>
         </ul>
