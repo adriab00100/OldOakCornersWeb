@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Old Oak Corners`,
-    description: `Sharing thoughts, ideas, and projects.`,
+    description: `A blog where Brian shares wood-working thoughts, ideas, and projects.`,
     author: `Brian Adriance`,
   },
   plugins: [
