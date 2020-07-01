@@ -1,15 +1,25 @@
 import React from "react";
-import { graphql } from "gatsby"
+import { Link, graphql } from "gatsby"
 import PostContents from "../components/post-contents";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 
-const BlogPost = ({ data }) => {
+const BlogPost = ({ data, pageContext }) => {
   const post = data.markdownRemark;
+  const { previous, next } = pageContext;
   return (
     <Layout>
       <SEO title={post.frontmatter.title} />
       <PostContents post={post} />
+      <br/>
+      <ul className="page-navigator">
+        {previous && (
+          <li><Link to={previous.frontmatter.path} rel="previous">← {previous.frontmatter.title}</Link></li>
+        )}
+        {next && (
+          <li><Link to={next.frontmatter.path} rel="next">{next.frontmatter.title} →</Link></li>
+        )}
+      </ul>
     </Layout>
   );
 };

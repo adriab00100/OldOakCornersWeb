@@ -183,5 +183,31 @@ a {
     }
   }
   
-  
+}
+
+.current-page {
+  display: inline-block;
+  border-width: 1px;
+  border-color: darkgrey;
+  border-radius: 2px;
+  border-style: solid;
+  background-color: linen;
+  font-weight: bold;
+}
+
+.page-listing-title {
+  text-align: center;
+  margin: 0;
+  padding: 16px 0 0 0;
+}
+
+.pages-listing,
+.page-navigator {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+
+  li {
+    padding: 0 8px 0 8px;
+  }
 }
