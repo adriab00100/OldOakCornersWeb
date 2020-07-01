@@ -45,11 +45,11 @@ const IndexPage = ({ data }) => (
   </Layout>
 );
 
-export const pageQuery = graphql`
+export const indexPageQuery = graphql`
   query BlogIndexQuery {
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
-      limit: 100
+      limit: 10
     ) {
       edges {
         node {

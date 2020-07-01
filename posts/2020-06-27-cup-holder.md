@@ -29,7 +29,7 @@ The leftovers I used came from this project
 
 ![Cabinet top](https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,w_800/blog-posts/cup-holder/IMG-6432_eyypyx)
 
-### The Build
+### The build
 I started with the table saw, and cut one long trapezoid piece that I then cut up into 10 segments (8 for the octagon cup holder + spares in case I screwed up)
 
 ![Table saw cuts](https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,w_400/blog-posts/cup-holder/IMG_6648_h4ypco)
@@ -88,7 +88,7 @@ We all make mistakes, and this is a great opportunity to learn.
 
 #### Finishing
 It would have been a hell of a lot easier if I sanded down the surface of the interior before rolling into the octagon shape, and I wish I had sanded the exterior before
-sanding the exterior. Live and learn, I guess. In this case I made it work with folded sandpaper and a lot of time.
+attaching the handle. Live and learn, I guess. In this case I made it work with folded sandpaper and a lot of time.
 
 #### Tear-outs
 When using the router I had a few tear-outs for the material that I was cutting for the slot in which the base would go. I could probably avoided this by doing a little
