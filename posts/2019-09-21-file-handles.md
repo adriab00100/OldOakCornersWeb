@@ -3,6 +3,7 @@ path: "/file-handles"
 date: "2019-09-21"
 title: "Mahogany File Handles"
 author: "Brian Adriance"
+previewImage: "https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,w_400/blog-posts/file-handles/IMG_4983_owwwtm"
 ---
 
 # Chainsaw sharpening time
