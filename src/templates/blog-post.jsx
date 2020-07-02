@@ -9,7 +9,7 @@ const BlogPost = ({ data, pageContext }) => {
   const { previous, next } = pageContext;
   return (
     <Layout>
-      <SEO title={post.frontmatter.title} />
+      <SEO title={post.frontmatter.title} datePublished={post.frontmatter.date} />
       <PostContents post={post} />
       <br/>
       <ul className="page-navigator">
@@ -33,6 +33,7 @@ export const postQuery = graphql`
         title
         author
         date
+        previewImage
       }
     }
   }
