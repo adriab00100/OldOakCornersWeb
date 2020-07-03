@@ -13,7 +13,16 @@
 }
 
 .site-navigation {
+
+    
+
     ul {
+        display: flex;
+
+        @media screen and (max-width: 896px) {
+        flex-direction: column;
+        }
+        
         list-style: none;
     }
     li {

@@ -35,8 +35,6 @@ const IndexPage = ({ data }) => (
     <section>
       <h3>Wish list of features not yet built</h3>
       <ul>
-        <li>Comments on posts</li>
-        <li>Mobile friendly layouts</li>
         <li>Styling improvements</li>
         <li>More custom layout options in blog posts</li>
         <li>Push notifications on a new post</li>

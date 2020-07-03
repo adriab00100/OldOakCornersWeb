@@ -1,8 +1,9 @@
 import React from "react";
-import { Link, graphql } from "gatsby";
+import { graphql } from "gatsby";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import PostContents from "../components/post-contents";
+import PostNavigator from "../components/post-navigator";
 import { DiscussionEmbed } from "disqus-react";
 
 const LatestPage = ({ data }) => {
@@ -17,16 +18,10 @@ const LatestPage = ({ data }) => {
 
   return (
     <Layout>
-      <SEO title={`Latest - ${latestPost.frontmatter.title}`} />
+      <SEO title={`Latest - ${latestPost.frontmatter.title}`} datePublished={latestPost.frontmatter.date} previewImage={latestPost.frontmatter.previewImage} />
       <PostContents post={latestPost} />
       <br />
-      <ul className="page-navigator">
-        {previousPost && (
-          <li>Previous Post<br />
-            <Link to={previousPost.frontmatter.path} rel="previousPost">← {previousPost.frontmatter.title}</Link>
-          </li>
-        )}
-      </ul>
+      <PostNavigator previous={previousPost} />
       <hr />
       <DiscussionEmbed {...disqusConfig} />
     </Layout>
@@ -48,6 +43,7 @@ export const latestPageQuery = graphql`
           title
           date
           author
+          previewImage
         }
       }
     }
