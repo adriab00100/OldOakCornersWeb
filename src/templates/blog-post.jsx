@@ -1,8 +1,9 @@
 import React from "react";
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import PostContents from "../components/post-contents";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
+import PostNavigator from "../components/post-navigator";
 import { DiscussionEmbed } from "disqus-react";
 
 const BlogPost = ({ data, pageContext }) => {
@@ -17,23 +18,10 @@ const BlogPost = ({ data, pageContext }) => {
 
   return (
     <Layout>
-      <SEO title={post.frontmatter.title} datePublished={post.frontmatter.date} />
+      <SEO title={post.frontmatter.title} datePublished={post.frontmatter.date} previewImage={post.frontmatter.previewImage} />
       <PostContents post={post} />
       <br />
-      <nav aria-label="Previous and/or next post">
-        <ul className="page-navigator">
-          {previous && (
-            <li>Previous Post <br />
-              <Link to={previous.frontmatter.path} rel="previous">← {previous.frontmatter.title}</Link>
-            </li>
-          )}
-          {next && (
-            <li style={{textAlign: 'right'}}>Next Post <br />
-              <Link to={next.frontmatter.path} rel="next">{next.frontmatter.title} →</Link>
-            </li>
-          )}
-        </ul>
-      </nav>
+      <PostNavigator next={next} previous={previous} />
       <hr />
       <DiscussionEmbed {...disqusConfig} />
     </Layout>
