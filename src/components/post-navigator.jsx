@@ -24,8 +24,8 @@ const PostNavigator = ({ next, previous }) => {
 };
 
 PostNavigator.propTypes = {
-    next: PropTypes.node,
-    previous: PropTypes.node
+    next: PropTypes.object,
+    previous: PropTypes.object
 };
 
 export default PostNavigator;

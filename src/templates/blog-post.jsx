@@ -18,7 +18,9 @@ const BlogPost = ({ data, pageContext }) => {
 
   return (
     <Layout>
-      <SEO title={post.frontmatter.title} datePublished={post.frontmatter.date} previewImage={post.frontmatter.previewImage} />
+      <SEO title={post.frontmatter.title} datePublished={post.frontmatter.date} 
+      description={post.excerpt}
+      previewImage={post.frontmatter.previewImage} />
       <PostContents post={post} />
       <br />
       <PostNavigator next={next} previous={previous} />
@@ -32,6 +34,7 @@ export const postQuery = graphql`
   query BlogPostByPath($path: String!) {
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
+      excerpt
       frontmatter {
         path
         title
