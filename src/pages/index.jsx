@@ -19,7 +19,6 @@ const IndexPage = ({ data }) => (
         width="100%"
         alt="Close up of hard maple wood grain"
         publicId="site-assets/wood-grain-hm_uk660z"
-
       >
         <Transformation
           width="1280"
@@ -32,14 +31,6 @@ const IndexPage = ({ data }) => (
       <h2>This is my blog about woodworking projects, thoughts, ideas. Look below for the latest few posts.</h2>
     </section>
     <PostListing posts={data.allMarkdownRemark.edges.map(p => p.node)} />
-    <section>
-      <h3>Wish list of features not yet built</h3>
-      <ul>
-        <li>Styling improvements</li>
-        <li>More custom layout options in blog posts</li>
-        <li>Push notifications on a new post</li>
-      </ul>
-    </section>
   </Layout>
 );
 

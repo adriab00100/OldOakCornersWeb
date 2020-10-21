@@ -1,12 +1,20 @@
-
 .site-footer {
-    background: wheat;
-    padding: 16px 0 8px 0;
+  background: wheat;
+  padding: 16px 0 8px 0;
 }
 
-.footer-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+.site-footer-copy-container {
+  padding: 5px 20px 5px 20px;
+}
+
+.site-footer-link-container {
+  @media screen and (max-width: 801px) {
+    padding: 10px 20px 10px 20px;
+  }
+  @media screen and (min-width: 802px) {
+    padding: 0 20px 0 20px;
+    border-left-width: 1px;
+    border-left-style: solid;
+    border-color: black;
+  }
 }
