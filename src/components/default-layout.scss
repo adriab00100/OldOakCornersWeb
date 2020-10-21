@@ -114,6 +114,14 @@ a {
     color: #3a3a3a;
   }
 
+  .post-tile-container {
+    padding: 5px;
+    
+    @media screen and (max-width: 800px) {
+      padding: 2px 0 2px 0;
+    }
+  }
+
   .post-tile {
     display: flex;
     flex-direction: column;
@@ -125,7 +133,6 @@ a {
     border-width: 1px;
 
     
-
     @media screen and (min-width: 501px) {
       max-width: 400px;
     }

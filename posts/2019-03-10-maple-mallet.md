@@ -3,7 +3,7 @@ path: "/maple-mallet"
 date: "2019-03-10"
 title: "Maple Mallet"
 author: "Brian Adriance"
-previewImage: "https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,w_400/blog-posts/maple-mallet/IMG_2795_nqvvto"
+previewImage: "https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,w_400/blog-posts/maple-mallet/IMG_2793_z7jifk"
 ---
 
 # The making of a mallet
