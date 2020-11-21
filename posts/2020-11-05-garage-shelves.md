@@ -30,7 +30,7 @@ After planing the edges nice and smooth I hit up both faces with sanding to get 
 
 ![Fill it up](https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,w_800/blog-posts/garage-shelves/8FBB4A81-1D01-4933-86EB-D32DB4FD8FAE_coxxpb)
 
-It took two rounds of wood-filler/drying/sanding to get it looking good, but after painting I doubt I'll notice at all. Moving on with teh first shelf I gave it the first coat of paint.
+It took two rounds of wood-filler/drying/sanding to get it looking good, but after painting I doubt I'll notice at all. Moving on with the first shelf I gave it the first coat of paint.
 
 ![Paint](https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,w_800/blog-posts/garage-shelves/84AADE90-98F2-4472-B960-8ACAF2363C2E_v4ohaa)
 
