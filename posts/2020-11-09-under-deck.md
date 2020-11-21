@@ -1,5 +1,5 @@
 ---
-path: "/garage-shelves"
+path: "/under-deck"
 date: "2020-11-20"
 title: "Under Deck: Shed and Lattice"
 author: "Brian Adriance"
