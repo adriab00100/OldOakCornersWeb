@@ -10,26 +10,26 @@ previewImage: "https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,w
 
 It turns out cedar and redcedar are not the same! Even weirder, but redcedar is not even a proper cedar tree. It is, instead, a juniper! It has rich, red, almost purple heartwood, with a strong cedar-like scent. The heartwood is quite rot and insect resistant. I had unearthed a nice piece of this wood from the ground in my yard, with the help of my brother, Bruce, a while back, but could not decide what to do with it.
 
-![A big tree part](https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,w_800/blog-posts/cedar-mallet/IMG_20151212_163526_629_hnt60s)
+![A big tree part](https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,w_2048/blog-posts/cedar-mallet/IMG_20151212_163526_629_hnt60s)
 
 ## The plan
 
 Eventually I decided to try to make a mallet for my dad for christmas, so I got to sawing and planing.
 
-![A variety of pieces](https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,w_800/blog-posts/cedar-mallet/IMG_20171112_195708_idji6z)
+![A variety of pieces](https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,w_2048/blog-posts/cedar-mallet/IMG_20171112_195708_idji6z)
 
 ## The build
 
 After I roughly shaped a few pieces, I got building! First get the mallet head to size, then get the handle to size.
 
-![Handle 1](https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,w_800/blog-posts/cedar-mallet/IMG_20171216_205738597_HDR_mehlm9)
+![Handle 1](https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,w_2048/blog-posts/cedar-mallet/IMG_20171216_205738597_HDR_mehlm9)
 
-![Handle 2](https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,w_800/blog-posts/cedar-mallet/IMG_20171216_211333899_xhfmuw)
+![Handle 2](https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,w_2048/blog-posts/cedar-mallet/IMG_20171216_211333899_xhfmuw)
 
 Once both parts are ready to go, we just tap them together until they fit.
 
-![Parts](https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,w_800/blog-posts/cedar-mallet/IMG_20171216_214048458_pkeeh0)
+![Parts](https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,w_2048/blog-posts/cedar-mallet/IMG_20171216_214048458_pkeeh0)
 
 I wasn't sure if my dad would want to apply a finish, so I left it unfinished, packed it up, and made it into a christmas gift.
 
-![Finished](https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,w_800/blog-posts/cedar-mallet/IMG_20171217_153042027_wunkbs)
+![Finished](https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,w_2048/blog-posts/cedar-mallet/IMG_20171217_153042027_wunkbs)

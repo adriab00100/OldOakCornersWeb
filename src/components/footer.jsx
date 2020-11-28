@@ -19,7 +19,7 @@ const Footer = () => {
               author/creator.
             </div>
           </Container>
-          <div class="site-footer-link-container">
+          <div className="site-footer-link-container">
             <Link to="/rss.xml">RSS</Link>
           </div>
         </Container>

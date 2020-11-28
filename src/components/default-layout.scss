@@ -172,8 +172,6 @@ a {
   }
 }
 
-
-
 .extra-large {
   font-size: 28pt;
 
@@ -186,12 +184,9 @@ a {
 }
 
 .blog-post-contents {
-  @media screen and (max-width: 801px) {
     img {
       width: 100%;
     }
-  }
-  
 }
 
 .current-page {
