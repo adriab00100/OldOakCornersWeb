@@ -34,7 +34,7 @@ The leftovers I used came from this project
 I started with the table saw, and cut one long trapezoid piece that I then cut up into 10 segments (8 for the octagon cup holder + spares in case I screwed up)
 
 ![Table saw cuts](https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,w_1024/blog-posts/cup-holder/IMG_6648_h4ypco)
-![Assembled octagon](https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,h_400/blog-posts/cup-holder/IMG_6651_uakdkv)
+![Assembled octagon](https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,h_1024/blog-posts/cup-holder/IMG_6651_uakdkv)
 
 The sawing all went pretty well so I moved on to the next step. I wanted to put a 1/4-inch plywood floor into the octagonal cup holder portion, so next I pulled
 out the scariest tool I own, the router. It went... ok, but I had some tear-out.

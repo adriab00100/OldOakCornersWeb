@@ -26,15 +26,15 @@ I happened to have a rather large piece of 1/4" plywood left over from another p
 
 Unfortunately I forgot to take a bunch of pictures, but I used my corded jigsaw here to cut the arc, and then I test-fitted it into the window.
 
-![Test fit the semicircle](https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,w_800/blog-posts/sun-blocker/7479ADBB-883A-4F53-839D-2A990A1DE2B1_fefw2a)
+![Test fit the semicircle](https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,w_2048/blog-posts/sun-blocker/7479ADBB-883A-4F53-839D-2A990A1DE2B1_fefw2a)
 
 The test fit was pretty good, but I needed to remove some material from the bottom, so I brought it back to my shop and scrubbed the bottom edge with a rasp for a bit, then sanded it smooth again.
 
-![Scrubbing the bottom edge](https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,w_800/blog-posts/sun-blocker/F1A90E42-F73D-4B44-BB79-4AE46C810A18_adh8lj)
+![Scrubbing the bottom edge](https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,w_2048/blog-posts/sun-blocker/F1A90E42-F73D-4B44-BB79-4AE46C810A18_adh8lj)
 
 After this, the fit was good, so I decided to paint it white to make it match the moulding.
 
-![Paint it white](https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,w_800/blog-posts/sun-blocker/7B4C6AC1-24B4-41A1-90B4-98138D037A48_nkylpl)
+![Paint it white](https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,w_2048/blog-posts/sun-blocker/7B4C6AC1-24B4-41A1-90B4-98138D037A48_nkylpl)
 
 I don't really love painting, but I gave each side a nice coat of white paint, let it dry then headed out to the local hardware store to get a handle.
 
@@ -44,11 +44,11 @@ Again, I got so caught up in things I forgot to take pictures, but one issue I h
 
 I did a quick check on layout to see if vertical or horizontal would be more useful for the handle and decided on vertical. I don't love how it looks, but is easier to grab on to where it is used than in a horizontal layout.
 
-![Get a handle on it](https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,w_800/blog-posts/sun-blocker/42B7B742-4AB5-4900-8573-9E32B56C2F0B_kyjsfq)
+![Get a handle on it](https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,w_2048/blog-posts/sun-blocker/42B7B742-4AB5-4900-8573-9E32B56C2F0B_kyjsfq)
 
 After I put it all together it was night time so I couldn't try it out, and then of course we had a bunch of rainy days. Finally though, a sunny bright day! I grabbed my brand new sun-blocker and tried it out.
 
-![In place](https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,w_800/blog-posts/sun-blocker/23778E4A-90AC-4754-B220-C03F57800622_gc5dkc)
+![In place](https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,w_2048/blog-posts/sun-blocker/23778E4A-90AC-4754-B220-C03F57800622_gc5dkc)
 
 It works pretty darn well, but I might have to trim a bit on a few tight places.
 
