@@ -4,6 +4,7 @@ date: "2020-11-20"
 title: "Under Deck: Shed and Lattice"
 author: "Brian Adriance"
 previewImage: "https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,w_800/blog-posts/under-deck/IMG_0114_dqxxl7"
+tags: ["carpentry", "exterior", "deck", "vinyl"]
 ---
 
 ## Under the deck

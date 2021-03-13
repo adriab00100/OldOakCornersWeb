@@ -4,6 +4,7 @@ date: "2020-06-27"
 title: "Bunk Bed Cup Holder"
 author: "Brian Adriance"
 previewImage: "https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,w_800/blog-posts/cup-holder/IMG_6700_tdfw8t"
+tags: ["wood working", "maple", "joinery"]
 ---
 
 ## Let's make a cup holder

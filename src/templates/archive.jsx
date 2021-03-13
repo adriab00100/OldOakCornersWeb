@@ -13,7 +13,7 @@ const Archive = ({ data, pageContext }) => {
     }
     const PageListing = ({ pages, currentPage }) => {
         return (
-            <div>
+            <section>
                 <Container type="centering">
                     <h4 className="page-listing-title">More pages in the archive</h4>
                 </Container>
@@ -27,7 +27,7 @@ const Archive = ({ data, pageContext }) => {
                         })}
                     </ul>
                 </nav>
-            </div>
+            </section>
         )
     }
 
@@ -41,7 +41,6 @@ const Archive = ({ data, pageContext }) => {
             {pages.length > 1 && (
                 <PageListing pages={pages} currentPage={currentPage} />
             )}
-
         </Layout>
     );
 };

@@ -4,6 +4,7 @@ date: "2019-04-27"
 title: "Corner Bookshelf"
 author: "Brian Adriance"
 previewImage: "https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,w_400/blog-posts/cornershelf/IMG_3766_pil01d"
+tags: ["wood working", "shelves", "plywood", "pine", "poplar"]
 ---
 
 # Lots of books, not enough shelf

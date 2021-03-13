@@ -1,7 +1,5 @@
 const path = require("path");
-
-
-
+const { toKebabCase } = require("./src/utilities/string-manipulations");
 
 
 exports.createPages = ({ actions, graphql }) => {
@@ -46,11 +44,37 @@ const archiveTemplateQuery = graphql(
   `
 );
 
+const tagTemplateQuery = graphql(
+  `
+{
+  allMarkdownRemark(
+    sort: { fields: [frontmatter___date], order: DESC }
+    limit: 2000
+  ) {
+    edges {
+      node {
+        frontmatter {
+          tags
+          path
+        }
+      }
+    }
+  }
+  tagsGroup: allMarkdownRemark(limit: 2000) {
+    group(field: frontmatter___tags) {
+      fieldValue
+    }
+  }
+}
+`
+);
+
   const postTemplate = path.resolve("src/templates/blog-post.jsx");
   const archiveTemplate = path.resolve("src/templates/archive.jsx");
-  return Promise.all([postTemplateQuery, archiveTemplateQuery]).then(([postGraph, archiveGraph]) => {
-    if (postGraph.errors || archiveGraph.errors) {
-      return Promise.reject([...postGraph.errors, ...archiveGraph.errors]);
+  const tagsTemplate = path.resolve("src/templates/tags.jsx");
+  return Promise.all([postTemplateQuery, archiveTemplateQuery, tagTemplateQuery]).then(([postGraph, archiveGraph, tagsGraph]) => {
+    if (postGraph.errors || archiveGraph.errors || tagsGraph.errors) {
+      return Promise.reject([...postGraph.errors, ...archiveGraph.errors, ...tagsGraph.errors]);
     }
     // posts
     const allPosts = postGraph.data.allMarkdownRemark.edges;
@@ -79,6 +103,18 @@ const archiveTemplateQuery = graphql(
           skip: i * postsPerPage,
           numPages,
           currentPage: i + 1,
+        },
+      });
+    });
+    // tags 
+    const tags = tagsGraph.data.tagsGroup.group;
+    tags.forEach(tag => {
+      const tagPath = toKebabCase(tag.fieldValue);
+      createPage({
+        path: `/tags/${tagPath}/`,
+        component: tagsTemplate,
+        context: {
+          tag: tag.fieldValue,
         },
       });
     });

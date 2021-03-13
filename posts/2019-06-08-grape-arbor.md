@@ -4,6 +4,7 @@ date: "2019-06-08"
 title: "Grape Arbor"
 author: "Brian Adriance"
 previewImage: "https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,w_400/blog-posts/grape-arbor/IMG_4080_ihjz6w"
+tags: ["carpentry", "exterior", "painted", "pressure treated"]
 ---
 
 # Too many grapes!
