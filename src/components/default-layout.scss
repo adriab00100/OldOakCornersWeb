@@ -215,3 +215,30 @@ a {
     padding: 0 8px 0 8px;
   }
 }
+
+.post-tags {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+
+  li {
+    padding: 0 8px 0 8px;
+  } 
+  
+  a {
+    background-color: blanchedalmond;
+    border-radius: 5px;
+    color: black;
+    display: inline-block;
+    font-size: smaller;
+    font-weight: normal;
+    padding: 0 3px 0 3px;
+    text-decoration: none;
+    transition: background-color 200ms;
+  }
+
+  li a:hover {
+    background-color: cornsilk;  
+    text-decoration: underline;
+  }
+}

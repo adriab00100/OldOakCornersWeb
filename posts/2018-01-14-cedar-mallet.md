@@ -4,6 +4,7 @@ date: "2018-01-14"
 title: "Redcedar Mallet"
 author: "Brian Adriance"
 previewImage: "https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,w_400/blog-posts/cedar-mallet/IMG_20171216_214048458_pkeeh0"
+tags: ["wood working", "mallet", "redcedar", "gift", "found materials", "joinery"]
 ---
 
 # What is cedar

@@ -1,6 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Container from "./container";
+import { Link } from "gatsby";
+import { toKebabCase } from "../utilities/string-manipulations";
 
 const PostContents = ({ post }) => {
   return (
@@ -12,6 +14,13 @@ const PostContents = ({ post }) => {
             Authored by {post.frontmatter.author} on{" "}
             <time>{post.frontmatter.date}</time>
           </h4>
+          <ul class="post-tags">
+            {
+            post.frontmatter.tags.map((tag) => (
+              <li><Link to={`/tags/${toKebabCase(tag)}`}>{tag}</Link></li>
+            ))
+            }
+          </ul>
         </div>
       </Container>
       <section className="blog-post-contents">

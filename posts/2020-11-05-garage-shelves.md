@@ -4,6 +4,7 @@ date: "2020-11-05"
 title: "Garage Shelves"
 author: "Brian Adriance"
 previewImage: "https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,w_800/blog-posts/garage-shelves/9FD4D24C-641D-4044-861D-0C16E74D8F94_cti7hr"
+tags: ["wood working", "garage", "small project", "shelves", "poplar", "painted"]
 ---
 
 ## Garages usually need more shelves

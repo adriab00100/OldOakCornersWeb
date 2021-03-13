@@ -44,6 +44,7 @@ export const latestPageQuery = graphql`
           date
           author
           previewImage
+          tags
         }
       }
     }

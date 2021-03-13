@@ -41,6 +41,7 @@ export const postQuery = graphql`
         author
         date
         previewImage
+        tags
       }
     }
   }

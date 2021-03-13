@@ -4,6 +4,7 @@ date: "2020-12-27"
 title: "Coffee Tables for Christmas"
 author: "Brian Adriance"
 previewImage: "https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,w_800/blog-posts/flag-coffeetables/IMG_0139_ighsvz"
+tags: ["wood working", "tables", "gifts", "pine"]
 ---
 
 ## Coffee Tables for Christmas

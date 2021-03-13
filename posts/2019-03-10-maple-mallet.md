@@ -4,6 +4,7 @@ date: "2019-03-10"
 title: "Maple Mallet"
 author: "Brian Adriance"
 previewImage: "https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,w_400/blog-posts/maple-mallet/IMG_2793_z7jifk"
+tags: ["wood working", "mallet", "maple", "found materials", "joinery"]
 ---
 
 # The making of a mallet

@@ -4,6 +4,7 @@ date: "2020-11-03"
 title: "Office Sun Blocker"
 author: "Brian Adriance"
 previewImage: "https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,w_800/blog-posts/sun-blocker/23778E4A-90AC-4754-B220-C03F57800622_gc5dkc"
+tags: ["wood working", "small project", "painted", "plywood"]
 ---
 
 ## A Glaring problem
