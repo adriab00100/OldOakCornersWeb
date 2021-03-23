@@ -12,13 +12,17 @@ const LatestPage = ({ data }) => {
   const slug = latestPost.frontmatter.path.substring(1);
 
   const disqusConfig = {
-    shortname: 'oldoakcorners',
+    shortname: "oldoakcorners",
     config: { identifier: slug },
   };
 
   return (
     <Layout>
-      <SEO title={`Latest - ${latestPost.frontmatter.title}`} datePublished={latestPost.frontmatter.date} previewImage={latestPost.frontmatter.previewImage} />
+      <SEO
+        title={`Latest - ${latestPost.frontmatter.title}`}
+        datePublished={latestPost.frontmatter.date}
+        previewImage={latestPost.frontmatter.previewImage}
+      />
       <PostContents post={latestPost} />
       <br />
       <PostNavigator previous={previousPost} />
@@ -28,28 +32,24 @@ const LatestPage = ({ data }) => {
   );
 };
 
-
 export const latestPageQuery = graphql`
-{
-  allMarkdownRemark(
-      sort: {fields: frontmatter___date, order: DESC},
-      limit: 2
-    ) {
-    edges {
-      node {
-        html
-        frontmatter {
-          path
-          title
-          date
-          author
-          previewImage
-          tags
+  {
+    allMarkdownRemark(sort: { fields: frontmatter___date, order: DESC }, limit: 2) {
+      edges {
+        node {
+          html
+          frontmatter {
+            path
+            title
+            date
+            author
+            previewImage
+            tags
+          }
         }
       }
     }
   }
-}
 `;
 
 export default LatestPage;

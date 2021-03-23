@@ -11,15 +11,14 @@ const PostContents = ({ post }) => {
         <div className="post-heading">
           <h1>{post.frontmatter.title}</h1>
           <h4>
-            Authored by {post.frontmatter.author} on{" "}
-            <time>{post.frontmatter.date}</time>
+            Authored by {post.frontmatter.author} on <time>{post.frontmatter.date}</time>
           </h4>
           <ul class="post-tags">
-            {
-            post.frontmatter.tags.map((tag) => (
-              <li><Link to={`/tags/${toKebabCase(tag)}`}>{tag}</Link></li>
-            ))
-            }
+            {post.frontmatter.tags.map(tag => (
+              <li>
+                <Link to={`/tags/${toKebabCase(tag)}`}>{tag}</Link>
+              </li>
+            ))}
           </ul>
         </div>
       </Container>

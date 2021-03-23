@@ -1,5 +1,5 @@
 import React from "react";
-import { graphql } from "gatsby"
+import { graphql } from "gatsby";
 import PostContents from "../components/post-contents";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
@@ -12,15 +12,18 @@ const BlogPost = ({ data, pageContext }) => {
   const { previous, next } = pageContext;
 
   const disqusConfig = {
-    shortname: 'oldoakcorners',
+    shortname: "oldoakcorners",
     config: { identifier: slug },
   };
 
   return (
     <Layout>
-      <SEO title={post.frontmatter.title} datePublished={post.frontmatter.date} 
-      description={post.excerpt}
-      previewImage={post.frontmatter.previewImage} />
+      <SEO
+        title={post.frontmatter.title}
+        datePublished={post.frontmatter.date}
+        description={post.excerpt}
+        previewImage={post.frontmatter.previewImage}
+      />
       <PostContents post={post} />
       <br />
       <PostNavigator next={next} previous={previous} />
