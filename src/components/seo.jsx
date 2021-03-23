@@ -27,7 +27,9 @@ function SEO({ description, lang, meta, title, datePublished, previewImage }) {
 
   const metaDescription = description || site.siteMetadata.description;
   const metaDatePublished = datePublished || "2020-06-28";
-  const metaPreviewImage = previewImage || "https://res.cloudinary.com/dgqmwqi0v/image/upload/f_auto,q_auto,w_800/site-assets/mallet_vfigwm.jpg";
+  const metaPreviewImage =
+    previewImage ||
+    "https://res.cloudinary.com/dgqmwqi0v/image/upload/f_auto,q_auto,w_800/site-assets/mallet_vfigwm.jpg";
 
   return (
     <Helmet
@@ -55,7 +57,7 @@ function SEO({ description, lang, meta, title, datePublished, previewImage }) {
         },
         {
           property: `og:image`,
-          content: metaPreviewImage
+          content: metaPreviewImage,
         },
         {
           name: `twitter:card`,
@@ -103,7 +105,7 @@ SEO.propTypes = {
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
   title: PropTypes.string.isRequired,
-  datePublished: PropTypes.string, 
+  datePublished: PropTypes.string,
   previewImage: PropTypes.string,
 };
 

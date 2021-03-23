@@ -20,13 +20,7 @@ const IndexPage = ({ data }) => (
         alt="Close up of hard maple wood grain"
         publicId="site-assets/wood-grain-hm_uk660z"
       >
-        <Transformation
-          width="1280"
-          height="220"
-          crop="scale"
-          fetchFormat="auto"
-          quality="auto"
-        />
+        <Transformation width="1280" height="220" crop="scale" fetchFormat="auto" quality="auto" />
       </Image>
       <h2>This is my blog about woodworking projects, thoughts, ideas. Look below for the latest few posts.</h2>
     </section>
@@ -36,10 +30,7 @@ const IndexPage = ({ data }) => (
 
 export const indexPageQuery = graphql`
   query BlogIndexQuery {
-    allMarkdownRemark(
-      sort: { order: DESC, fields: [frontmatter___date] }
-      limit: 10
-    ) {
+    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }, limit: 10) {
       edges {
         node {
           id

@@ -6,10 +6,10 @@ import { toKebabCase } from "../utilities/string-manipulations";
 
 const TagsPage = ({
   data: {
-    allMarkdownRemark: { group }
-  }
+    allMarkdownRemark: { group },
+  },
 }) => (
-    <Layout>
+  <Layout>
     <SEO title="All Tags" />
     <section>
       <h1>Tags</h1>

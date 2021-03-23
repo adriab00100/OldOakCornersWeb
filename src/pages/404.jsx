@@ -35,12 +35,7 @@ const NotFoundPage = () => (
             alt="An empty tool bag"
             publicId="site-assets/notFound_ipwmwf"
           >
-            <Transformation
-              width="440"
-              crop="scale"
-              fetchFormat="auto"
-              quality="auto"
-            />
+            <Transformation width="440" crop="scale" fetchFormat="auto" quality="auto" />
           </Image>
         </LazyLoad>
         <Container type="stacked" additionalClass="pls">

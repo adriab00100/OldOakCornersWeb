@@ -8,24 +8,21 @@ import Container from "../components/container";
 const Tags = ({ pageContext, data }) => {
   const { tag } = pageContext;
   const { edges, totalCount } = data.allMarkdownRemark;
-  const tagHeader = `${totalCount} post${
-    totalCount === 1 ? "" : "s"
-  } tagged with "${tag}"`;
+  const tagHeader = `${totalCount} post${totalCount === 1 ? "" : "s"} tagged with "${tag}"`;
 
   return (
     <Layout>
-        <SEO title={tagHeader} />
-        <Container type="centering">
-            <h1>{tagHeader}</h1>
-        </Container>
-        <PostListing posts={edges.map(p => p.node)} />
-        <Container type="centering">
-          <Link to="/tags">View full tag listing</Link>
-        </Container>
+      <SEO title={tagHeader} />
+      <Container type="centering">
+        <h1>{tagHeader}</h1>
+      </Container>
+      <PostListing posts={edges.map(p => p.node)} />
+      <Container type="centering">
+        <Link to="/tags">View full tag listing</Link>
+      </Container>
     </Layout>
   );
 };
-
 
 export default Tags;
 

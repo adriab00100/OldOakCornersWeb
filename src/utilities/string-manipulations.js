@@ -1,6 +1,5 @@
-
-const toKebabCase = (inputString) => {
-    return inputString.toLowerCase().replace(' ', '-')
+const toKebabCase = inputString => {
+  return inputString.toLowerCase().replace(" ", "-");
 };
 
 exports.toKebabCase = toKebabCase;
