@@ -21,8 +21,8 @@ This is nothing fancy. I already have the shelf brackets, now I need something t
 
 I have two places for a shelf - once is 6-foot long and the other just under 3. Picking up two boards and some nice white paint should do the trick.
 
-
 ### The build
+
 After I got the boards home I noticed the edges were a bit rough, and I had been watching some traditional woodcraft videos lately, so I busted out the hand plane to clean it up.
 
 ![Planing the edges](https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,w_2048/blog-posts/garage-shelves/40F2D810-DD22-4BFF-9E11-7B13D66792A4_zq1slm)
@@ -52,4 +52,5 @@ After the next shelf was all set, I again painted it, screwed the supports into 
 ![Little empty shelf](https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,w_2048/blog-posts/garage-shelves/DF64062C-BBF5-4930-A329-20F3334724E9_hkq3p4)
 
 ### The end
+
 Now I have more space in my garage to put stuff. I'm sure it will be filled in short order.

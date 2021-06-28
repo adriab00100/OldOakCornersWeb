@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "gatsby";
 import { Image, Transformation } from "cloudinary-react";
-import Layout from "../components/layout";
-import SEO from "../components/seo";
-import Container from "../components/container";
+import { Layout } from "../components/layout";
+import { SEO } from "../components/seo";
+import { Container } from "../components/container";
 import LazyLoad from "react-lazyload";
 import { cloudinaryCloudId } from "../images/constants";
 

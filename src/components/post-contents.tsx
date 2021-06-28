@@ -1,10 +1,15 @@
 import React from "react";
-import PropTypes from "prop-types";
-import Container from "./container";
+import { Container } from "./container";
 import { Link } from "gatsby";
 import { toKebabCase } from "../utilities/string-manipulations";
+import { Post } from "./post-types";
 
-const PostContents = ({ post }) => {
+export type PostContentsProps = {
+  post: Post;
+};
+
+export const PostContents = (props: PostContentsProps) => {
+  const { post } = props;
   return (
     <>
       <Container type="centering">
@@ -13,7 +18,7 @@ const PostContents = ({ post }) => {
           <h4>
             Authored by {post.frontmatter.author} on <time>{post.frontmatter.date}</time>
           </h4>
-          <ul class="post-tags">
+          <ul className="post-tags">
             {post.frontmatter.tags.map(tag => (
               <li>
                 <Link to={`/tags/${toKebabCase(tag)}`}>{tag}</Link>
@@ -28,9 +33,3 @@ const PostContents = ({ post }) => {
     </>
   );
 };
-
-PostContents.propTypes = {
-  post: PropTypes.object.isRequired,
-};
-
-export default PostContents;

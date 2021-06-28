@@ -2,9 +2,9 @@ import React from "react";
 import { Link } from "gatsby";
 import "./default-layout.scss";
 import "./site-footer.scss";
-import Container from "./container";
+import { Container } from "./container";
 
-const Footer = () => {
+export const Footer = () => {
   const year = new Date().getFullYear();
   return (
     <footer className="site-footer full-width-container">
@@ -25,5 +25,3 @@ const Footer = () => {
     </footer>
   );
 };
-
-export default Footer;

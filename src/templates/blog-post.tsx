@@ -1,12 +1,24 @@
 import React from "react";
 import { graphql } from "gatsby";
-import PostContents from "../components/post-contents";
-import Layout from "../components/layout";
-import SEO from "../components/seo";
-import PostNavigator from "../components/post-navigator";
+import { PostContents } from "../components/post-contents";
+import { Layout } from "../components/layout";
+import { SEO } from "../components/seo";
+import { PostNavigator } from "../components/post-navigator";
 import { DiscussionEmbed } from "disqus-react";
+import { Post } from "../components/post-types";
 
-const BlogPost = ({ data, pageContext }) => {
+export type BlogPostProps = {
+  data: {
+    markdownRemark: Post;
+  };
+  pageContext: {
+    previous?: Post;
+    next?: Post;
+  };
+};
+
+const BlogPost = (props: BlogPostProps) => {
+  const { data, pageContext } = props;
   const post = data.markdownRemark;
   const slug = post.frontmatter.path.substring(1);
   const { previous, next } = pageContext;

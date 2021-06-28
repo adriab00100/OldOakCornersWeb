@@ -1,9 +1,14 @@
 import React from "react";
-import PropTypes from "prop-types";
-import { Link } from "gatsby";
 import "./default-layout.scss";
+import { Link } from "gatsby";
+import { Post } from "./post-types";
 
-const PostListing = ({ posts }) => {
+export type PostListingProps = {
+  posts: Post[];
+};
+
+export const PostListing = (props: PostListingProps) => {
+  const { posts } = props;
   return (
     <section className="blog-listing">
       {posts.map(post => (
@@ -13,7 +18,7 @@ const PostListing = ({ posts }) => {
               <h3>{post.frontmatter.title}</h3>
             </Link>
             <small>
-              {post.frontmatter.author} on <date>{post.frontmatter.date}</date>
+              {post.frontmatter.author} on {post.frontmatter.date}
             </small>
             <p>{post.excerpt}</p>
             <Link className="preview-read-more" to={post.frontmatter.path}>
@@ -25,9 +30,3 @@ const PostListing = ({ posts }) => {
     </section>
   );
 };
-
-PostListing.propTypes = {
-  posts: PropTypes.array.isRequired,
-};
-
-export default PostListing;

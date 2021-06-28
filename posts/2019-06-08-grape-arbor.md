@@ -87,4 +87,3 @@ Secondly, I wish I had large clamps when I was building those side ladders, it w
 I also dropped a bag of cement and it split open and spilled all over the place. Ugh.
 
 All in all though, it went well and I am pretty happy with it!
-

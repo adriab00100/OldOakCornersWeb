@@ -1,12 +1,23 @@
 import React from "react";
 import { graphql } from "gatsby";
 import { Image, Transformation } from "cloudinary-react";
-import Layout from "../components/layout";
-import SEO from "../components/seo";
-import PostListing from "../components/post-listing";
+import { Layout } from "../components/layout";
+import { SEO } from "../components/seo";
+import { PostListing } from "../components/post-listing";
 import { cloudinaryCloudId } from "../images/constants";
+import { Post } from "../components/post-types";
 
-const IndexPage = ({ data }) => (
+export type IndexPageProps = {
+  data: {
+    allMarkdownRemark: {
+      edges: {
+        node: Post;
+      }[];
+    };
+  };
+};
+
+export const IndexPage = (props: IndexPageProps) => (
   <Layout>
     <SEO title="Home" />
     <section className="text-image">
@@ -24,7 +35,7 @@ const IndexPage = ({ data }) => (
       </Image>
       <h2>This is my blog about woodworking projects, thoughts, ideas. Look below for the latest few posts.</h2>
     </section>
-    <PostListing posts={data.allMarkdownRemark.edges.map(p => p.node)} />
+    <PostListing posts={props.data.allMarkdownRemark.edges.map(p => p.node)} />
   </Layout>
 );
 
@@ -46,5 +57,3 @@ export const indexPageQuery = graphql`
     }
   }
 `;
-
-export default IndexPage;

@@ -10,7 +10,8 @@ tags: ["wood working", "small project", "painted", "plywood"]
 ## A Glaring problem
 
 ### The problem
-In the era of COVID19 I am glad I am able to work from the comfort of my own home. I have a spare bedroom that I've converted into an office. However, I have 
+
+In the era of COVID19 I am glad I am able to work from the comfort of my own home. I have a spare bedroom that I've converted into an office. However, I have
 West-facing windows and in the afternoon the glare can be substantial. The builder also decided to add an artistic embellishment to the windows be means of a
 half-circle extra window above the main windows. If that sounds hard to picture, later images will clear it up. I have good blinds that darken the sun for the main
 window elements, but everything I could find online or in-store for the extra half-circle just wouldn't do. I didn't want something permanent, and I wanted something that was able to totally block the light, not just filter it.
@@ -41,7 +42,7 @@ I don't really love painting, but I gave each side a nice coat of white paint, l
 
 If I am going to be putting this thing up and taking it down, I don't want to have to fuss around with it, so I grabbed a nice cabinet pull that matched the rest of the hardware in my house (brushed nickel). Once I got it home I realized that even the short screws provided were way too long for this application. Fortunately, I have a Dremel with carbide disks meant for cutting through metal. I held on to the screw head with insulated gloves and got to cutting.
 
-Again, I got so caught up in things I forgot to take pictures, but one issue I had is that cutting the screw messed up the thread at the very end. Rather than trying to deal with that I carefully used the cutting disk to smooth down the end of the screw so that the diameter was smaller and tapered up to full size. Problem solved! Thread was barely altered, and it screwed right in. 
+Again, I got so caught up in things I forgot to take pictures, but one issue I had is that cutting the screw messed up the thread at the very end. Rather than trying to deal with that I carefully used the cutting disk to smooth down the end of the screw so that the diameter was smaller and tapered up to full size. Problem solved! Thread was barely altered, and it screwed right in.
 
 I did a quick check on layout to see if vertical or horizontal would be more useful for the handle and decided on vertical. I don't love how it looks, but is easier to grab on to where it is used than in a horizontal layout.
 
@@ -54,10 +55,13 @@ After I put it all together it was night time so I couldn't try it out, and then
 It works pretty darn well, but I might have to trim a bit on a few tight places.
 
 ### Mistakes
+
 Ahh, yes, there are always mistakes. What did we have this time?
 
 #### Warping after painting
+
 I measured and trimmed and got everything to size before painting, but this is 1/4" plywood. Painting it made it change shape just a little bit, but it was enough to not fit well into the window shape after it dried from the two coats of paint on either side. After I painted it, I had to re-trim and hit it with my rasp in several places so it would fit again. I don't really like paint.
 
 ### The end!
+
 That's all for this little thing; until next time. Thanks for reading!

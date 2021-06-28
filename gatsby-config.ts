@@ -3,7 +3,7 @@ module.exports = {
     title: `Old Oak Corners`,
     description: `A blog where Brian shares wood-working thoughts, ideas, and projects.`,
     author: `Brian Adriance`,
-    siteUrl: `https://www.brianadriance.com`
+    siteUrl: `https://www.brianadriance.com`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -82,8 +82,8 @@ module.exports = {
                   url: site.siteMetadata.siteUrl + edge.node.frontmatter.path,
                   guid: site.siteMetadata.siteUrl + edge.node.frontmatter.path,
                   custom_elements: [{ "content:encoded": edge.node.html }],
-                })
-              })
+                });
+              });
             },
             query: `
               {
@@ -107,9 +107,9 @@ module.exports = {
             output: "/rss.xml",
             title: "Old Oak Corners' RSS Feed",
           },
-        ]
-      }
+        ],
+      },
     },
-    `gatsby-plugin-sitemap`
+    `gatsby-plugin-sitemap`,
   ],
 };

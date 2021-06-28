@@ -1,9 +1,15 @@
 import React from "react";
-import PropTypes from "prop-types";
-import { Link } from "gatsby";
 import "./default-layout.scss";
+import { Link } from "gatsby";
+import { Frontmatter } from "./post-types";
 
-const PostNavigator = ({ next, previous }) => {
+export type PostNavigatorProps = {
+  next?: { frontmatter: Frontmatter };
+  previous?: { frontmatter: Frontmatter };
+};
+
+export const PostNavigator = (props: PostNavigatorProps) => {
+  const { next, previous } = props;
   return (
     <nav aria-label="Previous and/or next post">
       <ul className="page-navigator">
@@ -27,10 +33,3 @@ const PostNavigator = ({ next, previous }) => {
     </nav>
   );
 };
-
-PostNavigator.propTypes = {
-  next: PropTypes.object,
-  previous: PropTypes.object,
-};
-
-export default PostNavigator;

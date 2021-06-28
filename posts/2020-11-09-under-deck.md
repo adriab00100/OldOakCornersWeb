@@ -8,6 +8,7 @@ tags: ["carpentry", "exterior", "deck", "vinyl"]
 ---
 
 ## Under the deck
+
 This project took three **years**.
 
 Our house is built on a hill. The back-yard is lower than the front by the height of one floor, and the deck comes off the back of the house. This means I've got a rectangular space under the deck that is perfect for storing stuff. For a while I used this space for general storage, totally unorganized, and just mixed up together.
@@ -28,13 +29,13 @@ Unfortunately I don't have a bunch of pictures of my dad and I building it, but 
 
 ![From the inside](https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,w_2048/blog-posts/under-deck/IMG_20180506_130128083_eclblz)
 
-It took a full weekend of work, but thanks to my dad's seemingly-magical ability to just make things work we were able to get it all done without a problem. 
+It took a full weekend of work, but thanks to my dad's seemingly-magical ability to just make things work we were able to get it all done without a problem.
 
 Here we can see a nice front-on view after I started the _next_ stage of the project.
 
 ![Front view](https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,w_2048/blog-posts/under-deck/IMG_0074_dsetm4)
 
-After the shed was all set, Natallia asked if we could dress up the outside with some lattice. 
+After the shed was all set, Natallia asked if we could dress up the outside with some lattice.
 
 ### The Lattice
 
@@ -60,7 +61,7 @@ Sometimes when you work you upset the residents. I disturbed this little snake w
 
 ![Little snake](https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,w_2048/blog-posts/under-deck/EF1BFEDF-F1D6-4CDF-89A7-B779273C9EF0_gmvpm7)
 
-I started on the easiest side and worked my way around. I knew the front would be tricky because I was going to put a double door in, and the stairs would be tricky because of the angles involved. 
+I started on the easiest side and worked my way around. I knew the front would be tricky because I was going to put a double door in, and the stairs would be tricky because of the angles involved.
 
 ![Working the front](https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,w_2048/blog-posts/under-deck/IMG_4218_vxmvab)
 
@@ -70,7 +71,7 @@ Sometimes putting the lattice in can be a pain because it is floppy and tries to
 
 ![Much of the front is done](https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,w_2048/blog-posts/under-deck/IMG_4555_rr88np)
 
-It was a total pain to cut everything to the right size. I used hedge trimmer shears to cut the lattice in most cases, and had to measure-and-check often. What I thought I could get done quickly frequently took far longer than I had hoped. 
+It was a total pain to cut everything to the right size. I used hedge trimmer shears to cut the lattice in most cases, and had to measure-and-check often. What I thought I could get done quickly frequently took far longer than I had hoped.
 
 After the front was done, I wanted to get the back side done, so it looked good, leaving a little door to access behind the shed, and a large space to access under the stairs storage.
 

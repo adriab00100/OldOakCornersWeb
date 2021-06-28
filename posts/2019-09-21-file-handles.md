@@ -41,5 +41,5 @@ I intentionally experimented with slightly different shapes for the handles to s
 
 Not too many mistakes were made in this build since it was pretty straightforward, but I figured I might as well list things I wasn't perfectly happy with.
 
-* Holes were not __perfectly__ centered
-* Files were not perfectly in line with grip on all axes
+- Holes were not **perfectly** centered
+- Files were not perfectly in line with grip on all axes

@@ -1,8 +1,8 @@
 import React from "react";
-import Container from "../components/container";
-import Layout from "../components/layout";
-import SEO from "../components/seo";
-import ExternalLink from "../components/external-link";
+import { Container } from "../components/container";
+import { Layout } from "../components/layout";
+import { SEO } from "../components/seo";
+import { ExternalLink } from "../components/external-link";
 import { Image, Transformation } from "cloudinary-react";
 import { cloudinaryCloudId } from "../images/constants";
 
