@@ -36,7 +36,7 @@ const Archive = (props: ArchiveProps) => {
           <ul className="pages-listing">
             {pages.map(page => {
               return (
-                <li>
+                <li key={page}>
                   {currentPage === page ? (
                     <span className="current-page">{page}</span>
                   ) : (

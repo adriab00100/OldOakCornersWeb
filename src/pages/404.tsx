@@ -39,9 +39,9 @@ const NotFoundPage = () => (
           </Image>
         </LazyLoad>
         <Container type="stacked" additionalClass="pls">
-          <h2>There's nothing here</h2>
+          <h2>There&apos;s nothing here</h2>
           <span>
-            Unfortunately the page you're trying to visit doesn't seem to exist.
+            Unfortunately the page you&apos;re trying to visit doesn&apos;t seem to exist.
             <br />
             Try going back to the <Link to="/">home page</Link> instead.
           </span>

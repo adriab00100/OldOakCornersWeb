@@ -20,7 +20,7 @@ export const PostContents = (props: PostContentsProps) => {
           </h4>
           <ul className="post-tags">
             {post.frontmatter.tags.map(tag => (
-              <li>
+              <li key={tag}>
                 <Link to={`/tags/${toKebabCase(tag)}`}>{tag}</Link>
               </li>
             ))}

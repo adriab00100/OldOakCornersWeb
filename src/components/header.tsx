@@ -1,6 +1,7 @@
 import { Link } from "gatsby";
 import React from "react";
-import Logo from "../images/logo.svg";
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const Logo = require("../images/logo.svg");
 import "./site-header.scss";
 
 export type HeaderProps = {

@@ -19,7 +19,7 @@ const AboutPage = () => (
           for their own needs.
         </p>
         <p>
-          Any advice I provide, or designs I share are free to use at your own risk. I'm not an expert, and not a
+          Any advice I provide, or designs I share are free to use at your own risk. I&apos;m not an expert, and not a
           professional, but I sure do love the craft!
         </p>
       </section>
@@ -27,12 +27,12 @@ const AboutPage = () => (
         <h2>About Brian</h2>
         <p>
           As a kid I told my parents I want to be a carpenter when I grew up. They were understandably skeptical about
-          that. After all how many five-year-olds follow through and become what they say they want to be? I'm pretty
-          sure I've also wanted to be an astronomer, astronaut, fiction author, and at least several other things.
+          that. After all how many five-year-olds follow through and become what they say they want to be? I&apos;m pretty
+          sure I&apos;ve also wanted to be an astronomer, astronaut, fiction author, and at least several other things.
         </p>
         <p>
           Largely my dreams of carpentry had faded away by the time college came around, and I turned myself into a
-          software engineer. Building software is interesting and fun, but you can't reach out and touch it. One of my
+          software engineer. Building software is interesting and fun, but you can&apos;t reach out and touch it. One of my
           former co-workers, Scott, was an avid woodworking hobbyist and he rekindled my interest in building stuff out
           of wood. Most of my projects these days might fall more under the area of joinery, but I also have worked on a
           few projects that might fall under carpentry.
@@ -40,10 +40,10 @@ const AboutPage = () => (
       </section>
       <section>
         <h2>Inspirations</h2>
-        <p>Several amazing wood-crafters have inspired me to build and create, and I'll list some of them here.</p>
+        <p>Several amazing wood-crafters have inspired me to build and create, and I&apos;ll list some of them here.</p>
         <ul>
           <li>
-            <ExternalLink href="https://www.pbs.org/woodwrightsshop/">The Woodwright's Shop</ExternalLink> with Roy
+            <ExternalLink href="https://www.pbs.org/woodwrightsshop/">The Woodwright&apos;s Shop</ExternalLink> with Roy
             Underhill
           </li>
           <li>
@@ -65,7 +65,7 @@ const AboutPage = () => (
         <Container type="side-by-side">
           <div>
             <p>
-              I've used a combination of <ExternalLink href="https://www.gatsbyjs.org/">Gatsby</ExternalLink> and{" "}
+              I&apos;ve used a combination of <ExternalLink href="https://www.gatsbyjs.org/">Gatsby</ExternalLink> and{" "}
               <ExternalLink href="https://reactjs.org/">React</ExternalLink> for this blog, while I am storing the code
               in a <ExternalLink href="https://github.com/adriab00100/OldOakCornersWeb">github repository</ExternalLink>
               . I am hosting the website on <ExternalLink href="https://www.netlify.com/">Netlify</ExternalLink> and

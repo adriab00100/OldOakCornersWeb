@@ -22,7 +22,7 @@ export const IndexPage = (props: IndexPageProps) => (
     <SEO title="Home" />
     <section className="text-image">
       <div className="text-image-top-left">
-        <h1 className="extra-large">Welcome to Old Oak Corners, Brian's hobbyist workshop</h1>
+        <h1 className="extra-large">Welcome to Old Oak Corners, Brian&apos;s hobbyist workshop</h1>
       </div>
       <Image
         cloudName={cloudinaryCloudId}

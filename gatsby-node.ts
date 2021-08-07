@@ -1,5 +1,5 @@
-const path = require("path");
-const { toKebabCase } = require("./src/utilities/string-manipulations");
+import path from "path";
+import { toKebabCase } from "./src/utilities/string-manipulations";
 
 exports.createPages = async ({ actions, graphql }) => {
   const { createPage } = actions;
@@ -63,11 +63,7 @@ exports.createPages = async ({ actions, graphql }) => {
   const postTemplate = path.resolve("src/templates/blog-post.jsx");
   const archiveTemplate = path.resolve("src/templates/archive.jsx");
   const tagsTemplate = path.resolve("src/templates/tags.jsx");
-  const [postGraph, archiveGraph, tagsGraph] = await Promise.all([
-    postTemplateQuery,
-    archiveTemplateQuery,
-    tagTemplateQuery,
-  ]);
+  const [postGraph, archiveGraph, tagsGraph] = await Promise.all([postTemplateQuery, archiveTemplateQuery, tagTemplateQuery]);
   if (postGraph.errors || archiveGraph.errors || tagsGraph.errors) {
     return Promise.reject([...postGraph.errors, ...archiveGraph.errors, ...tagsGraph.errors]);
   }
