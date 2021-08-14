@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 module.exports = {
   siteMetadata: {
     title: `Old Oak Corners`,

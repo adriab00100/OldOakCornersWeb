@@ -1,5 +1,6 @@
-import path from "path";
-import { toKebabCase } from "./src/utilities/string-manipulations";
+/* eslint-disable @typescript-eslint/no-var-requires, no-undef */
+const path = require("path");
+const toKebabCase = require("./dist/utilities/string-manipulations");
 
 exports.createPages = async ({ actions, graphql }) => {
   const { createPage } = actions;

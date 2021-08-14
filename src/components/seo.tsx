@@ -83,7 +83,7 @@ export const SEO = (seoProps: SeoProps) => {
           name: `twitter:description`,
           content: metaDescription,
         },
-      ].concat(meta)}
+      ].concat(meta ?? [])}
     >
       <script type="application/ld+json">
         {`{
