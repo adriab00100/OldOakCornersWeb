@@ -4,18 +4,16 @@ date: "2020-12-27"
 title: "Coffee Tables for Christmas"
 author: "Brian Adriance"
 previewImage: "https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,w_800/blog-posts/flag-coffeetables/IMG_0139_ighsvz"
-tags: ["wood working", "tables", "gifts", "pine"]
+tags: ["wood working", "tables", "gift", "pine", "american flag"]
 ---
 
 ## Coffee Tables for Christmas
 
-Am I practiced enough to give away my furniture constructions as Christmas gifts to family? Lets find out. 
-
-
+Am I practiced enough to give away my furniture constructions as Christmas gifts to family? Lets find out.
 
 ### Planning
 
-Even in the summer of COVID19, we sometimes risked some (very) small (mostly outdoor) gatherings of family. During one of these visits someone encountered this table at my cousin's house and snapped a picture. 
+Even in the summer of COVID19, we sometimes risked some (very) small (mostly outdoor) gatherings of family. During one of these visits someone encountered this table at my cousin's house and snapped a picture.
 
 ![The inspiration table](https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,w_1024/blog-posts/flag-coffeetables/IMG_0026_bjh1db)
 
@@ -107,7 +105,7 @@ Next step was yet another trial assembly to make sure everything would fit okay 
 
 ![Trial assembly lower level](https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,w_2048/blog-posts/flag-coffeetables/IMG_0146_uc2ae5)
 
-I used my table saw to cut something like 40 cuts in each support for the 18 lower level strips to sit on. I decided to let the lower level surface sit above the support boards by about 1/4 inch to give it some more interest to look at. After I cut the supports, I used a chisel to pop out the excess. 
+I used my table saw to cut something like 40 cuts in each support for the 18 lower level strips to sit on. I decided to let the lower level surface sit above the support boards by about 1/4 inch to give it some more interest to look at. After I cut the supports, I used a chisel to pop out the excess.
 
 ![Chisel excess](https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,w_2048/blog-posts/flag-coffeetables/IMG_0147_g8ubqx)
 
@@ -127,7 +125,7 @@ After the glue was finally set for all the strips on the lower level It was time
 
 #### Finishing
 
-I painted the stars on by using a plastic template Natallia found online, and using more whitewash. 
+I painted the stars on by using a plastic template Natallia found online, and using more whitewash.
 
 ![Star painting](https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,w_2048/blog-posts/flag-coffeetables/IMG_0159_qio46o)
 
@@ -163,9 +161,9 @@ Who needs adapters? Duct tape to the rescue to help pull wood dust out of my saw
 
 ![Duct tape adapter](https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,w_2048/blog-posts/flag-coffeetables/IMG_0133_wbc9rt)
 
-As a side note, I really wish I could buy a new dust mask. Since COVID started, these things are impossible to find. Anyway, since I had just built one table I knew exactly what I would need to build another so I cut all the boards ahead of time. 
+As a side note, I really wish I could buy a new dust mask. Since COVID started, these things are impossible to find. Anyway, since I had just built one table I knew exactly what I would need to build another so I cut all the boards ahead of time.
 
-Well, almost. I somehow ended up with three support pieces for under the table surface instead of four. Fortunately I keep a lot of scraps from other projects and found a piece of red oak that would get the job done. 
+Well, almost. I somehow ended up with three support pieces for under the table surface instead of four. Fortunately I keep a lot of scraps from other projects and found a piece of red oak that would get the job done.
 
 Now that things were coming together, lots more toasting of wood followed. After this next picture was taken I actually put on my respirator. I figured breathing in even the little smoke that this produced wouldn't be precisely good for my lungs.
 
@@ -185,7 +183,7 @@ Three coats of polyurethane, even in a vented area, can really be unpleasant. I 
 
 ### The Final Product
 
-I was able to get both tables done in time for the second table to sit and cure for a few days before christmas. This was very important, because it would be rather unpleasant to drive three hours with a strong smell of polyurethane as the second table off-gassed the volatiles. 
+I was able to get both tables done in time for the second table to sit and cure for a few days before christmas. This was very important, because it would be rather unpleasant to drive three hours with a strong smell of polyurethane as the second table off-gassed the volatiles.
 
 ![Christmas tables](https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,w_2048/blog-posts/flag-coffeetables/IMG_0293_ozkqsp)
 
@@ -197,9 +195,9 @@ If you've read some of my other posts you know I don't shy away from mistakes. I
 
 #### The notable ones
 
-* **Miters.** Oh man, 45 degree angle cuts are a pain. I managed to make every single one of them _almost_ right, but not quite there. In most cases I was able to hide the poor cuts with some sanding, but in the one case, as I mentioned above, I turned a mistake into a feature!
-* **Star bleed.** The stars bled under the template and got fuzzy and blurry looking. I tried to carefully dab the whitewash on for the next table to avoid that, but it still happened. I think if I use even less next time, and do two coats, it would work out better.
-* **Poor fit on the lower level.** On the first table I cut the spaces for the lower level slats a little too big so there was a tiny gap when I glued them in place. On the second table they were just a tiny bit too small and I had to adjust a few of them. I also managed to break a few of the spacers off and had to glue them back on. Also, I managed to cut a few of the slats about 1/32 of an inch too short, and amazingly you can tell since they don't fit flush with the support.
+- **Miters.** Oh man, 45 degree angle cuts are a pain. I managed to make every single one of them _almost_ right, but not quite there. In most cases I was able to hide the poor cuts with some sanding, but in the one case, as I mentioned above, I turned a mistake into a feature!
+- **Star bleed.** The stars bled under the template and got fuzzy and blurry looking. I tried to carefully dab the whitewash on for the next table to avoid that, but it still happened. I think if I use even less next time, and do two coats, it would work out better.
+- **Poor fit on the lower level.** On the first table I cut the spaces for the lower level slats a little too big so there was a tiny gap when I glued them in place. On the second table they were just a tiny bit too small and I had to adjust a few of them. I also managed to break a few of the spacers off and had to glue them back on. Also, I managed to cut a few of the slats about 1/32 of an inch too short, and amazingly you can tell since they don't fit flush with the support.
 
 ### That's all for now
 
