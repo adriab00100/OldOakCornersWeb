@@ -3,7 +3,7 @@ path: "/dads-bar-cart"
 date: "2021-08-11"
 title: "Dad's Bar Cart"
 author: "Brian Adriance"
-previewImage: "https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,w_800/blog-posts/dad-bar-cart/IMG_2445_-_Copy_ryrllb"
+previewImage: "https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,w_800/blog-posts/dad-bar-cart/IMG_2445_ryrllb"
 tags: ["wood working", "poplar", "american flag", "gift"]
 ---
 
