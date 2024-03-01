@@ -1,27 +1,31 @@
 /* eslint-disable no-undef */
-module.exports = {
+import type { GatsbyConfig } from "gatsby";
+
+const config: GatsbyConfig = {
   siteMetadata: {
-    title: `Old Oak Corners`,
-    description: `A blog where Brian shares wood-working thoughts, ideas, and projects.`,
+    title: `Brian Adriance's Personal Website`,
+    description: "Brian's presence on the web",
     author: `Brian Adriance`,
     siteUrl: `https://www.brianadriance.com`,
   },
+  graphqlTypegen: true,
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-catch-links`,
+    //'gatsby-plugin-mdx', markdown react plugin
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
+        path: `./src/images`,
       },
     },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Brian Adriance Personal Website`,
+        short_name: `brian-adriance-web`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
@@ -106,7 +110,7 @@ module.exports = {
               }
             `,
             output: "/rss.xml",
-            title: "Old Oak Corners' RSS Feed",
+            title: "Brian Adriance's Blog RSS Feed",
           },
         ],
       },
@@ -114,3 +118,5 @@ module.exports = {
     `gatsby-plugin-sitemap`,
   ],
 };
+
+export default config;

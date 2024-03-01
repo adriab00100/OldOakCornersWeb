@@ -1,15 +1,14 @@
 export type Frontmatter = {
-  path: string;
-  date: string;
-  title: string;
-  author: string;
-  previewImage: string;
-  tags: string[];
+  readonly path: string | null;
+  readonly date: string | null;
+  readonly title: string | null;
+  readonly author: string | null;
+  readonly previewImage: string | null;
+  readonly tags: readonly (string | null)[] | null;
 };
 
 export type Post = {
-  frontmatter: Frontmatter;
-  id: string;
-  excerpt: string;
-  html: string;
+  readonly frontmatter: Frontmatter | null;
+  readonly excerpt: string | null;
+  readonly html: string | null;
 };

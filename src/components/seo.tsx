@@ -1,6 +1,6 @@
+import { graphql, useStaticQuery } from "gatsby";
 import React from "react";
 import { Helmet } from "react-helmet";
-import { useStaticQuery, graphql } from "gatsby";
 
 export type MetaType = {
   name: string;
@@ -8,36 +8,32 @@ export type MetaType = {
 };
 
 export type SeoProps = {
-  description?: string;
-  lang?: string;
-  meta?: MetaType[];
+  description: string | null;
+  lang?: string | null;
+  meta?: MetaType[] | null;
   title: string;
-  datePublished?: string;
-  previewImage?: string;
+  datePublished: string | null;
+  previewImage: string | null;
 };
 
 export const SEO = (seoProps: SeoProps) => {
-  const { site } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            description
-            author
-          }
+  const { site } = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          title
+          description
+          author
         }
       }
-    `
-  );
+    }
+  `);
   const { description, meta, title, datePublished, previewImage } = seoProps;
   const lang = seoProps.lang ?? "en";
 
   const metaDescription = description || (site.siteMetadata.description as string);
   const metaDatePublished = datePublished || "2020-06-28";
-  const metaPreviewImage =
-    previewImage ||
-    "https://res.cloudinary.com/dgqmwqi0v/image/upload/f_auto,q_auto,w_800/site-assets/mallet_vfigwm.jpg";
+  const metaPreviewImage = previewImage || "https://res.cloudinary.com/dgqmwqi0v/image/upload/f_auto,q_auto,w_800/site-assets/mallet_vfigwm.jpg";
 
   return (
     <Helmet

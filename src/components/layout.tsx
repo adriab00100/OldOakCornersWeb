@@ -1,11 +1,11 @@
-import React from "react";
-import { useStaticQuery, graphql } from "gatsby";
-import { Header } from "./header";
-import { Footer } from "./footer";
+import { graphql, useStaticQuery } from "gatsby";
+import React, { ReactNode } from "react";
 import "./default-layout.scss";
+import { Footer } from "./footer";
+import { Header } from "./header";
 
 export type LayoutProps = {
-  children: React.ReactNode | React.ReactNode[];
+  children: ReactNode | ReactNode[];
 };
 
 export const Layout = (props: LayoutProps) => {

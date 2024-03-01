@@ -27,11 +27,7 @@ const LatestPage = (props: LatestPageProps) => {
 
   return (
     <Layout>
-      <SEO
-        title={`Latest - ${latestPost.frontmatter.title}`}
-        datePublished={latestPost.frontmatter.date}
-        previewImage={latestPost.frontmatter.previewImage}
-      />
+      <SEO title={`Latest - ${latestPost.frontmatter.title}`} datePublished={latestPost.frontmatter.date} previewImage={latestPost.frontmatter.previewImage} />
       <PostContents post={latestPost} />
       <br />
       <PostNavigator previous={previousPost} />

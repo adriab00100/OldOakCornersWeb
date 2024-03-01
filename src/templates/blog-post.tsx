@@ -1,16 +1,14 @@
-import React from "react";
-import { graphql } from "gatsby";
-import { PostContents } from "../components/post-contents";
-import { Layout } from "../components/layout";
-import { SEO } from "../components/seo";
-import { PostNavigator } from "../components/post-navigator";
 import { DiscussionEmbed } from "disqus-react";
+import { graphql } from "gatsby";
+import React from "react";
+import { Layout } from "../components/layout";
+import { PostContents } from "../components/post-contents";
+import { PostNavigator } from "../components/post-navigator";
 import { Post } from "../components/post-types";
+import { SEO } from "../components/seo";
 
 export type BlogPostProps = {
-  data: {
-    markdownRemark: Post;
-  };
+  data: Queries.BlogPostByPathQuery;
   pageContext: {
     previous?: Post;
     next?: Post;
@@ -20,9 +18,15 @@ export type BlogPostProps = {
 const BlogPost = (props: BlogPostProps) => {
   const { data, pageContext } = props;
   const post = data.markdownRemark;
-  const slug = post.frontmatter.path.substring(1);
+  const slug = post?.frontmatter?.path?.substring(1) ?? "broken-slug";
   const { previous, next } = pageContext;
-
+  if (!post?.frontmatter) {
+    return (
+      <>
+        <h2>Something went wrong</h2>
+      </>
+    );
+  }
   const disqusConfig = {
     shortname: "oldoakcorners",
     config: { identifier: slug },
@@ -30,22 +34,17 @@ const BlogPost = (props: BlogPostProps) => {
 
   return (
     <Layout>
-      <SEO
-        title={post.frontmatter.title}
-        datePublished={post.frontmatter.date}
-        description={post.excerpt}
-        previewImage={post.frontmatter.previewImage}
-      />
+      <SEO title={post.frontmatter.title ?? "Untitled"} datePublished={post.frontmatter.date} description={post.excerpt} previewImage={post.frontmatter.previewImage} />
       <PostContents post={post} />
       <br />
-      <PostNavigator next={next} previous={previous} />
+      <PostNavigator next={next?.frontmatter} previous={previous?.frontmatter} />
       <hr />
       <DiscussionEmbed {...disqusConfig} />
     </Layout>
   );
 };
 
-export const postQuery = graphql`
+export const pageQuery = graphql`
   query BlogPostByPath($path: String!) {
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html

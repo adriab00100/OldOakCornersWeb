@@ -1,23 +1,10 @@
-import React from "react";
-import { Link } from "gatsby";
 import { Image, Transformation } from "cloudinary-react";
+import { Link } from "gatsby";
+import React from "react";
+import { Container } from "../components/container";
 import { Layout } from "../components/layout";
 import { SEO } from "../components/seo";
-import { Container } from "../components/container";
-import LazyLoad from "react-lazyload";
 import { cloudinaryCloudId } from "../images/constants";
-
-const placeholderImage = () => (
-  <Image
-    cloudName={cloudinaryCloudId}
-    secure="true"
-    width="40"
-    alt="An empty tool bag"
-    publicId="site-assets/notFound_ipwmwf"
-  >
-    <Transformation width="40" crop="scale" fetchFormat="auto" quality="auto" />
-  </Image>
-);
 
 const NotFoundPage = () => (
   <Layout>
@@ -27,17 +14,9 @@ const NotFoundPage = () => (
     </Container>
     <Container type="centering">
       <Container type="side-by-side">
-        <LazyLoad height={330} once={true} placeholder={placeholderImage}>
-          <Image
-            cloudName={cloudinaryCloudId}
-            secure="true"
-            width="440"
-            alt="An empty tool bag"
-            publicId="site-assets/notFound_ipwmwf"
-          >
-            <Transformation width="440" crop="scale" fetchFormat="auto" quality="auto" />
-          </Image>
-        </LazyLoad>
+        <Image cloudName={cloudinaryCloudId} secure="true" width="440" alt="An empty tool bag" publicId="site-assets/notFound_ipwmwf">
+          <Transformation width="440" crop="scale" fetchFormat="auto" quality="auto" />
+        </Image>
         <Container type="stacked" additionalClass="pls">
           <h2>There&apos;s nothing here</h2>
           <span>
