@@ -78,7 +78,7 @@ export const createPages: GatsbyNode["createPages"] = async ({ actions, graphql 
         path: postPath,
         component: postTemplate,
         context: {
-          path: postPath,
+          postPath: postPath,
           previous,
           next,
         },

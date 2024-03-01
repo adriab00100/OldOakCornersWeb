@@ -45,8 +45,8 @@ const BlogPost = (props: BlogPostProps) => {
 };
 
 export const pageQuery = graphql`
-  query BlogPostByPath($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
+  query BlogPostByPath($postPath: String!) {
+    markdownRemark(frontmatter: { path: { eq: $postPath } }) {
       html
       excerpt
       frontmatter {
