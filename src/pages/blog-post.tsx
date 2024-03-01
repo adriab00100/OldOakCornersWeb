@@ -1,5 +1,5 @@
 import React from "react";
 
-export const BlogPost = () => {
+export default () => {
   return <div />;
 };
