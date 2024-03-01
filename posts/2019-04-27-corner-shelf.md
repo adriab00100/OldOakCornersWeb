@@ -14,6 +14,7 @@ I initially built a small bookshelf for Alex when he was even smaller, but he qu
 ![Ready set go](https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,w_2048/blog-posts/cornershelf/IMG_20180224_220002586_eylilc)
 
 ## The design
+
 I had some physical constraints that helped me determine how large the shelf would be: there was a light switch I couldn't block, and the corner was only so large. Oh, and the books! Some of Alex's books were quite tall and I wanted to be able to accommodate most of them.
 
 For the materials I decided to go simple and cheap. White pine legs, some poplar I had and plywood I already had around for the case sides (it was 3/4 inch red oak). I also ended up going with 1/2 inch birch plywood for the shelves and top, with 1/4 inch backing.
@@ -26,6 +27,7 @@ I wanted thick legs, though so I laminated two pieces of the pine together to ma
 ![Laminating legs 2](https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,w_1024/blog-posts/cornershelf/IMG_20180224_221847074_cbafmg)
 
 ## The build
+
 I started with the case sides which I decided to make as a frame, with the plywood screwed onto from the inside to hide the screws. I started with a mortise and tenon for the frame.
 
 ![Mortise and tenon marking](https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,w_2048/blog-posts/cornershelf/IMG_20180317_152624878_l2jhs5)
@@ -77,7 +79,7 @@ After a lot of wriggling around on the floor and bending my arms into weird angl
 
 ![Shelves!](https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,w_2048/blog-posts/cornershelf/IMG_3659_kz5rfg)
 
-Once I got the shelves on, I cut and nailed the 1/4 inch thick backing plywood. I did drill tiny pilot holes for the nails because I was nailing close to the edge and didn't want any splits. After the back went on, it was time to put veneer on all the exposed plywood edges. I had 3/4 inch veneer strips for 1/2 inch plywood. Much trimming ensued. 
+Once I got the shelves on, I cut and nailed the 1/4 inch thick backing plywood. I did drill tiny pilot holes for the nails because I was nailing close to the edge and didn't want any splits. After the back went on, it was time to put veneer on all the exposed plywood edges. I had 3/4 inch veneer strips for 1/2 inch plywood. Much trimming ensued.
 
 ![Veneer time](https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,w_2048/blog-posts/cornershelf/IMG_3712_dvu89i)
 ![Ready for finishing](https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,w_2048/blog-posts/cornershelf/IMG_3689_vqj7ak)
@@ -93,4 +95,3 @@ After airing out for a week or so, I carefully carried it up from the basement t
 ![All done](https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,w_2048/blog-posts/cornershelf/IMG_3784_ws9og1)
 
 That's it for now! Time to fill it with books.
-

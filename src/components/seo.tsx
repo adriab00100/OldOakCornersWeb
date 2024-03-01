@@ -1,35 +1,39 @@
-/**
- * SEO component that queries for data with
- *  Gatsby's useStaticQuery React hook
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
+import { graphql, useStaticQuery } from "gatsby";
 import React from "react";
-import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
-import { useStaticQuery, graphql } from "gatsby";
 
-function SEO({ description, lang, meta, title, datePublished, previewImage }) {
-  const { site } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            description
-            author
-          }
+export type MetaType = {
+  name: string;
+  content: string;
+};
+
+export type SeoProps = {
+  description: string | null;
+  lang?: string | null;
+  meta?: MetaType[] | null;
+  title: string;
+  datePublished: string | null;
+  previewImage: string | null;
+};
+
+export const SEO = (seoProps: SeoProps) => {
+  const { site } = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          title
+          description
+          author
         }
       }
-    `
-  );
+    }
+  `);
+  const { description, meta, title, datePublished, previewImage } = seoProps;
+  const lang = seoProps.lang ?? "en";
 
-  const metaDescription = description || site.siteMetadata.description;
+  const metaDescription = description || (site.siteMetadata.description as string);
   const metaDatePublished = datePublished || "2020-06-28";
-  const metaPreviewImage =
-    previewImage ||
-    "https://res.cloudinary.com/dgqmwqi0v/image/upload/f_auto,q_auto,w_800/site-assets/mallet_vfigwm.jpg";
+  const metaPreviewImage = previewImage || "https://res.cloudinary.com/dgqmwqi0v/image/upload/f_auto,q_auto,w_800/site-assets/mallet_vfigwm.jpg";
 
   return (
     <Helmet
@@ -75,7 +79,7 @@ function SEO({ description, lang, meta, title, datePublished, previewImage }) {
           name: `twitter:description`,
           content: metaDescription,
         },
-      ].concat(meta)}
+      ].concat(meta ?? [])}
     >
       <script type="application/ld+json">
         {`{
@@ -92,21 +96,4 @@ function SEO({ description, lang, meta, title, datePublished, previewImage }) {
       </script>
     </Helmet>
   );
-}
-
-SEO.defaultProps = {
-  lang: `en`,
-  meta: [],
-  description: ``,
 };
-
-SEO.propTypes = {
-  description: PropTypes.string,
-  lang: PropTypes.string,
-  meta: PropTypes.arrayOf(PropTypes.object),
-  title: PropTypes.string.isRequired,
-  datePublished: PropTypes.string,
-  previewImage: PropTypes.string,
-};
-
-export default SEO;

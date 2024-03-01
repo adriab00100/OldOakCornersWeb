@@ -1,8 +1,14 @@
 import React from "react";
-import PropTypes from "prop-types";
 import "./default-layout.scss";
 
-const Container = ({ children, type, additionalClass }) => {
+export type ContainerProps = {
+  children: React.ReactNode[] | React.ReactNode;
+  type: "stacked" | "side-by-side" | "centering";
+  additionalClass?: string;
+};
+
+export const Container = (props: ContainerProps) => {
+  const { children, type, additionalClass } = props;
   let containerClass = "";
   switch (type) {
     case "stacked":
@@ -20,15 +26,3 @@ const Container = ({ children, type, additionalClass }) => {
 
   return <div className={`${containerClass} ${additionalClass}`}>{children}</div>;
 };
-
-Container.propTypes = {
-  children: PropTypes.node.isRequired,
-  type: PropTypes.string.isRequired,
-  additionalClass: PropTypes.string,
-};
-
-Container.defaultProps = {
-  additionalClass: "",
-};
-
-export default Container;

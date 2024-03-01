@@ -1,17 +1,32 @@
 import React from "react";
 import { graphql, Link } from "gatsby";
-import PostListing from "../components/post-listing";
-import Layout from "../components/layout";
-import SEO from "../components/seo";
-import Container from "../components/container";
+import { PostListing } from "../components/post-listing";
+import { Layout } from "../components/layout";
+import { SEO } from "../components/seo";
+import { Container } from "../components/container";
+import { Post } from "../components/post-types";
 
-const Archive = ({ data, pageContext }) => {
+export type ArchiveProps = {
+  data: {
+    allMarkdownRemark: {
+      edges: { node: Post }[];
+    };
+  };
+  pageContext: {
+    currentPage: number;
+    numPages: number;
+  };
+};
+
+const Archive = (props: ArchiveProps) => {
+  const { data, pageContext } = props;
   const { currentPage, numPages } = pageContext;
   const pages = new Array(numPages);
   for (let i = 0; i < pages.length; i++) {
     pages[i] = i + 1;
   }
-  const PageListing = ({ pages, currentPage }) => {
+  const PageListing = (props: { pages: number[]; currentPage: number }) => {
+    const { pages, currentPage } = props;
     return (
       <section>
         <Container type="centering">
@@ -21,13 +36,7 @@ const Archive = ({ data, pageContext }) => {
           <ul className="pages-listing">
             {pages.map(page => {
               return (
-                <li>
-                  {currentPage === page ? (
-                    <span className="current-page">{page}</span>
-                  ) : (
-                    <Link to={page === 1 ? "/archive" : `/archive/${page}`}>{page}</Link>
-                  )}
-                </li>
+                <li key={page}>{currentPage === page ? <span className="current-page">{page}</span> : <Link to={page === 1 ? "/archive" : `/archive/${page}`}>{page}</Link>}</li>
               );
             })}
           </ul>

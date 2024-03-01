@@ -10,11 +10,12 @@ tags: ["wood working", "maple", "joinery"]
 ## Let's make a cup holder
 
 ### The problem
+
 Alex previously had a bed that was full-size (it was a converted frame from his original crib when he was a baby) with fairly wide headboard and footboard.
 He had gotten used to placing a cup of water on his headboard for easy access when he was sleeping. Wake up thirsty, take a drink, go back to bed. No fuss,
 no problem.
 
-However, he just upgraded to a bunk bed that has a futon underneath that he can use as a couch, or his cousin can sleep on when he is visiting. This bunk 
+However, he just upgraded to a bunk bed that has a futon underneath that he can use as a couch, or his cousin can sleep on when he is visiting. This bunk
 bed, while fantastic, does not have wide enough spaces for Alex's water cup to fit on. So what do we do? We go to the workshop of course!
 
 ### The design
@@ -24,7 +25,7 @@ out of the way while he was sleeping. I ended up going with an octagon shape for
 that prevented him from rolling out of the bed.
 
 Turns out I hadn't done any reasonable amount of trigonometry in quite some time so I had to run the equations a few times (after I looked them up to make sure
-I was doing the right thing in the first place). After getting all my mathematics lined up and ready to go I selected a left-over piece of hard maple that I 
+I was doing the right thing in the first place). After getting all my mathematics lined up and ready to go I selected a left-over piece of hard maple that I
 had used for another project as the perfect piece and started.
 
 The leftovers I used came from this project
@@ -32,6 +33,7 @@ The leftovers I used came from this project
 ![Cabinet top](https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,w_2048/blog-posts/cup-holder/IMG-6432_eyypyx)
 
 ### The build
+
 I started with the table saw, and cut one long trapezoid piece that I then cut up into 10 segments (8 for the octagon cup holder + spares in case I screwed up)
 
 ![Table saw cuts](https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,w_1024/blog-posts/cup-holder/IMG_6648_h4ypco)
@@ -58,7 +60,7 @@ to the cup-holding portion an started on the tenon portion. Cutting a tenon can 
 ![Small tenon connector](https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,w_2048/blog-posts/cup-holder/IMG_6698_iovmgr)
 
 As you can see, I did not give myself a lot of space to work with, but moving on, I cut the mortises next. I forgot to take a lot of pictures at this part.
-First, I use the drill press to remove most of the material, then I clean it up with my chisel. 
+First, I use the drill press to remove most of the material, then I clean it up with my chisel.
 
 ![Mortise drilling](https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,w_2048/blog-posts/cup-holder/IMG_6657_qhfsom)
 
@@ -86,19 +88,24 @@ After letting it sit and cure for a day or two, I finally put it to the final te
 Yes, yes, and yes! It works and it looks good. It can be moved around as needed, and hold the cup at the perfect location. Alex loved it.
 
 ### Mistakes
+
 We all make mistakes, and this is a great opportunity to learn.
 
 #### Finishing
+
 It would have been a hell of a lot easier if I sanded down the surface of the interior before rolling into the octagon shape, and I wish I had sanded the exterior before
 attaching the handle. Live and learn, I guess. In this case I made it work with folded sandpaper and a lot of time.
 
 #### Tear-outs
+
 When using the router I had a few tear-outs for the material that I was cutting for the slot in which the base would go. I could probably avoided this by doing a little
 bit of sawing ahead of time so the waste material wouldn't break as it was cut away.
 
 #### Glue
+
 I got glue in the end-grain of the piece which prevented good coloration for when I applied the stain in some places and that annoyed me. I need to be more careful with where
 the glue goes.
 
 ### The end!
+
 That's all for this project. Thanks for reading!

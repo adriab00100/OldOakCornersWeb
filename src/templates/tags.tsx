@@ -1,11 +1,25 @@
 import React from "react";
 import { Link, graphql } from "gatsby";
-import PostListing from "../components/post-listing";
-import Layout from "../components/layout";
-import SEO from "../components/seo";
-import Container from "../components/container";
+import { PostListing } from "../components/post-listing";
+import { Layout } from "../components/layout";
+import { SEO } from "../components/seo";
+import { Container } from "../components/container";
+import { Post } from "../components/post-types";
 
-const Tags = ({ pageContext, data }) => {
+export type TagsProps = {
+  pageContext: {
+    tag: string;
+  };
+  data: {
+    allMarkdownRemark: {
+      totalCount: number;
+      edges: { node: Post }[];
+    };
+  };
+};
+
+const Tags = (props: TagsProps) => {
+  const { pageContext, data } = props;
   const { tag } = pageContext;
   const { edges, totalCount } = data.allMarkdownRemark;
   const tagHeader = `${totalCount} post${totalCount === 1 ? "" : "s"} tagged with "${tag}"`;
@@ -27,12 +41,8 @@ const Tags = ({ pageContext, data }) => {
 export default Tags;
 
 export const tagsPageQuery = graphql`
-  query($tag: String) {
-    allMarkdownRemark(
-      limit: 2000
-      sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { tags: { in: [$tag] } } }
-    ) {
+  query ($tag: String) {
+    allMarkdownRemark(limit: 2000, sort: { fields: [frontmatter___date], order: DESC }, filter: { frontmatter: { tags: { in: [$tag] } } }) {
       totalCount
       edges {
         node {
