@@ -2302,7 +2302,7 @@ type blogListQueryQueryVariables = Exact<{
 type blogListQueryQuery = { readonly allMarkdownRemark: { readonly edges: ReadonlyArray<{ readonly node: { readonly id: string, readonly excerpt: string | null, readonly frontmatter: { readonly path: string | null, readonly title: string | null, readonly author: string | null, readonly date: string | null } | null } }> } };
 
 type BlogPostByPathQueryVariables = Exact<{
-  path: Scalars['String'];
+  postPath: Scalars['String'];
 }>;
 
 
