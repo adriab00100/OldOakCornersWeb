@@ -22,7 +22,7 @@ const IndexPage = (props: IndexPageProps) => (
     <SEO title="Home" />
     <section className="text-image">
       <div className="text-image-top-left">
-        <h1 className="extra-large">Welcome to Old Oak Corners, Brian&apos;s hobbyist workshop</h1>
+        <h1 className="extra-large">Welcome to Brian&apos;s workshop</h1>
       </div>
       <Image cloudName={cloudinaryCloudId} secure="true" width="100%" alt="Close up of hard maple wood grain" publicId="site-assets/wood-grain-hm_uk660z">
         <Transformation width="1280" height="220" crop="scale" fetchFormat="auto" quality="auto" />
