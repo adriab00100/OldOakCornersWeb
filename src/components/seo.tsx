@@ -8,12 +8,12 @@ export type MetaType = {
 };
 
 export type SeoProps = {
-  description: string | null;
+  description?: string | null;
   lang?: string | null;
   meta?: MetaType[] | null;
   title: string;
-  datePublished: string | null;
-  previewImage: string | null;
+  datePublished?: string | null;
+  previewImage?: string | null;
 };
 
 export const SEO = (seoProps: SeoProps) => {
@@ -85,7 +85,7 @@ export const SEO = (seoProps: SeoProps) => {
         {`{
           "@context": "https://schema.org/",
           "@type": "Blog",
-          "name": "Old Oak Corners Blog",
+          "name": "Brian Adriance's Blog",
           "author": {
             "@type": "Person",
             "name": "${site.siteMetadata.author}"
