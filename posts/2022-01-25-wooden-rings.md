@@ -20,7 +20,6 @@ I tried out making a ring with juniper but I didn't like how it came out, so whe
 
 ![Koa blank](https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,w_1024/blog-posts/wooden-rings/IMG_4271_euciyz)
 
-
 ### The build
 
 First, I cut out a square that was roughly the size and thickness that I wanted, and marked a circle onto it for the outer diameter.

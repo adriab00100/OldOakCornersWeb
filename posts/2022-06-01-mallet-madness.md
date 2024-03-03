@@ -11,7 +11,7 @@ tags: ["wood working", "mallet", "commission"]
 
 ### The story
 
-Jointer's. Carver's. Carpenter's. Woodworker's. Crafter's. 
+Jointer's. Carver's. Carpenter's. Woodworker's. Crafter's.
 
 There are a lot of people who like to use a simple wooden mallet, and, as it turns out, it is a really nice and simple project to do yourself. In my case, however, I reached out to a few people to see
 if anyone needed a mallet so I could practice making them. They can be rounded or square-ish, or anywhere in between, and made from any wood that you like as long as it is strong and heavy enough
@@ -28,9 +28,9 @@ Mallets are so easy in planning. You have a head and a handle and that's it. Eve
 ![A broken Mallet](https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,w_2048/blog-posts/mallet-madness/IMG_4248_cke1no)
 
 I started my mallet adventure years ago with a simple 4x4 chunk of cedar I grabbed from Lowes. I didn't want to try anything fancy since I didn't have any experience, so I went simple. Cedar block head,
- and an oak handle in a rectangular shape. After years of use and abuse it finally failed on me. The head broke, but the handle was fine. I can re-use the handle and cut a new head.
+and an oak handle in a rectangular shape. After years of use and abuse it finally failed on me. The head broke, but the handle was fine. I can re-use the handle and cut a new head.
 
- I happened to have a few promising pieces of wood that I snagged from my older brother's firewood stack. He happened to cut some damaged ash down, which would be perfect for a new mallet head.
+I happened to have a few promising pieces of wood that I snagged from my older brother's firewood stack. He happened to cut some damaged ash down, which would be perfect for a new mallet head.
 
 #### Experimenting a-round
 
@@ -77,11 +77,9 @@ After the handle hole was bored out, I decided to remove the corners of the mall
 
 ![Octagonal head](https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,w_1024/blog-posts/mallet-madness/IMG_6128_dejggh)
 
-Finally I was able to round it down to the final size, and clean it up with some sand paper. The test fit showed it fits together well, but I would need to trim the handle shorter. 
+Finally I was able to round it down to the final size, and clean it up with some sand paper. The test fit showed it fits together well, but I would need to trim the handle shorter.
 
 ![Test fit mallet](https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,w_1024/blog-posts/mallet-madness/IMG_6129_fp7ph2)
-
-
 
 ### In summary
 
