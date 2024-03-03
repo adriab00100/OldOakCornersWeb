@@ -1,8 +1,8 @@
 import { Link } from "gatsby";
 import React from "react";
+import "../styles/site-header.scss";
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const Logo = require("../images/logo.svg");
-import "./site-header.scss";
 
 export type HeaderProps = {
   siteTitle: string;

@@ -1,6 +1,6 @@
 import { graphql, useStaticQuery } from "gatsby";
 import React, { ReactNode } from "react";
-import "./default-layout.scss";
+import "../styles/default-layout.scss";
 import { Footer } from "./footer";
 import { Header } from "./header";
 

@@ -1,5 +1,7 @@
+$header-footer-background: hsl(39, 16%, 76%);
+
 .site-footer {
-  background: wheat;
+  background: $header-footer-background;
   padding: 16px 0 8px 0;
 }
 

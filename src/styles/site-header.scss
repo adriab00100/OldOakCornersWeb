@@ -1,9 +1,15 @@
+$header-footer-background: hsl(39, 16%, 76%);
+$nav-link-color: black;
+$nav-link-hover-color: hsl(30, 80%, 17%);
+$nav-link-hover-background-color: hsl(38, 63%, 82%);
+$nav-link-hover-outline-color: hsl(30, 80%, 17%);
+
 .site-header-title {
     margin: 8px 0 0 4px;
 }
 
 .site-header {
-    background: wheat;
+    background: $header-footer-background;
     margin: 0 auto;
     padding: 1.45rem 1.0875rem;
 }
@@ -13,9 +19,6 @@
 }
 
 .site-navigation {
-
-    
-
     ul {
         display: flex;
 
@@ -33,13 +36,16 @@
         a {
             font-weight: normal;
             text-decoration: none;
-            color: black;
-            transition: background-color 200ms;
+            color: $nav-link-color;
+            transition: all 200ms;
         }
 
         a:hover {
-            text-decoration: underline;
-            background-color: blanchedalmond;
+            color: $nav-link-hover-color;
+            background-color: $nav-link-hover-background-color;
+            outline-color: $nav-link-hover-outline-color;
+            outline-style: solid;
+            outline-width: 1px;
         }
     }
 }

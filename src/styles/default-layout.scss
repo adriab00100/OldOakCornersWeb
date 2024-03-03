@@ -1,3 +1,15 @@
+$main-content-background-color: hsl(31, 21%, 97%);
+$body-margins-background-color: hsl(39, 21%, 90%);
+
+$blog-post-hover-background-color: hsl(39, 16%, 88%);
+$blog-post-border-color: hsl(39, 16%, 76%);
+$blog-post-hover-border-color: hsl(30, 80%, 17%);
+
+$tag-hover-background-color: hsl(38, 63%, 82%);
+$tag-background-color: hsl(39, 16%, 88%);
+$tag-hover-border-color: hsl(30, 80%, 17%);
+
+
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -7,11 +19,11 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: whitesmoke;
+  background-color: $body-margins-background-color;
 }
 
 .main-content {
-  background-color: white;
+  background-color: $main-content-background-color;
   padding: 0 8px 32px 8px;
 }
 
@@ -127,7 +139,7 @@ a {
     flex-direction: column;
     padding: 8px 8px 8px 8px;
     transition: all 500ms;
-    border-color: darkgrey;
+    border-color: $blog-post-border-color;
     border-radius: 5px;
     border-style: solid;
     border-width: 1px;
@@ -142,8 +154,8 @@ a {
     }
 
     &:hover {
-      background-color: linen;
-      border-color: black;
+      background-color: $blog-post-hover-background-color;
+      border-color: $blog-post-hover-border-color;
     }
 
     .preview-read-more {
@@ -236,19 +248,21 @@ a {
   } 
   
   a {
-    background-color: blanchedalmond;
+    background-color: $tag-background-color;
     border-radius: 5px;
     color: black;
     display: inline-block;
     font-size: smaller;
     font-weight: normal;
-    padding: 0 3px 0 3px;
+    padding: 0 8px 0 8px;
     text-decoration: none;
     transition: background-color 200ms;
   }
 
   li a:hover {
-    background-color: cornsilk;  
-    text-decoration: underline;
+    background-color: $tag-hover-background-color;  
+    outline-color: $tag-hover-border-color;
+    outline-style: solid;
+    outline-width: 1px;
   }
 }

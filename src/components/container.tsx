@@ -1,5 +1,5 @@
 import React from "react";
-import "./default-layout.scss";
+import "../styles/default-layout.scss";
 
 export type ContainerProps = {
   children: React.ReactNode[] | React.ReactNode;
