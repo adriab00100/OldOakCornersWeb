@@ -1,6 +1,6 @@
 import { Link } from "gatsby";
 import React from "react";
-import "./default-layout.scss";
+import "../styles/default-layout.scss";
 import { Frontmatter } from "./post-types";
 
 export type PostNavigatorProps = {

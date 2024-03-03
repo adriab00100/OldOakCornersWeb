@@ -1,7 +1,7 @@
-import React from "react";
 import { Link } from "gatsby";
-import "./default-layout.scss";
-import "./site-footer.scss";
+import React from "react";
+import "../styles/default-layout.scss";
+import "../styles/site-footer.scss";
 import { Container } from "./container";
 
 export const Footer = () => {

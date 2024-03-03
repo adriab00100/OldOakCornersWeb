@@ -1,11 +1,9 @@
-import { Image, Transformation } from "cloudinary-react";
 import { graphql } from "gatsby";
 import React from "react";
 import { Layout } from "../components/layout";
 import { PostListing } from "../components/post-listing";
 import { Post } from "../components/post-types";
 import { SEO } from "../components/seo";
-import { cloudinaryCloudId } from "../images/constants";
 
 export type IndexPageProps = {
   data: {
@@ -20,14 +18,9 @@ export type IndexPageProps = {
 const IndexPage = (props: IndexPageProps) => (
   <Layout>
     <SEO title="Home" />
-    <section className="text-image">
-      <div className="text-image-top-left">
-        <h1 className="extra-large">Welcome to Brian&apos;s workshop</h1>
-      </div>
-      <Image cloudName={cloudinaryCloudId} secure="true" width="100%" alt="Close up of hard maple wood grain" publicId="site-assets/wood-grain-hm_uk660z">
-        <Transformation width="1280" height="220" crop="scale" fetchFormat="auto" quality="auto" />
-      </Image>
-      <h2>This is my blog about woodworking projects, thoughts, ideas. Look below for the latest few posts.</h2>
+    <section>
+      <h1>Welcome to Brian&apos;s workshop</h1>
+      <p>This is my blog about woodworking projects, thoughts, ideas. Look below for the most recent 10 posts. Check the archive for more!</p>
     </section>
     <PostListing posts={props.data.allMarkdownRemark.edges.map(p => p.node)} />
   </Layout>
