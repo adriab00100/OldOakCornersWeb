@@ -30,7 +30,7 @@ const config: GatsbyConfig = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/favicon.png`, // This path is relative to the root of the site.
+        icon: `src/images/favicon.png`,
       },
     },
     {
@@ -84,8 +84,8 @@ const config: GatsbyConfig = {
                 return Object.assign({}, edge.node.frontmatter, {
                   description: edge.node.excerpt,
                   date: edge.node.frontmatter.date,
-                  url: site.siteMetadata.siteUrl + edge.node.frontmatter.path,
-                  guid: site.siteMetadata.siteUrl + edge.node.frontmatter.path,
+                  url: `${site.siteMetadata.siteUrl}/blog${edge.node.frontmatter.path}`,
+                  guid: `${site.siteMetadata.siteUrl}/blog${edge.node.frontmatter.path}`,
                   custom_elements: [{ "content:encoded": edge.node.html }],
                 });
               });
@@ -93,7 +93,7 @@ const config: GatsbyConfig = {
             query: `
               {
                 allMarkdownRemark(
-                  sort: { order: DESC, fields: [frontmatter___date] },
+                  sort: { frontmatter: {date: DESC} },
                 ) {
                   edges {
                     node {

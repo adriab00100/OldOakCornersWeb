@@ -16,14 +16,14 @@ export const PostListing = (props: PostListingProps) => {
           post.frontmatter && (
             <div key={post.frontmatter.path} className="post-tile-container">
               <div key={post.frontmatter.path} className="post-tile">
-                <Link to={post.frontmatter.path ?? "404"}>
+                <Link to={post.frontmatter.path ? `/blog${post.frontmatter.path}` : "404"}>
                   <h3>{post.frontmatter.title}</h3>
                 </Link>
                 <small>
                   {post.frontmatter.author} on {post.frontmatter.date}
                 </small>
                 <p>{post.excerpt}</p>
-                <Link className="preview-read-more" to={post.frontmatter.path ?? "404"}>
+                <Link className="preview-read-more" to={post.frontmatter.path ? `/blog${post.frontmatter.path}` : "404"}>
                   Read Post
                 </Link>
               </div>
