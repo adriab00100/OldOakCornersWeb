@@ -18,7 +18,10 @@ export const Footer = () => {
             </div>
           </Container>
           <div className="site-footer-link-container">
-            <Link to="/rss.xml">RSS</Link>
+            <Container type="stacked">
+              <Link to="/rss.xml">RSS</Link>
+              <Link to="/about">About</Link>
+            </Container>
           </div>
         </Container>
       </section>

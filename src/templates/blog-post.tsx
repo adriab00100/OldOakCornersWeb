@@ -1,6 +1,7 @@
 import { DiscussionEmbed } from "disqus-react";
 import { graphql } from "gatsby";
 import React from "react";
+import { ErrorMessage } from "../components/error-message";
 import { Layout } from "../components/layout";
 import { PostContents } from "../components/post-contents";
 import { PostNavigator } from "../components/post-navigator";
@@ -21,11 +22,7 @@ const BlogPost = (props: BlogPostProps) => {
   const slug = post?.frontmatter?.path?.substring(1) ?? "broken-slug";
   const { previous, next } = pageContext;
   if (!post?.frontmatter) {
-    return (
-      <>
-        <h2>Something went wrong</h2>
-      </>
-    );
+    return <ErrorMessage />;
   }
   const disqusConfig = {
     shortname: "oldoakcorners",

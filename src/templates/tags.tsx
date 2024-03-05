@@ -1,10 +1,10 @@
-import React from "react";
 import { Link, graphql } from "gatsby";
-import { PostListing } from "../components/post-listing";
-import { Layout } from "../components/layout";
-import { SEO } from "../components/seo";
+import React from "react";
 import { Container } from "../components/container";
+import { Layout } from "../components/layout";
+import { PostListing } from "../components/post-listing";
 import { Post } from "../components/post-types";
+import { SEO } from "../components/seo";
 
 export type TagsProps = {
   pageContext: {
@@ -42,7 +42,7 @@ export default Tags;
 
 export const tagsPageQuery = graphql`
   query ($tag: String) {
-    allMarkdownRemark(limit: 2000, sort: { fields: [frontmatter___date], order: DESC }, filter: { frontmatter: { tags: { in: [$tag] } } }) {
+    allMarkdownRemark(limit: 2000, sort: { frontmatter: { date: DESC } }, filter: { frontmatter: { tags: { in: [$tag] } } }) {
       totalCount
       edges {
         node {

@@ -1,10 +1,10 @@
-import React from "react";
 import { graphql, Link } from "gatsby";
-import { PostListing } from "../components/post-listing";
-import { Layout } from "../components/layout";
-import { SEO } from "../components/seo";
+import React from "react";
 import { Container } from "../components/container";
+import { Layout } from "../components/layout";
+import { PostListing } from "../components/post-listing";
 import { Post } from "../components/post-types";
+import { SEO } from "../components/seo";
 
 export type ArchiveProps = {
   data: {
@@ -36,7 +36,9 @@ const Archive = (props: ArchiveProps) => {
           <ul className="pages-listing">
             {pages.map(page => {
               return (
-                <li key={page}>{currentPage === page ? <span className="current-page">{page}</span> : <Link to={page === 1 ? "/archive" : `/archive/${page}`}>{page}</Link>}</li>
+                <li key={page}>
+                  {currentPage === page ? <span className="current-page">{page}</span> : <Link to={page === 1 ? "/blog-posts" : `/blog-posts/${page}`}>{page}</Link>}
+                </li>
               );
             })}
           </ul>
@@ -47,9 +49,9 @@ const Archive = (props: ArchiveProps) => {
 
   return (
     <Layout>
-      <SEO title="Post archive" />
+      <SEO title="Blog post archive" />
       <Container type="centering">
-        <h1>Post Archive</h1>
+        <h1>Blog Post Archive</h1>
       </Container>
       <PostListing posts={data.allMarkdownRemark.edges.map(p => p.node)} />
       {pages.length > 1 && <PageListing pages={pages} currentPage={currentPage} />}
@@ -59,7 +61,7 @@ const Archive = (props: ArchiveProps) => {
 
 export const archiveQuery = graphql`
   query blogListQuery($skip: Int!, $limit: Int!) {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }, limit: $limit, skip: $skip) {
+    allMarkdownRemark(sort: { frontmatter: { date: DESC } }, limit: $limit, skip: $skip) {
       edges {
         node {
           id

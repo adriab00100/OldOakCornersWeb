@@ -2,9 +2,32 @@ import { GatsbyNode } from "gatsby";
 import path from "path";
 import { toKebabCase } from "./src/utilities/string-manipulations";
 
-export const createPages: GatsbyNode["createPages"] = async ({ actions, graphql }) => {
-  const { createPage } = actions;
+type GraphQLType = <TData, TVariables = any>(
+  query: string,
+  variables?: TVariables | undefined,
+) => Promise<{
+  errors?: any;
+  data?: TData | undefined;
+}>;
 
+type AllPageTemplatesPromise = Promise<
+  [
+    {
+      errors?: any;
+      data?: Queries.BlogPostQuery;
+    },
+    {
+      errors?: any;
+      data?: Queries.BlogArchiveQuery;
+    },
+    {
+      errors?: any;
+      data?: Queries.BlogTagsQuery;
+    },
+  ]
+>;
+
+const queryAllPageTemplates = async (graphql: GraphQLType): AllPageTemplatesPromise => {
   const postTemplateQuery = graphql<Queries.BlogPostQuery>(`
     query BlogPost {
       allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
@@ -57,10 +80,61 @@ export const createPages: GatsbyNode["createPages"] = async ({ actions, graphql 
     }
   `);
 
+  return Promise.all([postTemplateQuery, archiveTemplateQuery, tagTemplateQuery]);
+};
+
+type CreateRedirectType = (
+  this: void,
+  redirect: {
+    [key: string]: unknown;
+    fromPath: string;
+    isPermanent?: boolean | undefined;
+    toPath: string;
+    redirectInBrowser?: boolean | undefined;
+    force?: boolean | undefined;
+    statusCode?: number | undefined;
+    ignoreCase?: boolean | undefined;
+  },
+  plugin?: any | undefined,
+) => void;
+
+const setupRedirects = (createRedirect: CreateRedirectType) => {
+  const oldBlogPosts = [
+    "mallet-madness",
+    "wooden-rings",
+    "dads-bar-cart",
+    "fish-tank-stand",
+    "flag-coffee-tables",
+    "under-deck",
+    "garage-shelves",
+    "sun-blocker",
+    "cup-holder",
+    "welcome",
+    "file-handles",
+    "grape-arbor",
+    "corner-bookshelf",
+    "maple-mallet",
+    "cedar-mallet",
+  ];
+  oldBlogPosts.forEach(post => {
+    createRedirect({
+      fromPath: `/${post}`,
+      toPath: `/blog/${post}`,
+    });
+  });
+
+  createRedirect({
+    fromPath: "/archive",
+    toPath: "/blog-posts",
+  });
+};
+
+export const createPages: GatsbyNode["createPages"] = async ({ actions, graphql }) => {
+  const { createPage, createRedirect } = actions;
   const postTemplate = path.resolve("src/templates/blog-post.tsx");
   const archiveTemplate = path.resolve("src/templates/archive.tsx");
   const tagsTemplate = path.resolve("src/templates/tags.tsx");
-  const [postGraph, archiveGraph, tagsGraph] = await Promise.all([postTemplateQuery, archiveTemplateQuery, tagTemplateQuery]);
+  const [postGraph, archiveGraph, tagsGraph] = await queryAllPageTemplates(graphql);
   if (postGraph.errors || archiveGraph.errors || tagsGraph.errors) {
     return Promise.reject([...postGraph.errors, ...archiveGraph.errors, ...tagsGraph.errors]);
   }
@@ -75,7 +149,7 @@ export const createPages: GatsbyNode["createPages"] = async ({ actions, graphql 
         postPath = postPath.substring(0, postPath.length - 1);
       }
       createPage({
-        path: postPath,
+        path: `/blog${postPath}`,
         component: postTemplate,
         context: {
           postPath: postPath,
@@ -91,7 +165,7 @@ export const createPages: GatsbyNode["createPages"] = async ({ actions, graphql 
   const numPages = Math.ceil(archivePosts.length / postsPerPage);
   Array.from({ length: numPages }).forEach((_, i) => {
     createPage({
-      path: i === 0 ? `/archive` : `/archive/${i + 1}`,
+      path: i === 0 ? `/blog-posts` : `/blog-posts/${i + 1}`,
       component: archiveTemplate,
       context: {
         limit: postsPerPage,
@@ -115,4 +189,5 @@ export const createPages: GatsbyNode["createPages"] = async ({ actions, graphql 
       });
     }
   });
+  setupRedirects(createRedirect);
 };
