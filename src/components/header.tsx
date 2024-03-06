@@ -28,9 +28,6 @@ export const Header = (props: HeaderProps) => {
               <Link to="/blog">Blog</Link>
             </li>
             <li>
-              <Link to="/latest">Latest Post</Link>
-            </li>
-            <li>
               <Link to="/blog-posts">Archive</Link>
             </li>
           </ul>
