@@ -10,5 +10,4 @@ export type Frontmatter = {
 export type Post = {
   readonly frontmatter: Frontmatter | null;
   readonly excerpt: string | null;
-  readonly html: string | null;
 };

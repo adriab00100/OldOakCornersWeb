@@ -86,7 +86,7 @@ const config: GatsbyConfig = {
                   date: edge.node.frontmatter.date,
                   url: `${site.siteMetadata.siteUrl}/blog${edge.node.frontmatter.path}`,
                   guid: `${site.siteMetadata.siteUrl}/blog${edge.node.frontmatter.path}`,
-                  custom_elements: [{ "content:encoded": edge.node.html }],
+                  //custom_elements: [{ "content:encoded": edge.node.html }],
                 });
               });
             },
@@ -98,7 +98,6 @@ const config: GatsbyConfig = {
                   edges {
                     node {
                       excerpt
-                      html
                       frontmatter {
                         path
                         title
