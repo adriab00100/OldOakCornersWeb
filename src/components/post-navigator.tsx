@@ -16,7 +16,7 @@ export const PostNavigator = (props: PostNavigatorProps) => {
         {next && next.path && (
           <li>
             Newer Post <br />
-            <Link to={next.path} rel="next">
+            <Link to={`/blog${next.path}`} rel="next">
               ← {next.title ?? "Next"}
             </Link>
           </li>
@@ -24,7 +24,7 @@ export const PostNavigator = (props: PostNavigatorProps) => {
         {previous && previous.path && (
           <li style={{ textAlign: "right" }}>
             Older Post <br />
-            <Link to={previous.path} rel="previous">
+            <Link to={`/blog${previous.path}`} rel="previous">
               {previous.title ?? "Previous"} →
             </Link>
           </li>

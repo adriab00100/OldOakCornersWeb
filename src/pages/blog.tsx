@@ -7,7 +7,7 @@ import { SEO } from "../components/seo";
 
 export type BlogPageProps = {
   data: {
-    allMarkdownRemark: {
+    allMdx: {
       edges: {
         node: Post;
       }[];
@@ -22,13 +22,13 @@ const BlogPage = (props: BlogPageProps) => (
       <h1>Welcome to Brian&apos;s workshop</h1>
       <p>This is my blog about woodworking projects, thoughts, ideas. Look below for the most recent 10 posts. Check the archive for more!</p>
     </section>
-    <PostListing posts={props.data.allMarkdownRemark.edges.map(p => p.node)} />
+    <PostListing posts={props.data.allMdx.edges.map(p => p.node)} />
   </Layout>
 );
 
 export const blogPageQuery = graphql`
   query BlogIndexQuery {
-    allMarkdownRemark(sort: { frontmatter: { date: DESC } }, limit: 10) {
+    allMdx(sort: { frontmatter: { date: DESC } }, limit: 10) {
       edges {
         node {
           id

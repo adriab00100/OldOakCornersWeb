@@ -13,7 +13,6 @@ const config: GatsbyConfig = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-catch-links`,
-    //'gatsby-plugin-mdx', markdown react plugin
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -53,7 +52,7 @@ const config: GatsbyConfig = {
         path: `${__dirname}/posts/`,
       },
     },
-    "gatsby-transformer-remark",
+    "gatsby-plugin-mdx",
     {
       resolve: "gatsby-plugin-react-svg",
       options: {
@@ -79,26 +78,26 @@ const config: GatsbyConfig = {
         `,
         feeds: [
           {
-            serialize: ({ query: { site, allMarkdownRemark } }) => {
-              return allMarkdownRemark.edges.map(edge => {
+            // TODO: type this
+            serialize: ({ query: { site, allMdx } }) => {
+              return allMdx.edges.map(edge => {
                 return Object.assign({}, edge.node.frontmatter, {
                   description: edge.node.excerpt,
                   date: edge.node.frontmatter.date,
                   url: `${site.siteMetadata.siteUrl}/blog${edge.node.frontmatter.path}`,
                   guid: `${site.siteMetadata.siteUrl}/blog${edge.node.frontmatter.path}`,
-                  custom_elements: [{ "content:encoded": edge.node.html }],
+                  //custom_elements: [{ "content:encoded": edge.node.html }],
                 });
               });
             },
             query: `
               {
-                allMarkdownRemark(
+                allMdx(
                   sort: { frontmatter: {date: DESC} },
                 ) {
                   edges {
                     node {
                       excerpt
-                      html
                       frontmatter {
                         path
                         title

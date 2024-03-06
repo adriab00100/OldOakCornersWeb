@@ -11,7 +11,7 @@ export type TagsProps = {
     tag: string;
   };
   data: {
-    allMarkdownRemark: {
+    allMdx: {
       totalCount: number;
       edges: { node: Post }[];
     };
@@ -21,7 +21,7 @@ export type TagsProps = {
 const Tags = (props: TagsProps) => {
   const { pageContext, data } = props;
   const { tag } = pageContext;
-  const { edges, totalCount } = data.allMarkdownRemark;
+  const { edges, totalCount } = data.allMdx;
   const tagHeader = `${totalCount} post${totalCount === 1 ? "" : "s"} tagged with "${tag}"`;
 
   return (
@@ -42,7 +42,7 @@ export default Tags;
 
 export const tagsPageQuery = graphql`
   query ($tag: String) {
-    allMarkdownRemark(limit: 2000, sort: { frontmatter: { date: DESC } }, filter: { frontmatter: { tags: { in: [$tag] } } }) {
+    allMdx(limit: 2000, sort: { frontmatter: { date: DESC } }, filter: { frontmatter: { tags: { in: [$tag] } } }) {
       totalCount
       edges {
         node {

@@ -2,28 +2,25 @@ import { Link } from "gatsby";
 import React from "react";
 import { toKebabCase } from "../utilities/string-manipulations";
 import { Container } from "./container";
-import { ErrorMessage } from "./error-message";
-import { Post } from "./post-types";
+import { Frontmatter } from "./post-types";
 
 export type PostContentsProps = {
-  post: Post;
+  frontmatter: Frontmatter;
+  contents: React.ReactNode | React.ReactNode[];
 };
 
 export const PostContents = (props: PostContentsProps) => {
-  const { post } = props;
-  if (!post.html || !post.frontmatter) {
-    return <ErrorMessage />;
-  }
+  const { frontmatter } = props;
   return (
     <>
       <Container type="centering">
         <div className="post-heading">
-          <h1>{post.frontmatter.title}</h1>
+          <h1>{frontmatter.title}</h1>
           <h4>
-            Authored by {post.frontmatter.author} on <time>{post.frontmatter.date}</time>
+            Authored by {frontmatter.author} on <time>{frontmatter.date}</time>
           </h4>
           <ul className="post-tags">
-            {(post.frontmatter.tags ?? []).map(tag => {
+            {(frontmatter.tags ?? []).map(tag => {
               return (
                 tag && (
                   <li key={tag}>
@@ -35,9 +32,7 @@ export const PostContents = (props: PostContentsProps) => {
           </ul>
         </div>
       </Container>
-      <section className="blog-post-contents">
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
-      </section>
+      <section className="blog-post-contents">{props.contents}</section>
     </>
   );
 };

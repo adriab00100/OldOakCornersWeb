@@ -30,7 +30,7 @@ type AllPageTemplatesPromise = Promise<
 const queryAllPageTemplates = async (graphql: GraphQLType): AllPageTemplatesPromise => {
   const postTemplateQuery = graphql<Queries.BlogPostQuery>(`
     query BlogPost {
-      allMarkdownRemark(sort: { frontmatter: { date: DESC } }) {
+      allMdx(sort: { frontmatter: { date: DESC } }) {
         edges {
           node {
             id
@@ -40,6 +40,9 @@ const queryAllPageTemplates = async (graphql: GraphQLType): AllPageTemplatesProm
               date
               author
             }
+            internal {
+              contentFilePath
+            }
           }
         }
       }
@@ -48,7 +51,7 @@ const queryAllPageTemplates = async (graphql: GraphQLType): AllPageTemplatesProm
 
   const archiveTemplateQuery = graphql<Queries.BlogArchiveQuery>(`
     query BlogArchive {
-      allMarkdownRemark(sort: { frontmatter: { date: DESC } }, limit: 1000) {
+      allMdx(sort: { frontmatter: { date: DESC } }, limit: 1000) {
         edges {
           node {
             frontmatter {
@@ -62,7 +65,7 @@ const queryAllPageTemplates = async (graphql: GraphQLType): AllPageTemplatesProm
 
   const tagTemplateQuery = graphql<Queries.BlogTagsQuery>(`
     query BlogTags {
-      allMarkdownRemark(sort: { frontmatter: { date: DESC } }, limit: 2000) {
+      allMdx(sort: { frontmatter: { date: DESC } }, limit: 2000) {
         edges {
           node {
             frontmatter {
@@ -72,7 +75,7 @@ const queryAllPageTemplates = async (graphql: GraphQLType): AllPageTemplatesProm
           }
         }
       }
-      tagsGroup: allMarkdownRemark(limit: 2000) {
+      tagsGroup: allMdx(limit: 2000) {
         group(field: { frontmatter: { tags: SELECT } }) {
           fieldValue
         }
@@ -139,7 +142,7 @@ export const createPages: GatsbyNode["createPages"] = async ({ actions, graphql 
     return Promise.reject([...postGraph.errors, ...archiveGraph.errors, ...tagsGraph.errors]);
   }
   // posts
-  const allPosts = postGraph?.data?.allMarkdownRemark.edges ?? [];
+  const allPosts = postGraph?.data?.allMdx.edges ?? [];
   allPosts.forEach(({ node }, index) => {
     const previous = index === allPosts.length - 1 ? null : allPosts[index + 1].node;
     const next = index === 0 ? null : allPosts[index - 1].node;
@@ -150,7 +153,7 @@ export const createPages: GatsbyNode["createPages"] = async ({ actions, graphql 
       }
       createPage({
         path: `/blog${postPath}`,
-        component: postTemplate,
+        component: `${postTemplate}?__contentFilePath=${node.internal.contentFilePath}`,
         context: {
           postPath: postPath,
           previous,
@@ -160,7 +163,7 @@ export const createPages: GatsbyNode["createPages"] = async ({ actions, graphql 
     }
   });
   // archive
-  const archivePosts = archiveGraph?.data?.allMarkdownRemark.edges ?? [];
+  const archivePosts = archiveGraph?.data?.allMdx.edges ?? [];
   const postsPerPage = 10;
   const numPages = Math.ceil(archivePosts.length / postsPerPage);
   Array.from({ length: numPages }).forEach((_, i) => {

@@ -8,7 +8,7 @@ import { SEO } from "../components/seo";
 
 export type ArchiveProps = {
   data: {
-    allMarkdownRemark: {
+    allMdx: {
       edges: { node: Post }[];
     };
   };
@@ -53,7 +53,7 @@ const Archive = (props: ArchiveProps) => {
       <Container type="centering">
         <h1>Blog Post Archive</h1>
       </Container>
-      <PostListing posts={data.allMarkdownRemark.edges.map(p => p.node)} />
+      <PostListing posts={data.allMdx.edges.map(p => p.node)} />
       {pages.length > 1 && <PageListing pages={pages} currentPage={currentPage} />}
     </Layout>
   );
@@ -61,7 +61,7 @@ const Archive = (props: ArchiveProps) => {
 
 export const archiveQuery = graphql`
   query blogListQuery($skip: Int!, $limit: Int!) {
-    allMarkdownRemark(sort: { frontmatter: { date: DESC } }, limit: $limit, skip: $skip) {
+    allMdx(sort: { frontmatter: { date: DESC } }, limit: $limit, skip: $skip) {
       edges {
         node {
           id

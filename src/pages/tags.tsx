@@ -6,7 +6,7 @@ import { toKebabCase } from "../utilities/string-manipulations";
 
 export type TagsPageProps = {
   data: {
-    allMarkdownRemark: {
+    allMdx: {
       group: {
         fieldValue: string;
         totalCount: number;
@@ -16,7 +16,7 @@ export type TagsPageProps = {
 };
 
 const TagsPage = (props: TagsPageProps) => {
-  const group = props.data.allMarkdownRemark.group;
+  const group = props.data.allMdx.group;
   return (
     <Layout>
       <SEO title="All Tags" />
@@ -39,7 +39,7 @@ const TagsPage = (props: TagsPageProps) => {
 export default TagsPage;
 export const pageQuery = graphql`
   query {
-    allMarkdownRemark(limit: 2000) {
+    allMdx(limit: 2000) {
       group(field: { frontmatter: { tags: SELECT } }) {
         fieldValue
         totalCount
