@@ -116,16 +116,6 @@ a {
     flex-wrap: wrap;
   }
 
-  h3 {
-    margin: 0;
-    padding: 8px 0 8px 0;
-  }
-
-  small {
-    font-weight: lighter;
-    color: #3a3a3a;
-  }
-
   .post-tile-container {
     padding: 5px;
     
@@ -149,6 +139,16 @@ a {
       max-width: 400px;
     }
     
+    h3 {
+      margin: 0;
+      padding: 8px 0 8px 0;
+    }
+  
+    small {
+      font-weight: lighter;
+      color: #3a3a3a;
+    }
+
     p {
       margin-bottom: 0;
     }

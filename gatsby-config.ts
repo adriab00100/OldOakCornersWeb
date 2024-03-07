@@ -3,7 +3,7 @@ import type { GatsbyConfig } from "gatsby";
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: `Brian Adriance's Personal Website`,
+    title: `Brian Adriance's Website`,
     description: "Brian's presence on the web",
     author: `Brian Adriance`,
     siteUrl: `https://www.brianadriance.com`,
