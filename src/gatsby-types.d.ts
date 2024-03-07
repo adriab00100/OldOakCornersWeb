@@ -2192,6 +2192,11 @@ type BlogPostByPathQueryVariables = Exact<{
 
 type BlogPostByPathQuery = { readonly mdx: { readonly excerpt: string | null, readonly frontmatter: { readonly path: string | null, readonly title: string | null, readonly author: string | null, readonly date: string | null, readonly previewImage: string | null, readonly tags: ReadonlyArray<string | null> | null } | null } | null };
 
+type LatestPostQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type LatestPostQuery = { readonly allMdx: { readonly edges: ReadonlyArray<{ readonly node: { readonly excerpt: string | null, readonly frontmatter: { readonly path: string | null, readonly title: string | null, readonly date: string | null, readonly author: string | null } | null } }> } };
+
 type SiteTitleQueryQueryVariables = Exact<{ [key: string]: never; }>;
 
 
