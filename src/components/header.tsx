@@ -25,10 +25,10 @@ export const Header = (props: HeaderProps) => {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/blog">Blog</Link>
+              <Link to="/blog-posts">Blog</Link>
             </li>
             <li>
-              <Link to="/blog-posts">Archive</Link>
+              <Link to="/commissions">Commissions</Link>
             </li>
           </ul>
         </nav>

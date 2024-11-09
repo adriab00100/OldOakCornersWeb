@@ -8,7 +8,7 @@ export type LayoutProps = {
   children: ReactNode | ReactNode[];
 };
 
-export const Layout = (props: LayoutProps) => {
+export const Layout = (props: LayoutProps): React.JSX.Element => {
   const { children } = props;
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {

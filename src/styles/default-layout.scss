@@ -9,7 +9,6 @@ $tag-hover-background-color: hsl(38, 63%, 82%);
 $tag-background-color: hsl(39, 16%, 88%);
 $tag-hover-border-color: hsl(30, 80%, 17%);
 
-
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -24,14 +23,18 @@ body {
 
 .main-content {
   background-color: $main-content-background-color;
-  padding: 0 8px 32px 8px;
+  padding: 0 16px 32px 8px;
+}
+
+.padded-content {
+  padding: 16px;
 }
 
 .full-width-container {
   width: auto;
   margin-left: auto;
   margin-right: auto;
-  
+
   .limited-width-container {
     max-width: 1440px;
   }
@@ -107,18 +110,19 @@ a {
 
 .blog-listing {
   display: flex;
-  
+
   @media screen and (max-width: 500px) {
     flex-direction: column;
   }
   @media screen and (min-width: 501px) {
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
   }
 
   .post-tile-container {
-    padding: 5px;
-    
+    padding: 8px;
+
     @media screen and (max-width: 800px) {
       padding: 2px 0 2px 0;
     }
@@ -127,23 +131,22 @@ a {
   .post-tile {
     display: flex;
     flex-direction: column;
-    padding: 8px 8px 8px 8px;
+    padding: 16px;
     transition: all 500ms;
     border-color: $blog-post-border-color;
     border-radius: 5px;
     border-style: solid;
     border-width: 1px;
 
-    
     @media screen and (min-width: 501px) {
       max-width: 400px;
     }
-    
+
     h3 {
       margin: 0;
       padding: 8px 0 8px 0;
     }
-  
+
     small {
       font-weight: lighter;
       color: #3a3a3a;
@@ -180,7 +183,6 @@ a {
     @media screen and (max-width: 801px) {
       top: 8px;
     }
-    
   }
 }
 
@@ -196,19 +198,19 @@ a {
 }
 
 .blog-post-contents {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+
+  @media screen and (max-width: 555px) {
+    width: 100%;
+  }
+
+  img {
     display: block;
-    margin-left: auto;
-    margin-right: auto; 
-    width: 80%;
-
-    @media screen and (max-width: 555px) {
-      width: 100%;
-    }
-
-    img {
-      display: block;
-      width: 100%;
-    }
+    width: 100%;
+  }
 }
 
 .current-page {
@@ -245,8 +247,8 @@ a {
 
   li {
     padding: 0 8px 0 8px;
-  } 
-  
+  }
+
   a {
     background-color: $tag-background-color;
     border-radius: 5px;
@@ -260,7 +262,7 @@ a {
   }
 
   li a:hover {
-    background-color: $tag-hover-background-color;  
+    background-color: $tag-hover-background-color;
     outline-color: $tag-hover-border-color;
     outline-style: solid;
     outline-width: 1px;

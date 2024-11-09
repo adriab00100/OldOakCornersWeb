@@ -17,28 +17,38 @@ export type LatestPostProps = {
 const IndexPage = (props: LatestPostProps) => (
   <Layout>
     <SEO title="Home" />
-    <section>
+    <section className="padded-content">
       <Container type="stacked">
         <Container type="centering">
           <p>Welcome to Brian's personal website. This is primarily a space where I write about woodworking projects. Checkout my latest post, or the blog for older posts.</p>
         </Container>
-        <Container type="centering">
-          <Container type="side-by-side">
-            <div>
-              <h2>Something new is coming here soon</h2>
-              <p>Stay tuned for what is next for this website.</p>
-            </div>
-            <div>
-              <p>&nbsp; &nbsp; &nbsp; &nbsp;</p>
-            </div>
-            <div className="blog-listing">
+        <div className="blog-listing">
+          <Container type="centering">
+            <Container type="side-by-side">
+              <Container type="stacked">
+                <h2>Latest commission</h2>
+                <PostPreviewTile
+                  post={{
+                    excerpt: "Something interesting is coming here soon. Stay tuned...",
+                    frontmatter: {
+                      date: "2024-11-08",
+                      title: "Commissions coming soon",
+                      path: null,
+                      previewImage: null,
+                      author: null,
+                      tags: [],
+                    },
+                  }}
+                />
+              </Container>
+
               <Container type="stacked">
                 <h2>Latest blog entry</h2>
                 <PostPreviewTile post={props.data.allMdx.edges[0].node} />
               </Container>
-            </div>
+            </Container>
           </Container>
-        </Container>
+        </div>
       </Container>
     </section>
   </Layout>

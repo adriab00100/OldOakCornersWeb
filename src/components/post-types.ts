@@ -1,4 +1,4 @@
-export type Frontmatter = {
+export type PostFrontmatter = {
   readonly path: string | null;
   readonly date: string | null;
   readonly title: string | null;
@@ -8,6 +8,6 @@ export type Frontmatter = {
 };
 
 export type Post = {
-  readonly frontmatter: Frontmatter | null;
+  readonly frontmatter: PostFrontmatter | null;
   readonly excerpt: string | null;
 };

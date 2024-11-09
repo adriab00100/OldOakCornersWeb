@@ -362,13 +362,9 @@ type File = Node & {
   readonly changeTime: Scalars['Date'];
   /** Returns the first child node of type Mdx or null if there are no children of given type on this node */
   readonly childMdx: Maybe<Mdx>;
-  /** Returns the first child node of type yml or null if there are no children of given type on this node */
-  readonly childYml: Maybe<yml>;
   readonly children: ReadonlyArray<Node>;
   /** Returns all children nodes filtered by type Mdx */
   readonly childrenMdx: Maybe<ReadonlyArray<Maybe<Mdx>>>;
-  /** Returns all children nodes filtered by type yml */
-  readonly childrenYml: Maybe<ReadonlyArray<Maybe<yml>>>;
   readonly ctime: Scalars['Date'];
   readonly ctimeMs: Scalars['Float'];
   readonly dev: Scalars['Int'];
@@ -512,10 +508,8 @@ type FileFieldSelector = {
   readonly blocks: InputMaybe<FieldSelectorEnum>;
   readonly changeTime: InputMaybe<FieldSelectorEnum>;
   readonly childMdx: InputMaybe<MdxFieldSelector>;
-  readonly childYml: InputMaybe<ymlFieldSelector>;
   readonly children: InputMaybe<NodeFieldSelector>;
   readonly childrenMdx: InputMaybe<MdxFieldSelector>;
-  readonly childrenYml: InputMaybe<ymlFieldSelector>;
   readonly ctime: InputMaybe<FieldSelectorEnum>;
   readonly ctimeMs: InputMaybe<FieldSelectorEnum>;
   readonly dev: InputMaybe<FieldSelectorEnum>;
@@ -557,10 +551,8 @@ type FileFilterInput = {
   readonly blocks: InputMaybe<IntQueryOperatorInput>;
   readonly changeTime: InputMaybe<DateQueryOperatorInput>;
   readonly childMdx: InputMaybe<MdxFilterInput>;
-  readonly childYml: InputMaybe<ymlFilterInput>;
   readonly children: InputMaybe<NodeFilterListInput>;
   readonly childrenMdx: InputMaybe<MdxFilterListInput>;
-  readonly childrenYml: InputMaybe<ymlFilterListInput>;
   readonly ctime: InputMaybe<DateQueryOperatorInput>;
   readonly ctimeMs: InputMaybe<FloatQueryOperatorInput>;
   readonly dev: InputMaybe<IntQueryOperatorInput>;
@@ -643,10 +635,8 @@ type FileSortInput = {
   readonly blocks: InputMaybe<SortOrderEnum>;
   readonly changeTime: InputMaybe<SortOrderEnum>;
   readonly childMdx: InputMaybe<MdxSortInput>;
-  readonly childYml: InputMaybe<ymlSortInput>;
   readonly children: InputMaybe<NodeSortInput>;
   readonly childrenMdx: InputMaybe<MdxSortInput>;
-  readonly childrenYml: InputMaybe<ymlSortInput>;
   readonly ctime: InputMaybe<SortOrderEnum>;
   readonly ctimeMs: InputMaybe<SortOrderEnum>;
   readonly dev: InputMaybe<SortOrderEnum>;
@@ -994,7 +984,6 @@ type Query = {
   readonly allSiteFunction: SiteFunctionConnection;
   readonly allSitePage: SitePageConnection;
   readonly allSitePlugin: SitePluginConnection;
-  readonly allYml: ymlConnection;
   readonly directory: Maybe<Directory>;
   readonly file: Maybe<File>;
   readonly mdx: Maybe<Mdx>;
@@ -1003,7 +992,6 @@ type Query = {
   readonly siteFunction: Maybe<SiteFunction>;
   readonly sitePage: Maybe<SitePage>;
   readonly sitePlugin: Maybe<SitePlugin>;
-  readonly yml: Maybe<yml>;
 };
 
 
@@ -1071,14 +1059,6 @@ type Query_allSitePluginArgs = {
 };
 
 
-type Query_allYmlArgs = {
-  filter: InputMaybe<ymlFilterInput>;
-  limit: InputMaybe<Scalars['Int']>;
-  skip: InputMaybe<Scalars['Int']>;
-  sort: InputMaybe<ReadonlyArray<InputMaybe<ymlSortInput>>>;
-};
-
-
 type Query_directoryArgs = {
   absolutePath: InputMaybe<StringQueryOperatorInput>;
   accessTime: InputMaybe<DateQueryOperatorInput>;
@@ -1131,10 +1111,8 @@ type Query_fileArgs = {
   blocks: InputMaybe<IntQueryOperatorInput>;
   changeTime: InputMaybe<DateQueryOperatorInput>;
   childMdx: InputMaybe<MdxFilterInput>;
-  childYml: InputMaybe<ymlFilterInput>;
   children: InputMaybe<NodeFilterListInput>;
   childrenMdx: InputMaybe<MdxFilterListInput>;
-  childrenYml: InputMaybe<ymlFilterListInput>;
   ctime: InputMaybe<DateQueryOperatorInput>;
   ctimeMs: InputMaybe<FloatQueryOperatorInput>;
   dev: InputMaybe<IntQueryOperatorInput>;
@@ -1246,17 +1224,6 @@ type Query_sitePluginArgs = {
   resolve: InputMaybe<StringQueryOperatorInput>;
   ssrAPIs: InputMaybe<StringQueryOperatorInput>;
   version: InputMaybe<StringQueryOperatorInput>;
-};
-
-
-type Query_ymlArgs = {
-  banner_message: InputMaybe<StringQueryOperatorInput>;
-  children: InputMaybe<NodeFilterListInput>;
-  copyright: InputMaybe<StringQueryOperatorInput>;
-  id: InputMaybe<StringQueryOperatorInput>;
-  internal: InputMaybe<InternalFilterInput>;
-  parent: InputMaybe<NodeFilterInput>;
-  use_statement: InputMaybe<StringQueryOperatorInput>;
 };
 
 type Site = Node & {
@@ -2041,141 +2008,6 @@ type StringQueryOperatorInput = {
   readonly nin: InputMaybe<ReadonlyArray<InputMaybe<Scalars['String']>>>;
   readonly regex: InputMaybe<Scalars['String']>;
 };
-
-type yml = Node & {
-  readonly banner_message: Maybe<Scalars['String']>;
-  readonly children: ReadonlyArray<Node>;
-  readonly copyright: Maybe<Scalars['String']>;
-  readonly id: Scalars['ID'];
-  readonly internal: Internal;
-  readonly parent: Maybe<Node>;
-  readonly use_statement: Maybe<Scalars['String']>;
-};
-
-type ymlConnection = {
-  readonly distinct: ReadonlyArray<Scalars['String']>;
-  readonly edges: ReadonlyArray<ymlEdge>;
-  readonly group: ReadonlyArray<ymlGroupConnection>;
-  readonly max: Maybe<Scalars['Float']>;
-  readonly min: Maybe<Scalars['Float']>;
-  readonly nodes: ReadonlyArray<yml>;
-  readonly pageInfo: PageInfo;
-  readonly sum: Maybe<Scalars['Float']>;
-  readonly totalCount: Scalars['Int'];
-};
-
-
-type ymlConnection_distinctArgs = {
-  field: ymlFieldSelector;
-};
-
-
-type ymlConnection_groupArgs = {
-  field: ymlFieldSelector;
-  limit: InputMaybe<Scalars['Int']>;
-  skip: InputMaybe<Scalars['Int']>;
-};
-
-
-type ymlConnection_maxArgs = {
-  field: ymlFieldSelector;
-};
-
-
-type ymlConnection_minArgs = {
-  field: ymlFieldSelector;
-};
-
-
-type ymlConnection_sumArgs = {
-  field: ymlFieldSelector;
-};
-
-type ymlEdge = {
-  readonly next: Maybe<yml>;
-  readonly node: yml;
-  readonly previous: Maybe<yml>;
-};
-
-type ymlFieldSelector = {
-  readonly banner_message: InputMaybe<FieldSelectorEnum>;
-  readonly children: InputMaybe<NodeFieldSelector>;
-  readonly copyright: InputMaybe<FieldSelectorEnum>;
-  readonly id: InputMaybe<FieldSelectorEnum>;
-  readonly internal: InputMaybe<InternalFieldSelector>;
-  readonly parent: InputMaybe<NodeFieldSelector>;
-  readonly use_statement: InputMaybe<FieldSelectorEnum>;
-};
-
-type ymlFilterInput = {
-  readonly banner_message: InputMaybe<StringQueryOperatorInput>;
-  readonly children: InputMaybe<NodeFilterListInput>;
-  readonly copyright: InputMaybe<StringQueryOperatorInput>;
-  readonly id: InputMaybe<StringQueryOperatorInput>;
-  readonly internal: InputMaybe<InternalFilterInput>;
-  readonly parent: InputMaybe<NodeFilterInput>;
-  readonly use_statement: InputMaybe<StringQueryOperatorInput>;
-};
-
-type ymlFilterListInput = {
-  readonly elemMatch: InputMaybe<ymlFilterInput>;
-};
-
-type ymlGroupConnection = {
-  readonly distinct: ReadonlyArray<Scalars['String']>;
-  readonly edges: ReadonlyArray<ymlEdge>;
-  readonly field: Scalars['String'];
-  readonly fieldValue: Maybe<Scalars['String']>;
-  readonly group: ReadonlyArray<ymlGroupConnection>;
-  readonly max: Maybe<Scalars['Float']>;
-  readonly min: Maybe<Scalars['Float']>;
-  readonly nodes: ReadonlyArray<yml>;
-  readonly pageInfo: PageInfo;
-  readonly sum: Maybe<Scalars['Float']>;
-  readonly totalCount: Scalars['Int'];
-};
-
-
-type ymlGroupConnection_distinctArgs = {
-  field: ymlFieldSelector;
-};
-
-
-type ymlGroupConnection_groupArgs = {
-  field: ymlFieldSelector;
-  limit: InputMaybe<Scalars['Int']>;
-  skip: InputMaybe<Scalars['Int']>;
-};
-
-
-type ymlGroupConnection_maxArgs = {
-  field: ymlFieldSelector;
-};
-
-
-type ymlGroupConnection_minArgs = {
-  field: ymlFieldSelector;
-};
-
-
-type ymlGroupConnection_sumArgs = {
-  field: ymlFieldSelector;
-};
-
-type ymlSortInput = {
-  readonly banner_message: InputMaybe<SortOrderEnum>;
-  readonly children: InputMaybe<NodeSortInput>;
-  readonly copyright: InputMaybe<SortOrderEnum>;
-  readonly id: InputMaybe<SortOrderEnum>;
-  readonly internal: InputMaybe<InternalSortInput>;
-  readonly parent: InputMaybe<NodeSortInput>;
-  readonly use_statement: InputMaybe<SortOrderEnum>;
-};
-
-type BlogIndexQueryQueryVariables = Exact<{ [key: string]: never; }>;
-
-
-type BlogIndexQueryQuery = { readonly allMdx: { readonly edges: ReadonlyArray<{ readonly node: { readonly id: string, readonly excerpt: string | null, readonly frontmatter: { readonly path: string | null, readonly title: string | null, readonly date: string | null, readonly author: string | null } | null } }> } };
 
 type blogListQueryQueryVariables = Exact<{
   skip: Scalars['Int'];
