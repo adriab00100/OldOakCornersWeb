@@ -49,11 +49,11 @@ const Archive = (props: ArchiveProps) => {
 
   return (
     <Layout>
-      <SEO title="Blog post archive" />
+      <SEO title="Blog posts" />
+      <h1 className="padded-content">Blog Posts</h1>
       <Container type="centering">
-        <h1>Blog Post Archive</h1>
+        <PostListing posts={data.allMdx.edges.map(p => p.node)} />
       </Container>
-      <PostListing posts={data.allMdx.edges.map(p => p.node)} />
       {pages.length > 1 && <PageListing pages={pages} currentPage={currentPage} />}
     </Layout>
   );

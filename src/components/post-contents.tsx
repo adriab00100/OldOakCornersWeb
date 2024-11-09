@@ -17,7 +17,7 @@ export const PostContents = (props: PostContentsProps) => {
         <div className="post-heading">
           <h1>{frontmatter.title}</h1>
           <h4>
-            Authored by {frontmatter.author} on <time>{frontmatter.date}</time>
+            by {frontmatter.author} on <time>{frontmatter.date}</time>
           </h4>
           <ul className="post-tags">
             {(frontmatter.tags ?? []).map(tag => {

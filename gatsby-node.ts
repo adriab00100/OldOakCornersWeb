@@ -164,7 +164,7 @@ export const createPages: GatsbyNode["createPages"] = async ({ actions, graphql 
   });
   // archive
   const archivePosts = archiveGraph?.data?.allMdx.edges ?? [];
-  const postsPerPage = 10;
+  const postsPerPage = 12;
   const numPages = Math.ceil(archivePosts.length / postsPerPage);
   Array.from({ length: numPages }).forEach((_, i) => {
     createPage({

@@ -1,3 +1,4 @@
+import { Link } from "@mui/material";
 import React from "react";
 
 export type ExternalLinkProps = {
@@ -8,8 +9,8 @@ export type ExternalLinkProps = {
 export const ExternalLink = (props: ExternalLinkProps) => {
   const { href, children } = props;
   return (
-    <a href={href} rel="external noreferrer" target="_blank">
+    <Link href={href} rel="external noreferrer" target="_blank">
       {children}
-    </a>
+    </Link>
   );
 };
