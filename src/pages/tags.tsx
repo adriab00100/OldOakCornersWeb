@@ -1,4 +1,6 @@
-import { Link, graphql } from "gatsby";
+import { Box, Link, Typography } from "@mui/material";
+import { Grid } from "@mui/system";
+import { graphql } from "gatsby";
 import React from "react";
 import { Layout } from "../components/layout";
 import { SEO } from "../components/seo";
@@ -19,19 +21,25 @@ const TagsPage = (props: TagsPageProps) => {
   const group = props.data.allMdx.group;
   return (
     <Layout>
-      <SEO title="All Tags" />
-      <section>
-        <h1>Tags</h1>
-        <ul>
-          {group.map(tag => (
-            <li key={tag.fieldValue}>
-              <Link to={`/tags/${toKebabCase(tag.fieldValue)}/`}>
-                {tag.fieldValue} ({tag.totalCount})
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </section>
+      <Box sx={{ padding: 2 }}>
+        <SEO title="All Tags" />
+        <Box component="section">
+          <Typography variant="h4" paddingY={2}>
+            Tags
+          </Typography>
+          <Grid container spacing={1}>
+            {group.map(tag => (
+              <Grid size={2}>
+                <Link key={tag.fieldValue} href={`/tags/${toKebabCase(tag.fieldValue)}/`}>
+                  <Typography>
+                    {tag.fieldValue} ({tag.totalCount})
+                  </Typography>
+                </Link>
+              </Grid>
+            ))}
+          </Grid>
+        </Box>
+      </Box>
     </Layout>
   );
 };

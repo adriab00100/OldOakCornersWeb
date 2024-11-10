@@ -1,4 +1,5 @@
-import { Link } from "gatsby";
+import { Card, CardContent, Link, Stack, Typography } from "@mui/material";
+import { Box } from "@mui/system";
 import React from "react";
 import "../styles/default-layout.scss";
 import { ErrorMessage } from "./error-message";
@@ -14,25 +15,31 @@ export const PostPreviewTile = (props: PostPreviewTileProps) => {
     return <ErrorMessage />;
   }
   return (
-    <div key={post.frontmatter.path} className="post-tile-container">
-      <div key={post.frontmatter.path} className="post-tile">
-        {post.frontmatter.path ? (
-          <Link to={post.frontmatter.path ? `/blog${post.frontmatter.path}` : "404"}>
-            <h3>{post.frontmatter.title}</h3>
-          </Link>
-        ) : (
-          <h3>{post.frontmatter.title}</h3>
-        )}
-        <small>
-          {post.frontmatter.author} on {post.frontmatter.date}
-        </small>
-        <p>{post.excerpt}</p>
-        {post.frontmatter.path && (
-          <Link className="preview-read-more" to={post.frontmatter.path ? `/blog${post.frontmatter.path}` : "404"}>
-            Read Post
-          </Link>
-        )}
-      </div>
-    </div>
+    <Box padding={1}>
+      <Card variant="outlined" sx={{ "@media screen and (min-width: 501px)": { maxWidth: "400px" }, height: "100%" }} key={post.frontmatter.path}>
+        <CardContent>
+          <Stack spacing={1}>
+            {post.frontmatter.path ? (
+              <Link href={post.frontmatter.path ? `/blog${post.frontmatter.path}` : "/404"} underline="hover">
+                <Typography variant="h5" paddingTop={1}>
+                  {post.frontmatter.title}
+                </Typography>
+              </Link>
+            ) : (
+              <h3>{post.frontmatter.title}</h3>
+            )}
+            <Typography variant="subtitle1" paddingBottom={1}>
+              {post.frontmatter.author} on {post.frontmatter.date}
+            </Typography>
+            <Typography>{post.excerpt}</Typography>
+            {post.frontmatter.path && (
+              <Link href={post.frontmatter.path ? `/blog${post.frontmatter.path}` : "/404"}>
+                <Typography sx={{ paddingTop: 1, textAlign: "right" }}>Read Post</Typography>
+              </Link>
+            )}
+          </Stack>
+        </CardContent>
+      </Card>
+    </Box>
   );
 };

@@ -1,6 +1,13 @@
+import "@fontsource/roboto/300.css";
+import "@fontsource/roboto/400.css";
+import "@fontsource/roboto/500.css";
+import "@fontsource/roboto/700.css";
+import { Container, Paper } from "@mui/material";
+import { Box } from "@mui/system";
 import { graphql, useStaticQuery } from "gatsby";
 import React, { ReactNode } from "react";
 import "../styles/default-layout.scss";
+import { SiteThemeProvider } from "../styles/theme";
 import { Footer } from "./footer";
 import { Header } from "./header";
 
@@ -21,16 +28,23 @@ export const Layout = (props: LayoutProps): React.JSX.Element => {
   `);
 
   return (
-    <div className="full-width-container">
-      <a className="jump-to-main" href="#maincontentstart">
-        Jump to main content
-      </a>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <main className="main-content full-width-container limited-width-container">
-        <span id="maincontentstart" />
-        {children}
-      </main>
-      <Footer />
-    </div>
+    <SiteThemeProvider>
+      <Box sx={{ width: "auto", marginLeft: "auto", marginRight: "auto" }}>
+        <a className="jump-to-main" href="#maincontentstart">
+          Jump to main content
+        </a>
+        <Header siteTitle={data.site.siteMetadata.title} />
+
+        <Container>
+          <Paper component="main" sx={{ padding: 2, marginX: { xs: -2 } }}>
+            <Box justifyContent="center">
+              <span id="maincontentstart" />
+              {children}
+            </Box>
+          </Paper>
+        </Container>
+        <Footer />
+      </Box>
+    </SiteThemeProvider>
   );
 };

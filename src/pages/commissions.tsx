@@ -1,3 +1,4 @@
+import { Typography } from "@mui/material";
 import React from "react";
 import { Layout } from "../components/layout";
 import { SEO } from "../components/seo";
@@ -5,9 +6,11 @@ import { SEO } from "../components/seo";
 const CommissionsPage = () => (
   <Layout>
     <SEO title="Commissions" />
-    <h1 className="padded-content">Welcome to Brian&apos;s workshop commission zone</h1>
+    <Typography variant="h4" padding={1}>
+      Welcome to Brian&apos;s workshop commission zone
+    </Typography>
     <section className="padded-content">
-      <p>Coming soon</p>
+      <Typography>Coming soon...</Typography>
     </section>
   </Layout>
 );

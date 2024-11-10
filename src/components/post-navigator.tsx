@@ -1,35 +1,46 @@
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import { Box, Stack, Typography } from "@mui/material";
 import { Link } from "gatsby";
 import React from "react";
 import "../styles/default-layout.scss";
-import { Frontmatter } from "./post-types";
+import { PostFrontmatter } from "./post-types";
 
 export type PostNavigatorProps = {
-  next?: Frontmatter | null;
-  previous?: Frontmatter | null;
+  next?: PostFrontmatter | null;
+  previous?: PostFrontmatter | null;
 };
 
 export const PostNavigator = (props: PostNavigatorProps) => {
   const { next, previous } = props;
   return (
-    <nav aria-label="Previous and/or next post">
-      <ul className="page-navigator">
+    <Box component="nav" aria-label="Previous and/or next post" sx={{ paddingY: 2, marginX: "auto", width: "auto", justifyContent: "center", display: "flex" }}>
+      <Stack direction="row" spacing={2}>
         {next && next.path && (
-          <li>
-            Newer Post <br />
+          <Stack>
+            <Typography>Newer Post </Typography>
             <Link to={`/blog${next.path}`} rel="next">
-              ← {next.title ?? "Next"}
+              <Stack direction="row">
+                <ArrowBackIcon />
+                <Typography>{next.title ?? "Next"}</Typography>
+              </Stack>
             </Link>
-          </li>
+          </Stack>
         )}
         {previous && previous.path && (
-          <li style={{ textAlign: "right" }}>
-            Older Post <br />
+          <Stack sx={{ textAlign: "right" }}>
+            <Typography>
+              Older Post <br />
+            </Typography>
             <Link to={`/blog${previous.path}`} rel="previous">
-              {previous.title ?? "Previous"} →
+              <Stack direction="row">
+                <Typography>{previous.title ?? "Previous"}</Typography>
+                <ArrowForwardIcon />
+              </Stack>
             </Link>
-          </li>
+          </Stack>
         )}
-      </ul>
-    </nav>
+      </Stack>
+    </Box>
   );
 };

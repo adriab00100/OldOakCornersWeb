@@ -1,6 +1,7 @@
+import { Container, Typography } from "@mui/material";
+import { Box, Stack } from "@mui/system";
 import { graphql } from "gatsby";
 import React from "react";
-import { Container } from "../components/container";
 import { Layout } from "../components/layout";
 import { PostPreviewTile } from "../components/post-preview-tile";
 import { Post } from "../components/post-types";
@@ -17,40 +18,43 @@ export type LatestPostProps = {
 const IndexPage = (props: LatestPostProps) => (
   <Layout>
     <SEO title="Home" />
-    <section className="padded-content">
-      <Container type="stacked">
-        <Container type="centering">
-          <p>Welcome to Brian's personal website. This is primarily a space where I write about woodworking projects. Checkout my latest post, or the blog for older posts.</p>
+    <Box sx={{ padding: 2 }} component="section">
+      <Stack>
+        <Box textAlign="center" sx={{ paddingY: 3 }}>
+          <Typography>
+            Welcome to Brian's personal website. This is primarily a space where I write about woodworking projects. Checkout my latest post, or the blog for older posts.
+          </Typography>
+        </Box>
+        <Container>
+          <Stack direction={{ xs: "column", sm: "row" }} spacing={2} justifyContent="space-around">
+            <Stack>
+              <Typography variant="h4" sx={{ paddingY: 1 }}>
+                Latest commission
+              </Typography>
+              <PostPreviewTile
+                post={{
+                  excerpt: "Something interesting is coming here soon. Stay tuned...",
+                  frontmatter: {
+                    date: "2024-11-08",
+                    title: "Commissions coming soon",
+                    path: null,
+                    previewImage: null,
+                    author: null,
+                    tags: [],
+                  },
+                }}
+              />
+            </Stack>
+            <Stack>
+              <Typography variant="h4" sx={{ paddingY: 1 }}>
+                Latest blog entry
+              </Typography>
+              <PostPreviewTile post={props.data.allMdx.edges[0].node} />
+            </Stack>
+          </Stack>
         </Container>
-        <div className="blog-listing">
-          <Container type="centering">
-            <Container type="side-by-side">
-              <Container type="stacked">
-                <h2>Latest commission</h2>
-                <PostPreviewTile
-                  post={{
-                    excerpt: "Something interesting is coming here soon. Stay tuned...",
-                    frontmatter: {
-                      date: "2024-11-08",
-                      title: "Commissions coming soon",
-                      path: null,
-                      previewImage: null,
-                      author: null,
-                      tags: [],
-                    },
-                  }}
-                />
-              </Container>
-
-              <Container type="stacked">
-                <h2>Latest blog entry</h2>
-                <PostPreviewTile post={props.data.allMdx.edges[0].node} />
-              </Container>
-            </Container>
-          </Container>
-        </div>
-      </Container>
-    </section>
+      </Stack>
+    </Box>
   </Layout>
 );
 

@@ -1,30 +1,32 @@
-import { Link } from "gatsby";
+import { Box, Container, Divider, Link, Stack, Typography } from "@mui/material";
 import React from "react";
 import "../styles/default-layout.scss";
-import "../styles/site-footer.scss";
-import { Container } from "./container";
 
 export const Footer = () => {
   const year = new Date().getFullYear();
   return (
-    <footer className="site-footer full-width-container">
-      <section className="footer-container full-width-container limited-width-container">
-        <Container type="side-by-side">
-          <Container type="stacked" additionalClass="site-footer-copy-container">
-            <div className="copyright ">© {year} Brian Adriance</div>
-            <div className="disclaimer">
-              All plans and designs presented here are FREE TO USE, COPY, OR MODIFY for personal or commercial use. Images MAY NOT be shared for commercial use or use by a
-              publication without consent of author/creator.
-            </div>
-          </Container>
-          <div className="site-footer-link-container">
-            <Container type="stacked">
-              <Link to="/rss.xml">RSS</Link>
-              <Link to="/about">About</Link>
-            </Container>
-          </div>
-        </Container>
-      </section>
-    </footer>
+    <Container component="footer" sx={{ padding: 2 }}>
+      <Box component="section">
+        <Stack direction="row" divider={<Divider orientation="vertical" flexItem />}>
+          <Stack padding={2}>
+            <Typography variant="overline">© {year} Brian Adriance</Typography>
+            <Typography variant="body2">
+              All plans and designs presented in the blog are FREE TO USE, COPY, OR MODIFY for personal or commercial use unless otherwise specified on the page. Images MAY NOT be
+              shared for commercial use or use by a publication without consent of author/creator.
+            </Typography>
+          </Stack>
+          <Box>
+            <Stack padding={2} spacing={1}>
+              <Link href="/rss.xml">
+                <Typography>RSS</Typography>
+              </Link>
+              <Link href="/about">
+                <Typography>About</Typography>
+              </Link>
+            </Stack>
+          </Box>
+        </Stack>
+      </Box>
+    </Container>
   );
 };
