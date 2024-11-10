@@ -85,7 +85,7 @@ export const SEO = (seoProps: SeoProps) => {
         {`{
           "@context": "https://schema.org/",
           "@type": "Blog",
-          "name": "Brian Adriance's Blog",
+          "name": "Brian Adriance's Website",
           "author": {
             "@type": "Person",
             "name": "${site.siteMetadata.author}"

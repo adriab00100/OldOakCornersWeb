@@ -1,38 +1,53 @@
+import { Box, Chip, Container, Stack, Typography } from "@mui/material";
 import { Link } from "gatsby";
 import React from "react";
 import { toKebabCase } from "../utilities/string-manipulations";
-import { Container } from "./container";
-import { Frontmatter } from "./post-types";
+import { PostFrontmatter } from "./post-types";
 
 export type PostContentsProps = {
-  frontmatter: Frontmatter;
+  frontmatter: PostFrontmatter;
   contents: React.ReactNode | React.ReactNode[];
 };
 
 export const PostContents = (props: PostContentsProps) => {
   const { frontmatter } = props;
   return (
-    <>
-      <Container type="centering">
-        <div className="post-heading">
-          <h1>{frontmatter.title}</h1>
-          <h4>
+    <Stack>
+      <Container sx={{ padding: 3, justifyContent: "center" }}>
+        <Stack spacing={1} justifyContent="center">
+          <Typography variant="h4" textAlign="center">
+            {frontmatter.title}
+          </Typography>
+          <Typography variant="subtitle1" textAlign="center">
             by {frontmatter.author} on <time>{frontmatter.date}</time>
-          </h4>
-          <ul className="post-tags">
+          </Typography>
+          <Stack direction="row" spacing={1} justifyContent="center">
             {(frontmatter.tags ?? []).map(tag => {
               return (
                 tag && (
-                  <li key={tag}>
-                    <Link to={`/tags/${toKebabCase(tag)}`}>{tag}</Link>
-                  </li>
+                  <Link to={`/tags/${toKebabCase(tag)}`}>
+                    <Chip
+                      label={tag}
+                      sx={{
+                        ":hover": {
+                          backgroundColor: "hsl(38, 63%, 82%)",
+                          color: "hsl(30, 80%, 17%)",
+                          outlineColor: "hsl(30, 80%, 17%)",
+                          outlineWidth: "1px",
+                          outlineStyle: "solid",
+                        },
+                      }}
+                    />
+                  </Link>
                 )
               );
             })}
-          </ul>
-        </div>
+          </Stack>
+        </Stack>
       </Container>
-      <section className="blog-post-contents">{props.contents}</section>
-    </>
+      <Box component="section" className="blog-post-contents">
+        {props.contents}
+      </Box>
+    </Stack>
   );
 };

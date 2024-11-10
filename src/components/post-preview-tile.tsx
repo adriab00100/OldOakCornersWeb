@@ -20,7 +20,7 @@ export const PostPreviewTile = (props: PostPreviewTileProps) => {
         <CardContent>
           <Stack spacing={1}>
             {post.frontmatter.path ? (
-              <Link href={post.frontmatter.path ? `/blog${post.frontmatter.path}` : "/404"}>
+              <Link href={post.frontmatter.path ? `/blog${post.frontmatter.path}` : "/404"} underline="hover">
                 <Typography variant="h5" paddingTop={1}>
                   {post.frontmatter.title}
                 </Typography>
@@ -33,8 +33,8 @@ export const PostPreviewTile = (props: PostPreviewTileProps) => {
             </Typography>
             <Typography>{post.excerpt}</Typography>
             {post.frontmatter.path && (
-              <Link sx={{ paddingTop: 1 }} href={post.frontmatter.path ? `/blog${post.frontmatter.path}` : "/404"}>
-                Read Post
+              <Link href={post.frontmatter.path ? `/blog${post.frontmatter.path}` : "/404"}>
+                <Typography sx={{ paddingTop: 1, textAlign: "right" }}>Read Post</Typography>
               </Link>
             )}
           </Stack>

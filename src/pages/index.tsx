@@ -1,4 +1,4 @@
-import { Typography } from "@mui/material";
+import { Container, Typography } from "@mui/material";
 import { Box, Stack } from "@mui/system";
 import { graphql } from "gatsby";
 import React from "react";
@@ -25,37 +25,34 @@ const IndexPage = (props: LatestPostProps) => (
             Welcome to Brian's personal website. This is primarily a space where I write about woodworking projects. Checkout my latest post, or the blog for older posts.
           </Typography>
         </Box>
-        <div className="blog-listing">
-          <Box>
-            <Stack direction="row">
-              <Stack>
-                <Typography variant="h4" sx={{ paddingY: 1 }}>
-                  Latest commission
-                </Typography>
-                <PostPreviewTile
-                  post={{
-                    excerpt: "Something interesting is coming here soon. Stay tuned...",
-                    frontmatter: {
-                      date: "2024-11-08",
-                      title: "Commissions coming soon",
-                      path: null,
-                      previewImage: null,
-                      author: null,
-                      tags: [],
-                    },
-                  }}
-                />
-              </Stack>
-
-              <Stack>
-                <Typography variant="h4" sx={{ paddingY: 1 }}>
-                  Latest blog entry
-                </Typography>
-                <PostPreviewTile post={props.data.allMdx.edges[0].node} />
-              </Stack>
+        <Container>
+          <Stack direction={{ xs: "column", sm: "row" }} spacing={2} justifyContent="space-around">
+            <Stack>
+              <Typography variant="h4" sx={{ paddingY: 1 }}>
+                Latest commission
+              </Typography>
+              <PostPreviewTile
+                post={{
+                  excerpt: "Something interesting is coming here soon. Stay tuned...",
+                  frontmatter: {
+                    date: "2024-11-08",
+                    title: "Commissions coming soon",
+                    path: null,
+                    previewImage: null,
+                    author: null,
+                    tags: [],
+                  },
+                }}
+              />
             </Stack>
-          </Box>
-        </div>
+            <Stack>
+              <Typography variant="h4" sx={{ paddingY: 1 }}>
+                Latest blog entry
+              </Typography>
+              <PostPreviewTile post={props.data.allMdx.edges[0].node} />
+            </Stack>
+          </Stack>
+        </Container>
       </Stack>
     </Box>
   </Layout>

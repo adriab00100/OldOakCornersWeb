@@ -1,3 +1,4 @@
+import { Divider } from "@mui/material";
 import { Stack } from "@mui/system";
 import { DiscussionEmbed } from "disqus-react";
 import { graphql } from "gatsby";
@@ -37,6 +38,7 @@ const BlogPost = (props: BlogPostProps) => {
       <Stack spacing={1}>
         <PostContents frontmatter={post.frontmatter} contents={props.children} />
         <PostNavigator next={next?.frontmatter} previous={previous?.frontmatter} />
+        <Divider />
         <DiscussionEmbed {...disqusConfig} />
       </Stack>
     </Layout>

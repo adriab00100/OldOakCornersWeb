@@ -1,4 +1,5 @@
-import { Box, Link, List, ListItem, Typography } from "@mui/material";
+import { Box, Link, Typography } from "@mui/material";
+import { Grid } from "@mui/system";
 import { graphql } from "gatsby";
 import React from "react";
 import { Layout } from "../components/layout";
@@ -23,16 +24,20 @@ const TagsPage = (props: TagsPageProps) => {
       <Box sx={{ padding: 2 }}>
         <SEO title="All Tags" />
         <Box component="section">
-          <Typography variant="h4">Tags</Typography>
-          <List>
+          <Typography variant="h4" paddingY={2}>
+            Tags
+          </Typography>
+          <Grid container spacing={1}>
             {group.map(tag => (
-              <ListItem key={tag.fieldValue}>
-                <Link href={`/tags/${toKebabCase(tag.fieldValue)}/`}>
-                  {tag.fieldValue} ({tag.totalCount})
+              <Grid size={2}>
+                <Link key={tag.fieldValue} href={`/tags/${toKebabCase(tag.fieldValue)}/`}>
+                  <Typography>
+                    {tag.fieldValue} ({tag.totalCount})
+                  </Typography>
                 </Link>
-              </ListItem>
+              </Grid>
             ))}
-          </List>
+          </Grid>
         </Box>
       </Box>
     </Layout>

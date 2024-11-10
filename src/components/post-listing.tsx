@@ -12,9 +12,11 @@ export const PostListing = (props: PostListingProps) => {
   const { posts } = props;
   return (
     <Box justifyContent="center" width="100%">
-      <Grid container>
+      <Grid container paddingX={3}>
         {posts.map(post => (
-          <PostPreviewTile post={post} />
+          <Grid size={4} key={post.frontmatter?.path}>
+            <PostPreviewTile post={post} />
+          </Grid>
         ))}
       </Grid>
     </Box>

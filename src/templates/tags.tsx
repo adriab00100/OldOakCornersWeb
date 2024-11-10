@@ -1,6 +1,6 @@
+import { Container, Typography } from "@mui/material";
 import { Link, graphql } from "gatsby";
 import React from "react";
-import { Container } from "../components/container";
 import { Layout } from "../components/layout";
 import { PostListing } from "../components/post-listing";
 import { Post } from "../components/post-types";
@@ -27,11 +27,11 @@ const Tags = (props: TagsProps) => {
   return (
     <Layout>
       <SEO title={tagHeader} />
-      <Container type="centering">
-        <h1>{tagHeader}</h1>
+      <Container>
+        <Typography variant="h3">{tagHeader}</Typography>
       </Container>
       <PostListing posts={edges.map(p => p.node)} />
-      <Container type="centering">
+      <Container>
         <Link to="/tags">View full tag listing</Link>
       </Container>
     </Layout>

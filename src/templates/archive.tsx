@@ -1,8 +1,6 @@
-import { Typography } from "@mui/material";
-import { Box, Stack } from "@mui/system";
-import { Link, graphql } from "gatsby";
+import { Box, Chip, Container, Link, Stack, Typography } from "@mui/material";
+import { graphql } from "gatsby";
 import React from "react";
-import { Container } from "../components/container";
 import { Layout } from "../components/layout";
 import { PostListing } from "../components/post-listing";
 import { Post } from "../components/post-types";
@@ -30,22 +28,42 @@ const Archive = (props: ArchiveProps) => {
   const PageListing = (props: { pages: number[]; currentPage: number }) => {
     const { pages, currentPage } = props;
     return (
-      <section>
-        <Container type="centering">
-          <h4 className="page-listing-title">More pages in the archive</h4>
+      <Box sx={{ marginX: "auto", width: "auto", justifyContent: "center", display: "flex" }}>
+        <Container component="section">
+          <Box paddingY={1}>
+            <Typography variant="h5">More blog posts</Typography>
+          </Box>
+          <Box component="nav" aria-label="pages of blog posts in archive">
+            <Stack direction="row" spacing={2} justifyContent="center" alignContent="center">
+              {pages.map(page => {
+                return (
+                  <Typography key={page}>
+                    {currentPage === page ? (
+                      <Chip label={page} />
+                    ) : (
+                      <Link href={page === 1 ? "/blog-posts" : `/blog-posts/${page}`}>
+                        <Chip
+                          label={page}
+                          variant="outlined"
+                          sx={{
+                            ":hover": {
+                              backgroundColor: "hsl(38, 63%, 82%)",
+                              color: "hsl(30, 80%, 17%)",
+                              outlineColor: "hsl(30, 80%, 17%)",
+                              outlineWidth: "1px",
+                              outlineStyle: "solid",
+                            },
+                          }}
+                        />
+                      </Link>
+                    )}
+                  </Typography>
+                );
+              })}
+            </Stack>
+          </Box>
         </Container>
-        <nav aria-label="pages of blog posts in archive">
-          <ul className="pages-listing">
-            {pages.map(page => {
-              return (
-                <li key={page}>
-                  {currentPage === page ? <span className="current-page">{page}</span> : <Link to={page === 1 ? "/blog-posts" : `/blog-posts/${page}`}>{page}</Link>}
-                </li>
-              );
-            })}
-          </ul>
-        </nav>
-      </section>
+      </Box>
     );
   };
 
@@ -56,7 +74,7 @@ const Archive = (props: ArchiveProps) => {
         <Typography variant="h4" padding={3}>
           Blog Posts
         </Typography>
-        <Box justifyContent="center">
+        <Box sx={{ marginX: "auto", width: "auto", justifyContent: "center", display: "flex" }}>
           <PostListing posts={data.allMdx.edges.map(p => p.node)} />
         </Box>
         {pages.length > 1 && <PageListing pages={pages} currentPage={currentPage} />}
