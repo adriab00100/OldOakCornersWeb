@@ -1,3 +1,4 @@
+import { Stack } from "@mui/system";
 import { DiscussionEmbed } from "disqus-react";
 import { graphql } from "gatsby";
 import React from "react";
@@ -33,11 +34,11 @@ const BlogPost = (props: BlogPostProps) => {
   return (
     <Layout>
       <SEO title={post.frontmatter.title ?? "Untitled"} datePublished={post.frontmatter.date} description={post.excerpt} previewImage={post.frontmatter.previewImage} />
-      <PostContents frontmatter={post.frontmatter} contents={props.children} />
-      <br />
-      <PostNavigator next={next?.frontmatter} previous={previous?.frontmatter} />
-      <hr />
-      <DiscussionEmbed {...disqusConfig} />
+      <Stack spacing={1}>
+        <PostContents frontmatter={post.frontmatter} contents={props.children} />
+        <PostNavigator next={next?.frontmatter} previous={previous?.frontmatter} />
+        <DiscussionEmbed {...disqusConfig} />
+      </Stack>
     </Layout>
   );
 };

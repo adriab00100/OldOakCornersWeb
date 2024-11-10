@@ -1,4 +1,6 @@
-import { graphql, Link } from "gatsby";
+import { Typography } from "@mui/material";
+import { Box, Stack } from "@mui/system";
+import { Link, graphql } from "gatsby";
 import React from "react";
 import { Container } from "../components/container";
 import { Layout } from "../components/layout";
@@ -50,11 +52,15 @@ const Archive = (props: ArchiveProps) => {
   return (
     <Layout>
       <SEO title="Blog posts" />
-      <h1 className="padded-content">Blog Posts</h1>
-      <Container type="centering">
-        <PostListing posts={data.allMdx.edges.map(p => p.node)} />
-      </Container>
-      {pages.length > 1 && <PageListing pages={pages} currentPage={currentPage} />}
+      <Stack>
+        <Typography variant="h4" padding={3}>
+          Blog Posts
+        </Typography>
+        <Box justifyContent="center">
+          <PostListing posts={data.allMdx.edges.map(p => p.node)} />
+        </Box>
+        {pages.length > 1 && <PageListing pages={pages} currentPage={currentPage} />}
+      </Stack>
     </Layout>
   );
 };

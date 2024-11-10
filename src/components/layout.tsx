@@ -1,3 +1,4 @@
+import { Box } from "@mui/system";
 import { graphql, useStaticQuery } from "gatsby";
 import React, { ReactNode } from "react";
 import "../styles/default-layout.scss";
@@ -27,8 +28,10 @@ export const Layout = (props: LayoutProps): React.JSX.Element => {
       </a>
       <Header siteTitle={data.site.siteMetadata.title} />
       <main className="main-content full-width-container limited-width-container">
-        <span id="maincontentstart" />
-        {children}
+        <Box justifyContent="center">
+          <span id="maincontentstart" />
+          {children}
+        </Box>
       </main>
       <Footer />
     </div>
