@@ -1,4 +1,4 @@
-import { Box, Link, Typography } from "@mui/material";
+import { Badge, Box, Link, Typography } from "@mui/material";
 import { Grid } from "@mui/system";
 import { graphql } from "gatsby";
 import React from "react";
@@ -29,12 +29,12 @@ const TagsPage = (props: TagsPageProps) => {
           </Typography>
           <Grid container spacing={1}>
             {group.map(tag => (
-              <Grid size={2}>
-                <Link key={tag.fieldValue} href={`/tags/${toKebabCase(tag.fieldValue)}/`}>
-                  <Typography>
-                    {tag.fieldValue} ({tag.totalCount})
-                  </Typography>
-                </Link>
+              <Grid size={{ xs: 18, sm: 6, md: 2 }} paddingY={1}>
+                <Badge badgeContent={tag.totalCount} color="primary">
+                  <Link key={tag.fieldValue} href={`/tags/${toKebabCase(tag.fieldValue)}/`} sx={{ paddingRight: 1 }}>
+                    <Typography>{tag.fieldValue}</Typography>
+                  </Link>
+                </Badge>
               </Grid>
             ))}
           </Grid>

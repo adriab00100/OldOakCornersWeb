@@ -10,7 +10,7 @@ export type PostContentsProps = {
 };
 
 export const PostContents = (props: PostContentsProps) => {
-  const { frontmatter } = props;
+  const { contents, frontmatter } = props;
   return (
     <Stack>
       <Container sx={{ padding: 3, justifyContent: "center" }}>
@@ -46,7 +46,7 @@ export const PostContents = (props: PostContentsProps) => {
         </Stack>
       </Container>
       <Box component="section" className="blog-post-contents">
-        {props.contents}
+        {contents}
       </Box>
     </Stack>
   );

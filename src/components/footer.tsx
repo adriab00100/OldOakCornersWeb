@@ -1,6 +1,5 @@
 import { Box, Container, Divider, Link, Stack, Typography } from "@mui/material";
 import React from "react";
-import "../styles/default-layout.scss";
 
 export const Footer = () => {
   const year = new Date().getFullYear();
