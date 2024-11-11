@@ -1,4 +1,4 @@
-import { Box, Button, Container, Link, Stack, Typography } from "@mui/material";
+import { Box, Button, Container, Link, Stack, Tooltip, Typography } from "@mui/material";
 import React from "react";
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const Logo = require("../images/logo.svg");
@@ -56,9 +56,13 @@ export const Header = (props: HeaderProps): React.JSX.Element => {
               <Stack direction={{ xs: "column", sm: "row" }} spacing={2}>
                 <NavButton href="/">Home</NavButton>
                 <NavButton href="/blog-posts">Blog</NavButton>
-                <NavButton href="/commissions" disabled>
-                  Commissions
-                </NavButton>
+                <Tooltip title="Coming soon...">
+                  <Box>
+                    <NavButton href="/commissions" disabled>
+                      Commissions
+                    </NavButton>
+                  </Box>
+                </Tooltip>
               </Stack>
             </Box>
           </Stack>
