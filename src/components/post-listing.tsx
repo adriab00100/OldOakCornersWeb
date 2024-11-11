@@ -14,7 +14,7 @@ export const PostListing = (props: PostListingProps) => {
     <Box justifyContent="center" width="100%">
       <Grid container paddingX={3}>
         {posts.map(post => (
-          <Grid size={4} key={post.frontmatter?.path}>
+          <Grid size={{ xs: 12, sm: 4 }} key={post.frontmatter?.path}>
             <PostPreviewTile post={post} />
           </Grid>
         ))}
