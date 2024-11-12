@@ -1,5 +1,5 @@
-import { Container, Typography } from "@mui/material";
-import { Link, graphql } from "gatsby";
+import { Link, Stack, Typography } from "@mui/material";
+import { graphql } from "gatsby";
 import React from "react";
 import { Layout } from "../components/layout";
 import { PostListing } from "../components/post-listing";
@@ -27,13 +27,15 @@ const Tags = (props: TagsProps) => {
   return (
     <Layout>
       <SEO title={tagHeader} />
-      <Container>
-        <Typography variant="h3">{tagHeader}</Typography>
-      </Container>
-      <PostListing posts={edges.map(p => p.node)} />
-      <Container>
-        <Link to="/tags">View full tag listing</Link>
-      </Container>
+      <Stack spacing={1}>
+        <Typography variant="h4" paddingY={2}>
+          {tagHeader}
+        </Typography>
+        <PostListing posts={edges.map(p => p.node)} />
+        <Link href="/tags">
+          <Typography>View full tag listing</Typography>
+        </Link>
+      </Stack>
     </Layout>
   );
 };

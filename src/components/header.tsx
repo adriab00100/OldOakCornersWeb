@@ -18,11 +18,10 @@ const NavButton = ({ children, disabled, href }: NavButtonProps): React.JSX.Elem
       size="large"
       sx={{
         color: "black",
-        borderColor: "black",
         ":hover": {
-          backgroundColor: "hsl(38, 63%, 82%)",
-          color: "hsl(30, 80%, 17%)",
-          outlineColor: "hsl(30, 80%, 17%)",
+          backgroundColor: theme => theme.palette.secondary.main,
+          color: theme => theme.palette.info.dark,
+          outlineColor: theme => theme.palette.info.dark,
           outlineWidth: "1px",
           outlineStyle: "solid",
         },

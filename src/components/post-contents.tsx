@@ -30,9 +30,9 @@ export const PostContents = (props: PostContentsProps) => {
                       label={tag}
                       sx={{
                         ":hover": {
-                          backgroundColor: "hsl(38, 63%, 82%)",
-                          color: "hsl(30, 80%, 17%)",
-                          outlineColor: "hsl(30, 80%, 17%)",
+                          backgroundColor: theme => theme.palette.secondary.main,
+                          color: theme => theme.palette.primary.main,
+                          outlineColor: theme => theme.palette.primary.main,
                           outlineWidth: "1px",
                           outlineStyle: "solid",
                         },

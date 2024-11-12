@@ -14,7 +14,7 @@ export const PostPreviewTile = (props: PostPreviewTileProps) => {
   }
   return (
     <Box padding={1}>
-      <Card sx={{ "@media screen and (min-width: 501px)": { maxWidth: "400px" }, height: "100%", borderColor: "hsl(39, 16%, 76%)" }} variant="outlined" key={post.frontmatter.path}>
+      <Card sx={{ "@media screen and (min-width: 501px)": { maxWidth: "400px" }, height: "100%" }} key={post.frontmatter.path}>
         <CardContent>
           <Stack spacing={1}>
             {post.frontmatter.path ? (

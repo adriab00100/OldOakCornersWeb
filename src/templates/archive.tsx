@@ -47,9 +47,9 @@ const Archive = (props: ArchiveProps) => {
                           variant="outlined"
                           sx={{
                             ":hover": {
-                              backgroundColor: "hsl(38, 63%, 82%)",
-                              color: "hsl(30, 80%, 17%)",
-                              outlineColor: "hsl(30, 80%, 17%)",
+                              backgroundColor: theme => theme.palette.secondary.main,
+                              color: theme => theme.palette.primary.main,
+                              outlineColor: theme => theme.palette.primary.main,
                               outlineWidth: "1px",
                               outlineStyle: "solid",
                             },
@@ -71,7 +71,7 @@ const Archive = (props: ArchiveProps) => {
     <Layout>
       <SEO title="Blog posts" />
       <Stack>
-        <Typography variant="h4" padding={3}>
+        <Typography variant="h4" padding={2}>
           Blog Posts
         </Typography>
         <Box sx={{ marginX: "auto", width: "auto", justifyContent: "center", display: "flex" }}>
