@@ -3,7 +3,7 @@ import type { GatsbyConfig } from "gatsby";
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: `Brian Adriance's Website`,
+    title: `Brian Adriance Online`,
     description: "Brian's presence on the web",
     author: `Brian Adriance`,
     siteUrl: `https://www.brianadriance.com`,
@@ -26,8 +26,8 @@ const config: GatsbyConfig = {
         name: `Brian Adriance Personal Website`,
         short_name: `brian-adriance-web`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#a13311`,
+        theme_color: `#a13311`,
         display: `minimal-ui`,
         icon: `src/images/favicon.png`,
       },

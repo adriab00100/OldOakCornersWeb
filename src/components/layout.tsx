@@ -6,7 +6,7 @@ import { Container, Paper } from "@mui/material";
 import { Box } from "@mui/system";
 import { graphql, useStaticQuery } from "gatsby";
 import React, { ReactNode } from "react";
-import "../styles/default-layout.scss";
+import "../styles/global.scss";
 import { SiteThemeProvider } from "../styles/theme";
 import { Footer } from "./footer";
 import { Header } from "./header";

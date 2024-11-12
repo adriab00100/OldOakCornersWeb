@@ -1,9 +1,7 @@
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import { Box, Stack, Typography } from "@mui/material";
-import { Link } from "gatsby";
+import { Box, Link, Stack, Typography } from "@mui/material";
 import React from "react";
-import "../styles/default-layout.scss";
 import { PostFrontmatter } from "./post-types";
 
 export type PostNavigatorProps = {
@@ -19,7 +17,7 @@ export const PostNavigator = (props: PostNavigatorProps) => {
         {next && next.path && (
           <Stack>
             <Typography>Newer Post </Typography>
-            <Link to={`/blog${next.path}`} rel="next">
+            <Link href={`/blog${next.path}`} rel="next">
               <Stack direction="row">
                 <ArrowBackIcon />
                 <Typography>{next.title ?? "Next"}</Typography>
@@ -32,7 +30,7 @@ export const PostNavigator = (props: PostNavigatorProps) => {
             <Typography>
               Older Post <br />
             </Typography>
-            <Link to={`/blog${previous.path}`} rel="previous">
+            <Link href={`/blog${previous.path}`} rel="previous">
               <Stack direction="row">
                 <Typography>{previous.title ?? "Previous"}</Typography>
                 <ArrowForwardIcon />

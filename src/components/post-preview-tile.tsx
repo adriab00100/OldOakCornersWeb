@@ -1,7 +1,5 @@
-import { Card, CardContent, Link, Stack, Typography } from "@mui/material";
-import { Box } from "@mui/system";
+import { Box, Card, CardContent, Link, Stack, Typography } from "@mui/material";
 import React from "react";
-import "../styles/default-layout.scss";
 import { ErrorMessage } from "./error-message";
 import { Post } from "./post-types";
 
@@ -16,17 +14,19 @@ export const PostPreviewTile = (props: PostPreviewTileProps) => {
   }
   return (
     <Box padding={1}>
-      <Card variant="outlined" sx={{ "@media screen and (min-width: 501px)": { maxWidth: "400px" }, height: "100%" }} key={post.frontmatter.path}>
+      <Card sx={{ "@media screen and (min-width: 501px)": { maxWidth: "400px" }, height: "100%" }} key={post.frontmatter.path}>
         <CardContent>
           <Stack spacing={1}>
             {post.frontmatter.path ? (
-              <Link href={post.frontmatter.path ? `/blog${post.frontmatter.path}` : "/404"} underline="hover">
+              <Link href={post.frontmatter.path ? `/blog${post.frontmatter.path}` : "/404"} sx={{ color: "black" }} underline="hover">
                 <Typography variant="h5" paddingTop={1}>
                   {post.frontmatter.title}
                 </Typography>
               </Link>
             ) : (
-              <h3>{post.frontmatter.title}</h3>
+              <Typography variant="h5" paddingTop={1}>
+                {post.frontmatter.title}
+              </Typography>
             )}
             <Typography variant="subtitle1" paddingBottom={1}>
               {post.frontmatter.author} on {post.frontmatter.date}
