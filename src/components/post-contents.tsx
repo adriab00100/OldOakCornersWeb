@@ -1,6 +1,7 @@
-import { Box, Chip, Container, Stack, Typography } from "@mui/material";
+import { Chip, Container, Stack, Typography } from "@mui/material";
 import { Link } from "gatsby";
 import React from "react";
+import { CustomMdxComponentProvider } from "../styles/mdx-components-provider";
 import { toKebabCase } from "../utilities/string-manipulations";
 import { PostFrontmatter } from "./post-types";
 
@@ -45,9 +46,11 @@ export const PostContents = (props: PostContentsProps) => {
           </Stack>
         </Stack>
       </Container>
-      <Box component="section" className="blog-post-contents">
-        {contents}
-      </Box>
+      <CustomMdxComponentProvider>
+        <Stack component="section" spacing={1} paddingX={{ xs: 0, sm: 2 }}>
+          {contents}
+        </Stack>
+      </CustomMdxComponentProvider>
     </Stack>
   );
 };
