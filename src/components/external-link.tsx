@@ -9,7 +9,7 @@ export type ExternalLinkProps = {
 export const ExternalLink = (props: ExternalLinkProps) => {
   const { href, children } = props;
   return (
-    <Link href={href} rel="external noreferrer" target="_blank">
+    <Link href={href} rel="external noreferrer" target="_blank" fontWeight={600}>
       {children}
     </Link>
   );

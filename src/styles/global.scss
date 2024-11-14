@@ -28,19 +28,3 @@ body {
     z-index: 10;
   }
 }
-
-.blog-post-contents {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 90%;
-
-  @media screen and (max-width: 555px) {
-    width: 100%;
-  }
-
-  img {
-    display: block;
-    width: 100%;
-  }
-}
