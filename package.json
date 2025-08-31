@@ -28,13 +28,13 @@
     "gatsby-source-filesystem": "^5.14.0",
     "gatsby-transformer-yaml": "^5.14.0",
     "jss": "^10.10.0",
-    "node-sass": "^9.0.0",
     "prop-types": "^15.8.1",
     "react": "^18.3.1",
-    "react-compare-image": "^3.4.0",
+    "react-compare-slider": "^3.1.0",
     "react-dom": "^18.3.1",
     "react-helmet": "^6.1.0",
     "react-jss": "^10.10.0",
+    "sass": "^1.91.0",
     "style-to-object": "^1.0.9"
   },
   "devDependencies": {
