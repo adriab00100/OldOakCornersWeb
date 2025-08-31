@@ -8,7 +8,7 @@ tags: ["website", "technology", "before and after"]
 ---
 
 import { Card } from "@mui/material";
-import ReactCompareImage from "react-compare-image";
+import { ReactCompareSlider, ReactCompareSliderImage } from 'react-compare-slider';
 import { colorPalette } from "../src/styles/theme";
 
 ## A new and improved look and feel
@@ -54,20 +54,18 @@ Now, since you're reading this post _after_ the upgrade, it is impossible to kno
 image comparison slider tool. Let's start with the home page. Unfortunately my screenshots are not exactly the same size.
 
 <Card variant="outlined">
-  <ReactCompareImage
-    leftImage="https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,c_pad,ar_16:9/blog-posts/site-refresh/oldhome_fs93ch"
-    rightImage="https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,c_pad,ar_16:9/blog-posts/site-refresh/newhome_fnqoah"
-    sliderLineColor={colorPalette.primary.main}
+  <ReactCompareSlider key={1}
+    itemOne={<ReactCompareSliderImage src="https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,c_pad,ar_16:9/blog-posts/site-refresh/oldhome_fs93ch" />}
+    itemTwo={<ReactCompareSliderImage src="https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,c_pad,ar_16:9/blog-posts/site-refresh/newhome_fnqoah" />}
   />
 </Card>
 
 I cleaned up the footer a lot! In general it feels a lot cleaner. Next up, the blog listing page.
 
 <Card variant="outlined">
-  <ReactCompareImage
-    leftImage="https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,c_pad,ar_16:9/blog-posts/site-refresh/blogpostingold_oeqkly"
-    rightImage="https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,c_pad,ar_16:9/blog-posts/site-refresh/blogpostingnew_fyjmvc"
-    sliderLineColor={colorPalette.primary.main}
+  <ReactCompareSlider key={2}
+    itemOne={<ReactCompareSliderImage src="https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,c_pad,ar_16:9/blog-posts/site-refresh/blogpostingold_oeqkly" />}
+    itemTwo={<ReactCompareSliderImage src="https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,c_pad,ar_16:9/blog-posts/site-refresh/blogpostingnew_fyjmvc" />}
   />
 </Card>
 
@@ -75,37 +73,34 @@ There's a lot more whitespace around the components, the font weights changed, a
 preview tiles as well. Let's look at the heading and footing for the blog posts themselves.
 
 <Card variant="outlined">
-  <ReactCompareImage
-    leftImage="https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto/blog-posts/site-refresh/oldblogheading_fl8wec"
-    rightImage="https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto/blog-posts/site-refresh/newblogheading_zdohhg"
-    sliderLineColor={colorPalette.primary.main}
+  <ReactCompareSlider key={3}
+    itemOne={<ReactCompareSliderImage src="https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto/blog-posts/site-refresh/oldblogheading_fl8wec" />}
+    itemTwo={<ReactCompareSliderImage src="https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto/blog-posts/site-refresh/newblogheading_zdohhg" />}
   />
 </Card>
 
 The screen shot got a little pixelated, but it still shows the difference.
 
 <Card variant="outlined">
-  <ReactCompareImage
-    leftImage="https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,w_800/blog-posts/site-refresh/oldpager_hdz1pq"
-    rightImage="https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,w_800/blog-posts/site-refresh/newpager_g8d3db"
-    sliderLineColor={colorPalette.primary.main}
+  <ReactCompareSlider key={4}
+    itemOne={<ReactCompareSliderImage src="https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,w_800/blog-posts/site-refresh/oldpager_hdz1pq" />}
+    itemTwo={<ReactCompareSliderImage src="https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,w_800/blog-posts/site-refresh/newpager_g8d3db" />}
   />
 </Card>
 
 And finally, a page that probably doesn't get a lot of traffic: the tags listing page.
 
 <Card variant="outlined">
-  <ReactCompareImage
-    leftImage="https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,c_pad,ar_16:9/blog-posts/site-refresh/oldtags_pv7rg0"
-    rightImage="https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,c_pad,ar_16:9/blog-posts/site-refresh/newtags_ya0mz7"
-    sliderLineColor={colorPalette.primary.main}
+  <ReactCompareSlider key={5}
+    itemOne={<ReactCompareSliderImage src="https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,c_pad,ar_16:9/blog-posts/site-refresh/oldtags_pv7rg0" />}
+    itemTwo={<ReactCompareSliderImage src="https://res.cloudinary.com/dgqmwqi0v/image/upload/q_auto,f_auto,c_pad,ar_16:9/blog-posts/site-refresh/newtags_ya0mz7" />}
   />
 </Card>
 
 ### Conclusion
 
 It was a decent effort, and I have been wanting to do some kind of improvement like this for a while now. Overall I am quite happy with how it
-all came out. There are also a few bonuses with the refresh: a sneek peek that commissions are coming soon! And expect a rebranding from Old Oak Corners
+all came out. There are also a few bonuses with the refresh: a sneak peek that commissions are coming soon! And expect a rebranding from Old Oak Corners
 to Laughing Woodchuck woodworking. I'll post on that later.
 
 Are you feeling inspired? Want to do something like this yourself? Here's a list of what I use for my site.
