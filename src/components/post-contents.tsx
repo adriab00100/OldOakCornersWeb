@@ -47,7 +47,16 @@ export const PostContents = (props: PostContentsProps) => {
         </Stack>
       </Container>
       <CustomMdxComponentProvider>
-        <Stack component="section" spacing={1} paddingX={{ xs: 0, sm: 2 }}>
+        <Stack
+          component="section"
+          spacing={1}
+          paddingX={{ xs: 0, sm: 2 }}
+          sx={{
+              img: {
+                paddingY: 2
+              },
+          }}
+        >
           {contents}
         </Stack>
       </CustomMdxComponentProvider>
